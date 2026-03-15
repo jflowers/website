@@ -1,0 +1,77 @@
+baseURL = 'https://www.jayflowers.com/'
+languageCode = 'en-us'
+title = 'Jay Flowers'
+theme = 'PaperMod'
+
+[params]
+  author = 'Jay Flowers'
+  description = 'Software engineer, CI pioneer, creator of CI Factory and MbUnit contributor. Archived technical writing on Continuous Integration, testing, and software craftsmanship.'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  defaultTheme = 'auto'
+  disableThemeToggle = false
+
+  [params.homeInfoParams]
+    Title = 'Jay Flowers'
+    Content = 'Software engineer and CI pioneer. Creator of CI Factory, MbUnit contributor, and author on Continuous Integration, testing patterns, and software craftsmanship.'
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/jayflowers'
+
+[params.assets]
+  favicon = '/favicon.ico'
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[markup]
+  [markup.highlight]
+    style = 'monokai'
+    lineNos = false
+    codeFences = true
+    guessSyntax = true
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    identifier = 'blog'
+    name = 'Blog'
+    url = '/blog/'
+    weight = 10
+
+  [[menu.main]]
+    identifier = 'wiki'
+    name = 'Wiki'
+    url = '/wiki/'
+    weight = 20
+
+  [[menu.main]]
+    identifier = 'projects'
+    name = 'Projects'
+    url = '/projects/'
+    weight = 30
+
+  [[menu.main]]
+    identifier = 'media'
+    name = 'Media'
+    url = '/media/'
+    weight = 40
+
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 50
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+  series = 'series'

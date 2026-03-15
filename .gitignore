@@ -1,0 +1,22 @@
+# Hugo build output
+public/
+resources/_gen/
+.hugo_build.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Recovery tool working files (large, not needed in repo)
+tools/raw_html/
+tools/fetch.log
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Hugo module cache
+_vendor/

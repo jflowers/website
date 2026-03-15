@@ -1,0 +1,7 @@
+{{ if .Params.params }}
+  {{ if .Params.params.wayback_url }}
+  <div style="background: #f8f8f8; border-top: 1px solid #ddd; padding: 10px 15px; margin-top: 20px; font-size: 0.8em; color: #666;">
+    This post was restored from the <a href="{{ .Params.params.wayback_url }}" target="_blank" rel="noopener">Wayback Machine</a>.
+  </div>
+  {{ end }}
+{{ end }}
