@@ -51,10 +51,3 @@ So far I have focused on who is most infectious. The message needs to be infecti
 - return on investment
 
 Constructing a message that addresses these concerns and communicating it through your infectious hubs (those nodes with the best fitness) will greatly increase the chance of TDD reaching the tipping point in your organization.
-
-
-
-
-|
-
-|

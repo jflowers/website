@@ -23,6 +23,3 @@ How to publish xml files for use by xsl with out merging into the ccnet build lo
 ![CCNET Artifact Directory](http://www.jayflowers.com/BlogFiles/CCNET_20Artifact_20Directory_small.jpg)](http://www.jayflowers.com/BlogFiles/CCNET%20Artifact%20Directory.avi)
 
 P.S. When I say archive I mean to say artifact.
-
-
-|

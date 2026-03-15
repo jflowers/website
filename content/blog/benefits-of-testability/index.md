@@ -32,10 +32,3 @@ I have been having a hard sell of “testability is a good thing” at my work. 
 This list was gathered from Appendix D of Stefan Jungmayr’s thesis [**Improving testability of object-oriented systems**](http://www.google.com/url?sa=t&ct=res&cd=6&url=http%3A%2F%2Fwww.dissertation.de%2FFDP%2Fsj929.pdf&ei=yvz6RP6LG8rUwgG56bzOCw&sig=__GUdqOEqs-Ksp47vYIYfqzwvAx5Y=&sig2=ZyGYX67tAhwW5EfO1kSlvQ#search=%22stefan%20testability%20metric%22).
 
 If some or all of the list is important to your project then testability will help you get it.
-
-
-
-
-|
-
-|

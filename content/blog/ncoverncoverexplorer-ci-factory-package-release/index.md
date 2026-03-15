@@ -83,10 +83,3 @@ In the properties file of the package you need to choose which unit testing pack
 ```
 
 [**Download**](http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=select&id=12)
-
-
-
-
-|
-
-|

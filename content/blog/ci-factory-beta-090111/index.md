@@ -41,10 +41,3 @@ Added labelPrefix to the Perforce source control block for CCNet.
 Moved all common variables to a dtd file Entities.xml.
 
 There was more, read it in the Release Notes. ![:-)](http://jayflowers.com/WordPress/wp-includes/images/smilies/icon_smile.gif)
-
-
-
-
-|
-
-|

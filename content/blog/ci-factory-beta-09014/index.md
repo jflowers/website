@@ -63,10 +63,3 @@ Fix largeproperty issue where when xml is true the outerxml is set as the value 
 Fix message size issue for CCNet TFS source control block  
 Fix issue with vdproj files and versioning  
 VSTSVersionControl - Oops the or was not working as I thought Needed a ${} around the property
-
-
-
-
-|
-
-|

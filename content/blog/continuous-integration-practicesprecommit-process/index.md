@@ -63,10 +63,3 @@ Fear of breaking the build has caused some people to adopt measures to keep the 
 ## Working in Small Changes
 
 If the team works by decomposing stories into small tasks, tasks that can be completed in less than a day, preferably a couple of hours, things can work very smoothly.  Imagine that every hour or two the developers are committing changes as they complete tasks.  Their precommit process would involve integration of a small number of changes from a source control update and executing a small number of tests to exercise their changes.  I am sure you can see how this would result in a short precommit process with little chance that the updates from source control would impact local changes.
-
-
-
-
-|
-
-|

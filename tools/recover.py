@@ -1001,6 +1001,13 @@ def clean_markdown(md):
 
     md = "\n".join(result_lines)
 
+    # Remove trailing pipe characters (leftover table fragments from WP theme layout)
+    md = re.sub(r"(\n\s*\|\s*)+\s*$", "", md)
+
+    # Remove standalone pipe lines in the middle of content too
+    md = re.sub(r"\n\s*\|\s*\n\s*\|\s*\n", "\n\n", md)
+    md = re.sub(r"\n\s*\|\s*\n", "\n\n", md)
+
     # Final cleanup
     md = md.strip()
 

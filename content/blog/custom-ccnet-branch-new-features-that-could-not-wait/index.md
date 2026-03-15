@@ -472,7 +472,3 @@ Here is a complete example:
 
 </cruisecontrol>
 ```
-
-|
-
-|

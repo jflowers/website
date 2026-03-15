@@ -33,10 +33,3 @@ Lastly I want to talk about equality.  I deeply believe that we are all equal.�
 So when I read a post like Simone’s [Yet another ALT.net opinion](http://codeclimber.net.nz/archive/2007/10/11/Yet-another-ALT.net-opinion.aspx) I get pissed.  I get pissed because I see him and others stating that there are some people that just wont get it.  I am not sure if Simone means they are not capable, maybe he means don’t care.  I will address both.  To be clear I get pissed when I infer an underling belief of inequality.  In many shops most of the developers are assumed to have inadequate faculties to learn OOP, TDD, Patterns, etc.  They are not blind.  They see where the bar is set.  When it is set so low they don’t give a good god damn.  They will find something else in life to challenge and engage them.  Shame on you if you treat people this way.
 
 So lets say Simone really meant that many people just are not interested and that is why ALT.Net and tools like Windsor wont succeed.  Were you not looking?  Did you not see all the talk about how do we get more people involved?  How do we get more people interested?  How can we make this more accessible?  Well those talks happened and continue.  Both MSDN online and mag guys were there to help with these very aspects. There are blogs in abundance, and conference/user group speakers galore.  Still there are those people that wont be reached by any of those methods just mentioned.  How can they be reached?  By you!  At your work.  Today!  You have influence.  You can be a leader.  There is a spot for you in this movement.  You are welcome here.
-
-
-
-
-|
-
-|

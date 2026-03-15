@@ -30,10 +30,3 @@ Straight from the [source](http://www.objectmentor.com/omReports/articles/srp.pd
 SRP has the broadest relationship to testability out of all the OOD principles. It relates to all aspects of testability; Observability, Controllability, Understandability. To test something you must be able to observe or sense that it did what it was supposed to do. To test something you must be able to control or manipulate it. Control is needed at the very least to instigate it to do the thing that you desire to test. In the case of unit tests and some other testing the control will be used to isolate the test subject. To test something you must be able to know: What needs to be controlled and observed. How to control what needs to be controlled. Lastly what the out come should be.
 
 The fewer the responsibilities of the test subject the less that needs to be; observed, controlled, and understood. Chances are the fewer the responsibilities the less surface area the test subject will have. As well the less need to have interactions with other types. This reduces coupling and the type population tied to the test subject. All this effects testability.
-
-
-
-
-|
-
-|

@@ -31,10 +31,3 @@ There is an element of [symbol sickness](http://jayflowers.com/WordPress/?p=128)
 > What we mean by understanding and explaining things is being able to put them into words. We do that first by analyzing them into many bits. In the same way, when you want to measure the properties of a curve, which is complicated, in order to say how that curve is shaped, you have to reduce it to tiny points and measure them. So you put a grid of graph paper across, and by telling the position on the graph of where the curve is at every point, you get an accurate description of what that curve is, or how it is, in scientific terms. That is what we mean when we talk about understanding things, but obviously there is another sense of “to understand.” You understand how to walk even if you can’t explain it, because you can do it. Can you drive a car? Yes. How do you drive a car? If you could put it into words, it might be easier to teach people how to do it in the first place, but one understands and learns many things about driving a car that are never explained in words. You just watch somebody else do it, and you do the same thing. - [Alan Watts The Philosophies of Asia](http://www.terebess.hu/english/watts5.html)
 
 P.S.  When I use the term [enlightenment](http://en.wikipedia.org/wiki/Enlightenment_(concept)) I am making no distinction between [awakening](http://en.wikipedia.org/wiki/Awakening), [awareness](http://en.wikipedia.org/wiki/Awareness), and [embodiment](http://en.wikipedia.org/wiki/Embodied_philosophy).  As well when I have used the word understand in absence of conceptualization a better word is likely [awareness](http://en.wikipedia.org/wiki/Awareness).
-
-
-
-
-|
-
-|

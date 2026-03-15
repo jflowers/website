@@ -45,10 +45,3 @@ There are many wonderful perspectives that he presents in this book.  It is a b
 [![Spontaneous Awakening](http://ec1.images-amazon.com/images/P/1591792916.01._AA240_SCLZZZZZZZ_.jpg)](http://www.amazon.com/gp/product/images/1591792916/ref=dp_image_0/105-6244180-7165267?ie=UTF8&n=283155&s=books)
 
 This was a very powerful listen.  Adya is a wonderful speaker, he could be your next door neighbor.  His insights are much the same as Alan Watts and conveyed in a less intellectual way.  They, Alan and Adya, make for an effective environment to awaken.
-
-
-
-
-|
-
-|

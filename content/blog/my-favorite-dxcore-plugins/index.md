@@ -80,10 +80,3 @@ Lastly is [Code Style Enforcer](http://joel.fjorden.se/static.php?page=CodeStyle
 [http://joel.fjorden.se/static.php?page=CodeStyleEnforcer](http://joel.fjorden.se/static.php?page=CodeStyleEnforcer "http://joel.fjorden.se/static.php?page=CodeStyleEnforcer")
 
 [http://www.paraesthesia.com/blog/weblog.php?id=C0\_10\_1](http://www.paraesthesia.com/blog/weblog.php?id=C0_10_1 "http://www.paraesthesia.com/blog/weblog.php?id=C0_10_1")
-
-
-
-
-|
-
-|

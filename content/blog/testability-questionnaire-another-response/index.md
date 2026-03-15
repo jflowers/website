@@ -73,10 +73,3 @@ What do you think is the best way to get testability into a product?
 > I think it’s best approached as a matter of personal honor. Each  
 > programmer has to make a personal commitment to quality. Doing TDD is  
 > how I express that commitment.
-
-
-
-
-|
-
-|

@@ -23,10 +23,3 @@ We just finished iteration zero, setting up the project infrastructure.  It has
 For sure I am more familiar with CCNet than CC and I still think that CCNet is a more mature product.  CCNet is implemented in a much simpler fashion than CC.  It provides much more info about what is happening as well.  Don’t think everything just worked the first try with CCNet.  That is not to say that most of it did work out of the box.  We had some issues with StarTeam and Maven and all were solved quickly as a result of the quality of logging information in the server and build logs for CCNet.
 
 So far my experience with the tools surrounding Java as compared those surrounding .Net is that of disappointment.  Many of the tools in the .Net arena came from Java, and I thought to find more mature, better implementations, that would be easier to use.  I miss Visual Studio 200\*, Subversion, MbUnit, TestDriven.Net, NCover, TypeMock, NAnt, CI Factory, TortoiseSvn, and VisualSvn.
-
-
-
-
-|
-
-|

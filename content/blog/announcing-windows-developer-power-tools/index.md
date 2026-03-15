@@ -49,10 +49,3 @@ Creating a Setup Project with WiX
 [sample chapter](http://iterativerose.com/WinDevPowerTools/WinDevPowerTools.aspx)
 
 Congratulation Jim and James you have a beautiful baby book.
-
-
-
-
-|
-
-|

@@ -33,10 +33,3 @@ There is no installer yet.  Heck the TestDriven.NET FitNesse Runner has no home
 This attribute clues TestDriven.NET into what runner to use.  Once we get an installer we can create the registry entries that are normally used to clue TestDriven.NET into what runner to use.
 
 Where do you think the FitNesse plugin’s home should be?
-
-
-
-
-|
-
-|

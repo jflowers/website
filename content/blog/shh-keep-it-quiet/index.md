@@ -108,10 +108,3 @@ public class LogLevelTask : Task
     }
 }
 ```
-
-
-
-
-|
-
-|

@@ -33,10 +33,3 @@ The most important feature missing is light weight parameterized unit testing. 
 If I did not think that the MSTest team was competent I would not have written this post.
 
 Don’t forget that you have to innovate on top of everything that I have asked for.  MbUnit, NUnit, and TD.NET are not going to wait for you to catch up.
-
-
-
-
-|
-
-|

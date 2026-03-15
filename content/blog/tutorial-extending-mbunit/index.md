@@ -1021,10 +1021,3 @@ You could then use this in any project that included xml files that must conform
 This tutorial was compiled aganst MbUnit 2.3 RC2.
 
 [MbUnit Extension Tutorial.zip](images/2006/10/MbUnit_20Extension_20Tutorial.zip)
-
-
-
-
-|
-
-|

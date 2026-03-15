@@ -140,10 +140,3 @@ The end result would be C:\Temp\Example-Installer.exe.  I would unzip to the di
 The Workspace Package in CI Factory creates a SFX that bundles up NAnt and all the scripts needed to bootstrap the process of creating a new workspace.
 
 ![Workspace Setup](images/2010/04/CropperCapture4.jpg "Workspace Setup")
-
-
-
-
-|
-
-|

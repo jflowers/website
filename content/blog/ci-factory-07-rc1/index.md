@@ -48,10 +48,3 @@ You can download CI Factory 0.7 RC1 and independent packages [here](http://jayf
 | --- | --- | --- |
 | Email: | |  | | --- | |  | |
 | [Browse Archives](http://groups.google.com/group/CI-Factory) at [groups.google.com](http://groups.google.com/) | |
-
-
-
-
-|
-
-|

@@ -26,10 +26,3 @@ Most notable and easily apparent are the changes to web dashboard.  This releas
 ![CropperCapture[1]](images/2007/09/CropperCapture%5B1%5D.png)
 
 ![CropperCapture[3]](images/2007/09/CropperCapture%5B3%5D.png)
-
-
-
-
-|
-
-|

@@ -50,10 +50,3 @@ Fix: Simian Alert img paths and conditional show of removed blocks.
 Fix: Simian Alert compare counts, use int::parse to compare.   
 Fix: Try to preserve email users for ccnet project config. This works for the default config.   
 Fix: Aggregator remoting
-
-
-
-
-|
-
-|

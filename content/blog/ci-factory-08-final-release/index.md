@@ -53,10 +53,3 @@ Fix unit test alert for broken builds
 Fix Current and other Path hard coding
 
 There have been a lot of new features and improvements in the 0.8 series.  I can’t wait to see what the 0.9 series brings.
-
-
-
-
-|
-
-|

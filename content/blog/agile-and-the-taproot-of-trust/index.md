@@ -38,10 +38,3 @@ Now back to the question: how does Agile affect/create/enable/encourage trust? 
 - Automated Tests
 
 I think one of the best places to re-enforce this is the daily standup.
-
-
-
-
-|
-
-|

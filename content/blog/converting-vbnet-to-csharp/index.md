@@ -108,10 +108,3 @@ Should have been:
 reference.methodcall();
 
 There were a few more, you get the picture.
-
-
-
-
-|
-
-|

@@ -36,10 +36,3 @@ I explained to my buddies that it is not the wisest thing to do: hand out sharp 
 Getting a laceration aside the only real argument that I could see against it is:  The effort one would put into controlling TypeMock could be better spent on refactoring the test subject into a more naturally testable subject.  A code generator to produce the blocks of code to control TypeMock integrated into the IDE you could easily defeat this concern.  I talked to Eli about this and he said “We have plans to create a GUI pack and a Recorder pack…”.
 
 It seems to me that tool side of things are shaping up very well.  Take MbUnit, FitNesse, TypeMock.NET, ReSharper and CodeRush.  This toolset will let you do some amazing things if you take the time to learn.   It is nice not to need so much courage.
-
-
-
-
-|
-
-|

@@ -23,10 +23,3 @@ params:
 <http://cifactorybuild.stelligent.com/ci factory>
 
 Not having a public build server has prevented the growth of a developer community on CI Factory.  I didn’t think it fare to invite people to become committers while the build server was private.  I see establishing a core development team on CI Factory as one of the most vital issues.  Hopefully this will open the way for others to join the team.
-
-
-
-
-|
-
-|

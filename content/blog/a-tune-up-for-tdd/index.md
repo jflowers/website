@@ -78,10 +78,3 @@ Those last few paragraphs are the wisdom that I have collected. Sometimes as a n
 Besides getting you to truly understand testability one of the main points that I am trying to make here is you already have a good understanding of what testability is. I doubt that I told you anything new. At most you may have thought ahh that is what I knew all a long but have never verbalized. Because you already have a good understanding of what testability is you will be less resistant to actually performing the step of refactoring to increase testability. My experience with refactoring to remove duplication has proven to be that of resistance. Many people do not truly understand what it is nor do they see how it ties back into and supports/enables the process to continue. It is far easier to see how refactor to increase testability ties back in and supports the process to continue.
 
 P.S. Once you have mastered testability I would add in duplication.
-
-
-
-
-|
-
-|

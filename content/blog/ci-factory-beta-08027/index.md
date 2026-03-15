@@ -54,10 +54,3 @@ Some the coolest new features are in the setup. It can setup your new CI Factory
 You can download the bits from [here](http://code.google.com/p/ci-factory/downloads/detail?name=CI-Factory-Beta-0.8.0.27.zip&can=2&q=).
 
 If you are going to use the Ant package please note that I could not include the Java distro for size reasons. You will need to plop the jre in the Ant Packages Java folder or configure the package to look in a different location.
-
-
-
-
-|
-
-|

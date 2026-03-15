@@ -29,6 +29,3 @@ attendees.
 MbUnit is an advanced .NET xUnit Framework.  This session will cover  
 some of the more interesting fixtures provided by the product and a  
 few custom extensions.
-
-
-|

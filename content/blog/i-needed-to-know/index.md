@@ -17,10 +17,3 @@ params:
 ## I needed to know…
 
 [![I am nerdier than 43% of all people. Are you nerdier? Click here to find out!](http://www.nerdtests.com/images/ft/nq.php?val=9630)](http://www.nerdtests.com/ft_nq.php?im)
-
-
-
-
-|
-
-|

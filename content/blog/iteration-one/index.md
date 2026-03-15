@@ -23,10 +23,3 @@ We really over committed on the first iteration, we forgot about the holiday.  
 I seem to have nothing good to say.  I was really hoping to report something that we liked better than the .Net world.  I even consulted with the team before writing this post.  So far it is hands down .Net and my team mates have no knowledge of things like LINQ, VS 2008, ASP.Net MVC, and most of the 3.5 technologies.
 
 It looks like I will get some good exposure to Java Server Faces and EJB 3.0 next week.  Maybe that will bring about something cool…
-
-
-
-
-|
-
-|

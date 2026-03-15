@@ -19,10 +19,3 @@ params:
 I had been looking for Windows Explorer like controls for some time when I came across Sky Software’s [Shell MegaPack.Net](http://www.ssware.com/megapack.htm).  I particularly need the FileView control.  They offer several other products as well: Shell MegaPack ActiveX/Shell MegaPack.Net/ EZShellExtensions.Net.  They integrate well into the VS.NET IDE (all editions).  I will try to get the FileView into my Doubler product shortly.  I am keen to see what could be done with the [EZShellExtensions.Net](http://www.ssware.com/ezshell/ezshell.htm) as well.
 
 <http://www.ssware.com/>
-
-
-
-
-|
-
-|

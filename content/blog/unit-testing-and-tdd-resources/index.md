@@ -61,6 +61,3 @@ You should really join the TDD user group and maybe even the OOP user group:
 
 [comp.object](http://groups.google.com/group/comp.object)  
 [testdrivendevelopment](http://groups.yahoo.com/group/testdrivendevelopment/)
-
-
-|

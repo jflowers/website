@@ -51,10 +51,3 @@ Here is a table that I think quickly summarizes how, when followed, the principl
 After studying the table I noticed two things. It pays to have less to work with in a test. That is to say that when there are very few types and members involved in a test it will be easier to understand. It is easier to observer and control less than more. When you can’t have less it pays to have a test double.
 
 It seems there two general fulcrums that you have to control testability. They are decreasing the surface area and type population or introducing test doubles. As well, they help in increasing the effectiveness of unit tests by eliminating failure points other than the test subject.
-
-
-
-
-|
-
-|

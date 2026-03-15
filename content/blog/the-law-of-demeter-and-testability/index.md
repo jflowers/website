@@ -62,10 +62,3 @@ I think the basic underlining issue with violations of the Law of Demeter is mis
 Side Note:
 
 Some people get concerned about interaction based testing coupling the unit test to the implementation of the test subject. It can if a test double is used in place of an object that the test subject uses as a helper (i.e. the interaction of the test subject with the helper is not a responsibility of the test subject). In general you should only ever use test doubles where it is the responsibility of the test subject to perform the interaction. Please notice I said responsibility of the test subject and not the system. A test subject plays a role in a system and that role has responsibilities which include interaction, maybe even entirely comprised of, with other objects in the system. When you refactor a class, or test subject, in a system it is still responsible for interacting with the same objects it did before the refactoring. When you change its interactions, or move the responsibility to an other class, you are refactoring the system. When refactoring the system unit tests should break. When refactoring a class unit tests should not break.
-
-
-
-
-|
-
-|

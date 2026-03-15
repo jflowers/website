@@ -36,10 +36,3 @@ There are more changes but that is what the release notes are for.
 ![CropperCapture[6]](images/2007/10/CropperCapture%5B6%5D.png)
 
 ![CropperCapture[24]1](images/2007/10/CropperCapture%5B24%5D11.png)
-
-
-
-
-|
-
-|

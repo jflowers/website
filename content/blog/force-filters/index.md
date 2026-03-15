@@ -261,10 +261,3 @@ Here is a config example with context, note I would not use both, one or the oth
 ```csharp
   </project>
 ```
-
-
-
-
-|
-
-|

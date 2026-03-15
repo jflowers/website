@@ -33,10 +33,3 @@ I have found peoples reactions interesting.  Acting in your circle of influen
 So back to the thread on the XP Yahoo user group.  I explained some of this in a reply an stated that I am still a developer and my product is a software configuration management ecosystem.  [Elizabeth Keogh](http://sirenian.livejournal.com) replied that made me a software configuration management ecowarrior.
 
 I love it.
-
-
-
-
-|
-
-|

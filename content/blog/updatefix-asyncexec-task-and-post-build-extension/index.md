@@ -123,10 +123,3 @@ The attribute taskname used to be required, but now is not, and there is a new a
 **Post Build Extension** [**Zip**](http://code.google.com/p/ci-factory/downloads/detail?name=Post-Build-Extension-v2.zip&can=2&q=) **and** [**Doc**](http://groups-beta.google.com/group/CI-Factory/web/Post+Build?hl=en&_done=%2Fgroup%2FCI-Factory%2Fweb%2FPost%2BBuild%3Fmsg%3Dns%26hl%3Den)
 
 **Source for asyncexec and waitforexit** [**Async.Tasks.zip**](http://www.jayflowers.com/Misc%20Downloads/Async.Tasks.zip)
-
-
-
-
-|
-
-|

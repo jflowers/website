@@ -26,10 +26,3 @@ This is a small bug fix release, really for just one bug.
 | |  |  | | --- | --- | |  | [**Download CI Factory**](http://ci-factory.googlecode.com/files/CI-Factory-1.0.1.4.exe "CI-Factory-1.0.1.4.exe")  [*Version 1.0.1*](http://ci-factory.googlecode.com/files/CI-Factory-1.0.1.4.exe "CI-Factory-1.0.1.4.exe") | |
 
 Any build following a failed build would throw and exception when try to display the main build report on the web dashboard.
-
-
-
-
-|
-
-|

@@ -929,10 +929,3 @@ namespace Double
 ```csharp
 }
 ```
-
-
-
-
-|
-
-|

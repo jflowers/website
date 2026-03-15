@@ -38,10 +38,3 @@ I doubt that the sage can do what he does because he memorized all the processes
 Most of us are not sages.  Most of our employers through out our careers have imprinted on us that we learn the right thing to do by memorizing processes, procedures, and policies.  If you are like me your experience has shown this to be false or as Michael Carroll says “surprisingly inadequate”.  Michael puts forward the issues is that they are missing the cultivation of *li*.
 
 I have read about the use of roles instead of processes, procedures, and policies.  The goal being not to try and give people a paint by numbers for any situation but a hat to wear, a persona to play.  For more on roles see **[Organizational Patterns of Agile Software Development](http://www.amazon.com/Organizational-Patterns-Agile-Software-Development/dp/0131467409)**.  This may be a good start in the right direction, yet I don’t think it goes far enough.  Just like moving from processes to roles was an increase in abstraction so to is *li*.  *Li* moves beyond the limits of a role and puts the responsibility squarely on the individual.  The employer is no longer in the impossible position of trying to anticipate on behalf of the employee.  Now the employer can and should work to enable the employee to cultivate *li*.  I have not been able to find much on the Internet about [cultivating](http://encarta.msn.com/thesaurus_561570147/cultivate.html) *li*.  Michael suggests that focusing on simple courtesies given to your workmates is a good start.  He goes on to say that contemplation/meditation is a significant part of developing *li*.
-
-
-
-
-|
-
-|

@@ -25,10 +25,3 @@ Where: [Stelligent](http://www.stelligent.com/)’s headquarters ([map)](http://
 Who: Anyone interested in TDD, BDD, or just plain automated developer testing.
 
 You need to [RSVP](mailto:mandy.owens@stelligent.com)
-
-
-
-
-|
-
-|

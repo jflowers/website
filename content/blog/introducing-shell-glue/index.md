@@ -250,10 +250,3 @@ The project is hosted on Google Code so you can play with the code yourself:
 [http://code.google.com/p/shellglue/source](http://code.google.com/p/shellglue/source "http://code.google.com/p/shellglue/source")
 
 Please know that it is using a commercial product to make extending the shell easy.  So if you want to play with the code you will need to download [Sky Software’s EZShellExtension.Net](http://www.ssware.com/ezshell/ezshell.htm).
-
-
-
-
-|
-
-|

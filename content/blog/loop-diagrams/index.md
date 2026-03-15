@@ -57,10 +57,3 @@ This diagram is by no means complete.  It is meant to spark a dialogue on this 
 I have a page on my wiki about working with this loop diagram [here](http://jayflowers.com/doku/doku.php?id=creating_a_loop_diagram_for_ci).  It includes information on understanding loop diagrams, creating loop diagrams, software for creating loop diagrams, as well as fodder and variables for this loop diagram.  Lastly it includes a link to a download of the project file for this loop diagram.
 
 I hope over the next year to be able to flesh this out at all the different conferences that I will be going to.  I truly believe that this will be a great asset to the CI community.
-
-
-
-
-|
-
-|

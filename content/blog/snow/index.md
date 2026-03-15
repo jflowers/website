@@ -65,10 +65,3 @@ The salsa I make as mostly the same, sometimes I add a fresh peach.
 1 Handful of Cilantro
 
 1 Medium Jalapeno
-
-
-
-
-|
-
-|

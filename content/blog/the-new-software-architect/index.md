@@ -20,10 +20,3 @@ Have you ever heard of genetic algorithms? [Codefarm](http://www.codefarm.com/in
   
 If you know of **Microsoft’s WhiteHorse** (I think [this](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnvsent/html/vsts-arch.asp) is it and [this](http://msdn.microsoft.com/vstudio/teamsystem/developer/default.aspx?pull=/library/en-us/dv_vstechart/html/clssdsgnr.asp) too) then you can imagine how one could use an interface similar to it to select an initial population. The more difficult part, as always, would be in creating the fitness tests for the evaluations of the newly spawned generations.  
 Is your head spinning yet? If not you must not understand. This kind of technology has the potentially to change so much it is mind boggling. It is already starting to change the [economy](http://news.bbc.co.uk/1/hi/technology/3752725.stm). How will you be effected?
-
-
-
-
-|
-
-|

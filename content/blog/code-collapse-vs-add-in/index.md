@@ -29,10 +29,3 @@ Update:  I changed things a little.  The banner for the region is no longer se
 [Binary CR\_CodeFold.dll (24 KB)](images/2007/02/CR_CodeFold.dll)
 
 [Source CR\_CodeFold.zip (12 KB)](images/2007/02/CR_CodeFold.zip)
-
-
-
-
-|
-
-|

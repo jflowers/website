@@ -71,6 +71,3 @@ improvement effort is blessed by management.
 
 Have I explained this shift well?  Do you understand?  Do you agree?  
 What pitfalls do you see…
-
-
-|

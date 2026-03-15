@@ -28,10 +28,3 @@ In either case once you have decided on a tool moving forward with open source i
 Continuing to live with the product can be a very different experience between commercial and open source.  The release cycle in the open source world is far more frequent than in the commercial.
 
 Some tools already have a large Agile user base and are a driving force in the evolution of that tool.  Subversion for example has a large Agile user base effecting the Subversion ecosystem.  I imagine if there was a larger Agile user base for StarTeam CC’s and CCNet’s support of StarTeam would be in a much better state.  When you take into account both the affect a large Agile user base has and more frequent releases of open source I am sure that you see how an open source project will respond much quicker to the needs of the Agile community than a commercial project on a slower release cycle.  Let me heap on a little more: in many cases the developers on these open source project are Agile practitioners themselves where as many of the Commercial tool vendors are not practicing Agile.
-
-
-
-
-|
-
-|

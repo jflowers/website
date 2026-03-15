@@ -373,10 +373,3 @@ There are a few new attributes force, cleancopy, and deleteWorkspace that bear 
 ![](images/2007/02/WindowsLiveWriter/ClosingIn_14082/cifactory%5B6%5D1.gif)
 
 If you are just dyeing to get you hands on this you can find the source for the [NAnt tasks and functions](http://ci-factory.googlecode.com/svn/Current/Product/Production/Common/TF.Tasks/) and the [first two CCNet plugins](http://ci-factory.googlecode.com/svn/Current/Product/Production/Common/CCNET.TFS.Plugin/) in [CI Factory’s source control repo](http://ci-factory.googlecode.com/svn/Current/Product/) and [Martin’s is on CodePlex.](http://www.codeplex.com/TFSCCNetPlugin)  I have attached [my modifications to Martin’s stuff](images/2007/02/WindowsLiveWriter/ClosingIn_14082/Vsts.cs).
-
-
-
-
-|
-
-|

@@ -32,10 +32,3 @@ Add the creation of a branching script: CreateBranch.xml.  It is located in the
 If you tried to use the new upgrade script in the last release on a 0.8 CI Factory project I am sure that it bombed on you.  That has been fixed!
 
 There was more, read it in the Release Notes.
-
-
-
-
-|
-
-|

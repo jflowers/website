@@ -55,12 +55,3 @@ This is not production worthy.  It is not optimized, in fact it can be down rig
 [**Download**](http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=fileinfo&id=17)
 
 **Note:** You will need to have DXCore installed.  You can download it from [**here**](http://www.devexpress.com/Downloads/NET/IDETools/DXCore/).
-
-
-
-
-
-
-|
-
-|

@@ -33,10 +33,3 @@ These are some of the words and concepts that I have learned from [Pema Chodron]
 **[![The Places that Scare You: A Guide to Fearlessness in Difficult Times](http://www.audible.com/audiblewords/content/sp/true/000151/full_image.jpg "The Places that Scare You: A Guide to Fearlessness in Difficult Times")](http://www.audible.com/adbl/site/products/ProductDetail.jsp?productID=SP_TRUE_000151&BV_SessionID=@@@@1120832332.1182023901@@@@&BV_EngineID=cccfaddlellgfkecefecekjdffidfjf.0) [Bodhicitta](http://en.wikipedia.org/wiki/Bodhicitta)** - From Wikipedia: In [Buddhism](http://en.wikipedia.org/wiki/Buddhism), **bodhicitta** (Ch. 菩提心, *pudixin*, Jp. *bodaishin*) is the wish to attain full enlightenment (or Buddhahood) in order to be of benefit to all sentient beings. One whose primary motivation for all of their activities is Bodhicitta is called a [bodhisattva](http://en.wikipedia.org/wiki/Bodhisattva). Bodhicitta can also refer to the actual Awakened Mind of a Buddha itself, as in certain tantras (e.g. the [Kunjed Gyalpo Tantra](http://en.wikipedia.org/wiki/Kunjed_Gyalpo_Tantra)).
 
 Etymologically, the word is a combination of the Sanskrit words [Bodhi](http://en.wikipedia.org/wiki/Bodhi) and [Citta](http://en.wikipedia.org/wiki/Citta). Bodhi means ‘awakening’, or ‘enlightenment’. Citta may be translated as ‘mind’ or ’spirit’. Bodhicitta can therefore be translated as ‘mind of enlightenment’ or ’spirit of awakening’.
-
-
-
-
-|
-
-|

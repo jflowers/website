@@ -28,10 +28,3 @@ This is the type of mental model I have for TDD and CI, well all of agile really
 > Language has a subtle, yet powerful effect on the way we view the world. English, like most other Western languages, is linear—its basic sentence construction, noun-verb-noun, translates into a worldview of “x causes y.” This linearity predisposes us to focus on one-way relationships rather than circular or mutually causative ones, where x influences y, and y in turn influences x. Unfortunately, many of the most vexing problems confronting managers and corporations today are caused by a web of tightly interconnected circular relationships. To enhance our understanding and communication of such problems, we need a language more naturally suited to the task.
 
 I am sure that I will be a much more effective communicator of agile once I have mastered Systems Thinking.  I can’t what to be able to successfuly convey how the combination of individual agile practices have a greater effect than their sum.  I can’t even do that for my rational self, my intuision tells me that it is so.  It also tells me that the answer to CI’s [PendingHead](http://martinfowler.com/bliki/PendingHead.html) lies in Systems Thinking.
-
-
-
-
-|
-
-|

@@ -85,10 +85,3 @@ public void Add(InventoryItem inventoryItem, int amount)
 This feels a lot like a stint to me.  The assertions act as stints allowing the verification while maintaining encapsulation.  I have seen other solutions that offer information through public members that are conditionally compiled (i.e. encapsulation is only broken for testing).  Any kind of solution that breaks the rules just to achieve testability is a lazy solution in my book (that is the bad kind not the good kind of lazy).  I doubt that the inventors and practitioners of those solutions hold OOP values and principles.  They certainly are not practising them.
 
 Anyway I hope to have the time to finish up the research into testability metrics here in the next two weeks.  If you are interested in this kind of thing you can keep track of my progress in more detail at [JayFlowers.com](http://jayflowers.com/).
-
-
-
-
-|
-
-|

@@ -134,10 +134,3 @@ There were some notable fixes too:  The Subversion Package will now recognize \
 ### 
 
 Various small fixes and improvements.
-
-
-
-
-|
-
-|

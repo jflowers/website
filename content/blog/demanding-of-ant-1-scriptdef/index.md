@@ -240,10 +240,3 @@ C:\Temp\play\scratch05.01.2010-10.00.33-EDT.log
 >
 > BUILD SUCCESSFUL  
 > Total time: 0 seconds
-
-
-
-
-|
-
-|

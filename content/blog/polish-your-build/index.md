@@ -266,10 +266,3 @@ IF %ERRORLEVEL%==0 (GOTO OpenFolder) ELSE GOTO END
 explorer “%ProductDirectory%”
 
 :END
-
-
-
-
-|
-
-|

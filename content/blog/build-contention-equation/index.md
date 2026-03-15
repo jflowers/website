@@ -29,12 +29,3 @@ Filling out the right side of the equation will show how many change packages ca
 So if you have 10 developers they can submit twice a day.  Does this fit your needs?  No?  Well can you live with a lower chance of availability risking that developers will start working in larger change packages?  If so then lets try reducing the buffer to provide a 50% chance of availability .  That will yield an average of 30 change packages in 8 hours for 2.5 submissions per developer for a 10 developer team.
 
 So what is a team of 10 developers to do if there are no acceptable set of values to this equation?  The only solution that I can fathom out is to split the build into multiple builds (e.g. a build for the client and a build for the server).  Dividing the build should occur along two axis, package dependencies and number of contributing developers.  For example there is not much benefit to splitting the the server off into its own build if only 10% of the team works on it.
-
-
-
-
-
-
-|
-
-|

@@ -62,10 +62,3 @@ First off CI Factory’s NAnt now supports .NET 3.5.  Next there is a new Packa
 There were some notable fixes too:  The Subversion Package will now recognize \_svn admin folders.  The VSTSVersionControl Package now fully supports automated setup/install of a new CI Factory instance.  Improved intellisense for NAnt, the xsd creation was fixed, all task containers now show the correct intellisense.
 
 As always you can read the [release notes](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=44&Itemid=1) for a complete list of changes.
-
-
-
-
-|
-
-|

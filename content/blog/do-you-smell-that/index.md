@@ -157,10 +157,3 @@ I am glad to have found that Gerard’s book xUnit Patterns has more to do with 
 Gerard does not formally link the Causes to refactorings.  I would have like to seen that.  In this case the refactoring needed was Wrap Class(from Working Effectively with Legacy Code).
 
 **It seems that I can smell that and it has grabbed me by the nose!**
-
-
-
-
-|
-
-|

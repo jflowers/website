@@ -57,10 +57,3 @@ Your pal the build server.
 So that little example shows some interesting possibilities for shaping developers.  Notice that there was positive feedback as well as negative and even the negative is not very direct.  I imagine that this could be used to help shape a culture.  Now please don’t think that I mean human interaction will not be needed.  I see this as a helpful tool for engaged leaders.  I don’t see this working out well for a leader of the command style.  I do see it working for the leadership styles: visionary, affiliative, and coaching.  The emails should go to more than just the developer, they should be sent to the leaders as well.  This will help the leaders to remember to engage.
 
 I think this Threshold Package will raise the scoreboard up and keep it from being lost in the sea of data.  It will be the exuder as long as the leaders play their part.
-
-
-
-
-|
-
-|

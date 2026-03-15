@@ -47,10 +47,3 @@ Something more we can do to make this easier is map a control key sequence to ex
 I mapped mine to Ctrl+Shift+N.
 
 ![NAnt Shortcut Keys](http://www.jayflowers.com/BlogFiles/nAnt_20Shortcut_20Keys.png)
-
-
-
-
-|
-
-|

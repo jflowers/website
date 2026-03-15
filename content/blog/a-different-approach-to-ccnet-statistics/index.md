@@ -360,10 +360,3 @@ I refactored the main processing target to be more parameterized so that I could
 To create an html report I will need an xsl and to show it I will need a new CCNET dashboard plugin. The xsl is mostly done as I have been stealing plenty from Ashish Kumar’s Statistics plugin. I made a few adjustments to the xsl that comes with the Statistics plugin most notably the addition of the chart. To get it to show on the dashboard I wrote a new build level plugin. It let you specify where to find the artifacts directory, what the name of the xml file is, and where the xsl file is located. Just like the xsl file has to be accessible through an http uri so does the artifacts directory and in turn the xml file. The artifacts directory is not something native to CCNET. This is a directory that the nant scripts create. In the life of CI Factory it was created to store installers and zips created in the build. It was named the installs directory, this might help to understand why installs is part of the paths in the examples above. This directory is exposed as an IIS virtual directory. The nant scripts create a directory for each build named with the datetime of the build. The plugin figures out which build artifact directory to use. It applies the xsl file specified to the xml specified and returns the html fragment. This gets the html report shown. At this point we have very similar functionality to Ashish Kumar’s Statistics plugin.
 
 The package is still a little rough but I expect to have it polished in a the next 5 to 7 days. I will release the BackUp package at the same time.
-
-
-
-
-|
-
-|
