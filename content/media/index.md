@@ -30,6 +30,10 @@ International Software Testing Conference focused on advanced software testing m
 
 - **Why We Do What We Do** -- [Slides](https://docs.google.com/presentation/u/0/d/1GUVZLa-BYuslInORIY1MZksZXgrXLjO3kdivlAyUQTQ/edit)
 
+### NoVa CodeCamp South -- Woodbridge, VA, March 2008
+
+Strayer University Woodbridge Campus, March 29, 2008.
+
 ## User Group Talks
 
 - **Capital Area .NET User Group** (August 29, 2007) -- CI Factory talk.
