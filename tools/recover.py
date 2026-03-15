@@ -948,13 +948,41 @@ def clean_markdown(md):
             and len(stripped) > 3
         )
 
-        if looks_like_xml:
+        # Also detect XML attribute continuations (indented lines with attr="val" patterns)
+        looks_like_xml_continuation = (
+            in_xml_run
+            and stripped != ""
+            and not looks_like_xml
+            and (
+                # Indented attribute continuation: name="value" or name='value'
+                re.match(r'^\s+\w[\w\-]*\s*=\s*["\']', line)
+                # Indented attribute continuation: name="${...}" (NAnt/Ant properties)
+                or re.match(r'^\s+\w[\w\-]*\s*=\s*"\$\{', line)
+                # Closing > or /> on its own line
+                or stripped in (">", "/>", ">")
+                # Lines that are clearly part of XML content (indented text)
+                or (
+                    re.match(r"^\s{4,}", line)
+                    and not stripped.startswith("#")
+                    and not stripped.startswith("-")
+                )
+            )
+        )
+
+        if looks_like_xml or looks_like_xml_continuation:
             if not in_xml_run:
                 in_xml_run = True
+            xml_block.append(line)
+        elif in_xml_run and stripped == "":
+            # Blank line inside an XML run -- keep it as part of the block
+            # (the original HTML often had blank lines between XML tags)
             xml_block.append(line)
         else:
             if in_xml_run:
                 # End of XML run, flush it as a code block
+                # Strip trailing blank lines from the block
+                while xml_block and xml_block[-1].strip() == "":
+                    xml_block.pop()
                 result_lines.append("")
                 result_lines.append("```xml")
                 result_lines.extend(xml_block)

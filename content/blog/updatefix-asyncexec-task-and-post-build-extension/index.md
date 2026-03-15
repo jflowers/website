@@ -26,20 +26,10 @@ One of the key things to note is that the output attribute does not work.  Take
 
 ```xml
 <target name=“test“>
-```
 
-
-
-```xml
   <delete file=“C:\temp\ping.txt“ if=“${file::exists(’C:\temp\ping.txt’)}“ />
-```
 
-
-
-```xml
   <asyncexec program=“cmd.exe“
-```
-
 
             commandline=“/C ping 192.168.1.3 > C:\temp\ping.txt“
 
@@ -51,51 +41,27 @@ One of the key things to note is that the output attribute does not work.  Take
 
             verbose=“true“ />
 
-
-```xml
   <asyncexec program=“notepad.exe“ waitforexit=“false“ />
-```
 
-
-
-```xml
   <waitforexit>
-```
 
-
-
-```xml
     <tasknames>
-```
 
-
-
-```xml
       <string value=“ping“/>
-```
-
 
     tasknames>
+```
 
   waitforexit>
 
 
 ```xml
   <echo message=“The exit code for pinging 192.168.1.3 was ${ping}.“/>
-```
 
-
-
-```xml
   <loadfile file=“C:\temp\ping.txt“ property=“output“ />
-```
 
-
-
-```xml
   <echo message=“${output}“/>
 ```
-
 
 target>
 
@@ -130,50 +96,21 @@ I have been working a good bit with the Post Build extension for [CI Factory](ht
 
 ```xml
 <asyncexec taskname=“PostBuild“ waitforexit=“false“ program=“${NantExePath}“ failonerror=“false“>
-```
 
-
-
-```xml
   <arg line=“-buildfile:Post.Build.xml“/>
-```
 
-
-
-```xml
   <arg line=‘-logger:NAnt.Core.XmlLogger‘ />
-```
 
-
-
-```xml
   <arg line=‘-logfile:”${Common.ArtifactDirectoryPath}\postbuildlog.xml”‘ />
-```
 
-
-
-```xml
   <arg line=‘@”${Common.PropertiesFile}”‘ />
-```
 
-
-
-```xml
   <arg line=‘-D:CCNetLogFilePath=”${CCNetLogFilePath}”‘ />
-```
 
-
-
-```xml
   <arg line=“${CCNetForcedByArg}“ />
-```
 
-
-
-```xml
   <arg line=“PostBuild“/>
 ```
-
 
 asyncexec>
 

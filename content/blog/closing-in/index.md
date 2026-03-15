@@ -28,7 +28,6 @@ I have been focused on getting our build infrastructure working with Visual Stud
 <tfsserverconnection
 ```
 
-
   password=“”
 
   username=“”
@@ -44,7 +43,6 @@ I have been focused on getting our build infrastructure working with Visual Stud
 <versionspec
 ```
 
-
   type=“Changeset, Date, Label, Workspace, Latest, or Null“
 
   versionspec=“”
@@ -56,7 +54,6 @@ I have been focused on getting our build infrastructure working with Visual Stud
 <tfsadd
 ```
 
-
   localitem=“”
 
   recursive=“”
@@ -66,44 +63,19 @@ I have been focused on getting our build infrastructure working with Visual Stud
 
 ```xml
   <localitems>
-```
 
-
-
-```xml
     <include name=“”/>
-```
 
-
-
-```xml
   </localitems>
-```
 
-
-
-```xml
   <tfsserverconnection refid=“tfs“/>
-```
 
-
-
-```xml
 </tfsadd>
-```
 
-
-
-```xml
 <echo message=“${tfs-vc::get-latest-changeset-id(’tfs‘)}“/>
-```
 
-
-
-```xml
 <tfsblock
 ```
-
 
   clean=“true or false“
 
@@ -112,14 +84,8 @@ I have been focused on getting our build infrastructure working with Visual Stud
 
 ```xml
   <tfsserverconnection refid=“tfs“/>
-```
 
-
-
-```xml
   <do>
-```
-
 
     <!–
 
@@ -129,95 +95,36 @@ I have been focused on getting our build infrastructure working with Visual Stud
 
     –>
 
-
-```xml
     <echo message=“${tfs-vc::get-latest-changeset-id()}“/>
-```
 
-
-
-```xml
     <echo message=“${tfs-vc::get-latest-changeset-id-frompath(serverItem)}“/>
-```
 
-
-
-```xml
     <echo message=“${tfs-vc::label-exists(label, scope)}“/>
-```
 
-
-
-```xml
     <echo message=“${tfs-vc::workspace-exists(workspaceName)}“/>
-```
 
-
-
-```xml
     <echo message=“${tfs-vc::get-workspace-name(localItem)}“/>
-```
 
-
-
-```xml
     <echo message=“${tfs-vc::is-server-path-mapped(serverItem)}“/>
-```
 
-
-
-```xml
     <echo message=“${tfs-vc::is-local-path-mapped(localItem)}“/>
-```
 
-
-
-```xml
     <echo message=“${tfs-vc::get-localitem-for-serveritem(serverItem)}“/>
-```
 
-
-
-```xml
     <echo message=“${tfs-vc::get-serveritem-for-localitem(localItem)}“/>
-```
 
-
-
-```xml
     <echo message=“${tfs-vc::has-pending-changes()}“/>
-```
 
-
-
-```xml
     <echo message=“${tfs-vc::has-pending-changes(localItem)}“/>
-```
 
-
-
-```xml
     <echo message=“${tfs-vc::has-confilcts(pathfilter, recursive)}“/>
-```
 
-
-
-```xml
   </do>
-```
 
-
-
-```xml
 </tfsblock>
-```
 
-
-
-```xml
 <tfscheckin
 ```
-
 
   comment=“”
 
@@ -232,38 +139,17 @@ I have been focused on getting our build infrastructure working with Visual Stud
 
 ```xml
   <localitems>
-```
 
-
-
-```xml
     <include name=“”/>
-```
 
-
-
-```xml
   </localitems>
-```
 
-
-
-```xml
   <tfsserverconnection refid=“tfs“/>
-```
 
-
-
-```xml
 </tfscheckin>
-```
 
-
-
-```xml
 <tfscheckout
 ```
-
 
   localitem=“”
 
@@ -276,38 +162,17 @@ I have been focused on getting our build infrastructure working with Visual Stud
 
 ```xml
   <localitems>
-```
 
-
-
-```xml
     <include name=“”/>
-```
 
-
-
-```xml
   </localitems>
-```
 
-
-
-```xml
   <tfsserverconnection refid=“tfs“/>
-```
 
-
-
-```xml
 </tfscheckout>
-```
 
-
-
-```xml
 <tfsdeleteworkspace
 ```
-
 
   workspacename=“”
 
@@ -316,20 +181,11 @@ I have been focused on getting our build infrastructure working with Visual Stud
 
 ```xml
   <tfsserverconnection refid=“tfs“/>
-```
 
-
-
-```xml
 </tfsdeleteworkspace>
-```
 
-
-
-```xml
 <tfsget
 ```
-
 
   all=“”
 
@@ -350,26 +206,13 @@ I have been focused on getting our build infrastructure working with Visual Stud
 
 ```xml
   <tfsserverconnection refid=“tfs“/>
-```
 
-
-
-```xml
   <versionspec refid=“ver“/>
-```
 
-
-
-```xml
 </tfsget>
-```
 
-
-
-```xml
 <tfshistory
 ```
-
 
   itemspec=“”
 
@@ -382,32 +225,15 @@ I have been focused on getting our build infrastructure working with Visual Stud
 
 ```xml
   <tfsserverconnection refid=“tfs“/>
-```
 
-
-
-```xml
   <fromversionspec refid=“ver“/>
-```
 
-
-
-```xml
   <toversionspec refid=“ver“/>
-```
 
-
-
-```xml
 </tfshistory>
-```
 
-
-
-```xml
 <tfslabel
 ```
-
 
   child=“”
 
@@ -428,26 +254,13 @@ I have been focused on getting our build infrastructure working with Visual Stud
 
 ```xml
   <tfsserverconnection refid=“tfs“/>
-```
 
-
-
-```xml
   <versionspec refid=“ver“/>
-```
 
-
-
-```xml
 </tfslabel>
-```
 
-
-
-```xml
 <tfsmapworkspace
 ```
-
 
   comment=“”
 
@@ -458,14 +271,9 @@ I have been focused on getting our build infrastructure working with Visual Stud
 
 ```xml
   <tfsserverconnection refid=“tfs“/>
-```
 
-
-
-```xml
 </tfsmapworkspace>
 ```
-
 
 ![](images/2007/02/WindowsLiveWriter/ClosingIn_14082/ccnet41.gif)I have added two plugins to CCNet and altered a third.  The two that I added, vstsbychangesetTrigger and vstsbychangesetSourceControl, subscribe to the checkin event, TFS will call a WCF soap service hosted in the CCNet process on the port specified.  This means that triggering a build is much more responsive and safe (as in concurrency).  As well each build will work with just one person’s changes.  The [third plugin](http://www.codeplex.com/TFSCCNetPlugin) is [Martin Woodward’s](http://www.woodwardweb.com/) with a few modifications.  The main one being that it remembers the latest changeset from when the build starts, during the get modification phase, and will use this in the get and label operations.  Again this is to prevent concurrency issues.
 
@@ -473,7 +281,6 @@ I have been focused on getting our build infrastructure working with Visual Stud
 ```xml
 <vstsbychangesetTrigger
 ```
-
 
   port=“4567“
 
@@ -495,7 +302,6 @@ I have been focused on getting our build infrastructure working with Visual Stud
 ```xml
 <vstsbychangesetSourceControl 
 ```
-
 
   applyLabel=“false“
 
@@ -531,7 +337,6 @@ I have been focused on getting our build infrastructure working with Visual Stud
 ```xml
 <vsts 
 ```
-
 
   applyLabel=“true“
 

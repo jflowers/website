@@ -24,116 +24,43 @@ That is not a clear enough picture though.  Depends is not just for defining a 
 
 ```xml
 <?xml version=“1.0“ encoding=“UTF-8“?>
-```
 
-
-
-```xml
 <project name=“scratch“ default=“deploy“ basedir=“.“ >
-```
 
-
-
-```xml
   <target name=“deploy“ depends=“recompile,package“>
-```
 
-
-
-```xml
     <echo>deploy the missile</echo>
-```
 
-
-
-```xml
   </target>
-```
 
-
-
-```xml
   <target name=“package“ depends=“unittest“>
-```
 
-
-
-```xml
     <echo>package the missile</echo>
-```
 
-
-
-```xml
   </target>
-```
 
-
-
-```xml
   <target name=“unittest“ depends=“compile“>
-```
 
-
-
-```xml
     <echo>test the missile</echo>
-```
 
-
-
-```xml
   </target>
-```
 
-
-
-```xml
   <target name=“compile“ >
-```
 
-
-
-```xml
     <echo>compile the missile</echo>
-```
 
-
-
-```xml
   </target>
-```
 
-
-
-```xml
   <target name=“clean“>
-```
 
-
-
-```xml
     <echo>clean missile</echo>
-```
 
-
-
-```xml
   </target>
-```
 
-
-
-```xml
   <target name=“recompile“ depends=“clean,compile“/>
-```
 
-
-
-```xml
 </project>
 ```
-
 
 The output from calling the target deploy would be:
 
@@ -189,140 +116,51 @@ What would be ideal would be the following.
 
 ```xml
 <target name=“deploy“>
-```
 
-
-
-```xml
   <call target=“recompile“ once=“true“/>
-```
 
-
-
-```xml
   <call target=“package“ once=“true“/>
-```
 
-
-
-```xml
   <echo>deploy the missile</echo>
-```
 
-
-
-```xml
 </target>
-```
 
-
-
-```xml
 <target name=“package“>
-```
 
-
-
-```xml
   <call target=“unittest“ once=“true“/>
-```
 
-
-
-```xml
   <echo>package the missile</echo>
-```
 
-
-
-```xml
 </target>
-```
 
-
-
-```xml
 <target name=“unittest“>
-```
 
-
-
-```xml
   <call target=“compile“ once=“true“/>
-```
 
-
-
-```xml
   <echo>test the missile</echo>
-```
 
-
-
-```xml
 </target>
-```
 
-
-
-```xml
 <target name=“compile“ >
-```
 
-
-
-```xml
   <echo>compile the missile</echo>
-```
 
-
-
-```xml
 </target>
-```
 
-
-
-```xml
 <target name=“clean“>
-```
 
-
-
-```xml
   <echo>clean missile</echo>
-```
 
-
-
-```xml
 </target>
-```
 
-
-
-```xml
 <target name=“recompile“>
-```
 
-
-
-```xml
   <call target=“clean“ once=“true“/>
-```
 
-
-
-```xml
   <call target=“compile“ once=“true“/>
-```
 
-
-
-```xml
 </target>
 ```
-
 
 With the output:
 
@@ -348,192 +186,73 @@ I implemented the call task with a macrodef that checks if the target has been r
 
 ```xml
 <macrodef name=“call“>
-```
 
-
-
-```xml
   <attribute name=“target“/>
-```
 
-
-
-```xml
   <attribute name=“if“ default=“true“/>
-```
 
-
-
-```xml
   <attribute name=“unless“ default=“false“/>
-```
 
-
-
-```xml
   <attribute name=“once“ default=“false“/>
-```
 
-
-
-```xml
   <sequential>
-```
 
-
-
-```xml
     <if>
-```
 
-
-
-```xml
       <and>
-```
 
-
-
-```xml
         <istrue value=“@{if}“ />
-```
 
-
-
-```xml
         <isfalse value=“@{unless}“ />
-```
 
-
-
-```xml
         <or>
-```
 
-
-
-```xml
           <and>
-```
 
-
-
-```xml
             <istrue value=“@{once}“/>
-```
 
-
-
-```xml
             <not>
-```
 
-
-
-```xml
               <isset property=“${ant.project.name}.Target.@{target}.Executed“/>
-```
 
-
-
-```xml
             </not>
-```
 
-
-
-```xml
           </and>
-```
 
-
-
-```xml
           <isfalse value=“@{once}“/>
-```
 
-
-
-```xml
         </or>
-```
 
-
-
-```xml
       </and>
-```
-
 
       <then>
 
-
-```xml
         <runtarget target=“@{target}“/>
-```
 
-
-
-```xml
       </then>
-```
 
-
-
-```xml
     </if>
-```
 
-
-
-```xml
   </sequential>
-```
 
-
-
-```xml
 </macrodef>
 ```
-
 
 This macrodef depends on a property being set after the successful execution of every target.  To accomplish this I created a simple logger to set a property for each target called; source is at the end of the post.  I also made sure that the logger was loaded with the script task at the beginning of the Ant project file.
 
 
 ```xml
 <?xml version=“1.0“ encoding=“UTF-8“?>
-```
 
-
-
-```xml
 <project name=“scratch“ default=“deploy“ basedir=“.“ >
-```
 
-
-
-```xml
   <taskdef resource=“net/sf/antcontrib/antcontrib.properties“ />
-```
 
-
-
-```xml
   <typedef resource=“AgilexAnt.properties“ />
-```
 
-
-
-```xml
   <script language=“javascript“>
-```
 
-
-
-```xml
     <![CDATA[
-```
-
 
       importClass(Packages.com.agilex.ant.TargetListener);
 
@@ -545,41 +264,18 @@ This macrodef depends on a property being set after the successful execution of 
 
     ]]>
 
-
-```xml
   </script>
-```
 
-
-
-```xml
   <target name=“deploy“>
-```
 
-
-
-```xml
     <call target=“recompile“ once=“true“/>
-```
 
-
-
-```xml
     <call target=“package“ once=“true“/>
-```
 
-
-
-```xml
     <echo>deploy the missile</echo>
-```
 
-
-
-```xml
   </target>
 ```
-
 
   …
 
@@ -588,38 +284,17 @@ Once you have this functionality you can begin to orchestrate in more robust way
 
 ```xml
 <property name=“env.dev“ value=“true“/>
-```
 
-
-
-```xml
 <target name=“deploy“>
-```
 
-
-
-```xml
   <call target=“recompile“ once=“true“ if=“${env.dev}“/>
-```
 
-
-
-```xml
   <call target=“package“ once=“true“ if=“${env.dev}“/>
-```
 
-
-
-```xml
   <echo>deploy the missile</echo>
-```
 
-
-
-```xml
 </target>
 ```
-
 
 > c:\>ant -f scratch.build.xml -Denv.dev=false  
 > Buildfile: scratch.build.xml

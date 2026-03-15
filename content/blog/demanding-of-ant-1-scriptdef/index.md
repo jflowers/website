@@ -26,60 +26,27 @@ If you are not familiar with the scriptdef task in Ant you should read the help 
 
 ```xml
 <?xml version=“1.0“ encoding=“UTF-8“?>
-```
 
-
-
-```xml
 <project name=“scratch“ default=“play“ basedir=“.“ >
-```
 
-
-
-```xml
   <target name=“play“>
-```
 
-
-
-```xml
     <say.hello/>
-```
 
-
-
-```xml
   </target>
-```
 
-
-
-```xml
   <scriptdef name=“say.hello“ language=“javascript“>
-```
 
-
-
-```xml
     <![CDATA[
-```
-
 
       self.log(”hello”);
 
     ]]>
 
-
-```xml
   </scriptdef>
-```
 
-
-
-```xml
 </project>
 ```
-
 
 Executing this script will output:
 
@@ -96,14 +63,9 @@ You can import Java classes into the JavaScript with the importClass method: imp
 
 ```xml
 <scriptdef name=“explore.self“ language=“javascript“>
-```
 
-
-
-```xml
   <![CDATA[
 ```
-
 
   for (member in self)
 
@@ -119,7 +81,6 @@ You can import Java classes into the JavaScript with the importClass method: imp
 ```xml
 </scriptdef>
 ```
-
 
 > [explore.self] project  
 > [explore.self] getText  
@@ -171,86 +132,32 @@ Self provides a reference to the Ant object project; pretty much the root of the
 
 ```xml
 <?xml version=“1.0“ encoding=“UTF-8“?>
-```
 
-
-
-```xml
 <project name=“scratch“ default=“play“ basedir=“.“ >
-```
 
-
-
-```xml
   <taskdef resource=“net/sf/antcontrib/antcontrib.properties“ />
-```
 
-
-
-```xml
   <target name=“play“>
-```
 
-
-
-```xml
     <var name=“Log.Directory.Path“ value=“C:\Temp\Play“/>
-```
 
-
-
-```xml
     <start.logger/>
-```
 
-
-
-```xml
     <echo>T minus</echo>
-```
 
-
-
-```xml
     <echo>3</echo>
-```
 
-
-
-```xml
     <echo>2</echo>
-```
 
-
-
-```xml
     <echo>1</echo>
-```
 
-
-
-```xml
     <echo>blast off…</echo>
-```
 
-
-
-```xml
   </target>
-```
 
-
-
-```xml
   <scriptdef name=“start.logger“ language=“javascript“>
-```
 
-
-
-```xml
     <![CDATA[
-```
-
 
         importClass(Packages.org.apache.tools.ant.DefaultLogger);
 
@@ -300,17 +207,10 @@ Self provides a reference to the Ant object project; pretty much the root of the
 
     ]]>
 
-
-```xml
   </scriptdef>
-```
 
-
-
-```xml
 </project>
 ```
-
 
 This is the console output:
 

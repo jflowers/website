@@ -21,8 +21,6 @@ I have been working to bring the build time for our developer facing build to so
 
 ```xml
 <asyncexec taskname=“UnitTests“
-```
-
 
       program=“${NantProcess}“
 
@@ -30,297 +28,112 @@ I have been working to bring the build time for our developer facing build to so
 
       resultproperty=“UnitTestsResult“>
 
-
-```xml
   <arg line=“-buildfile:.\Packages\MSTest\UnitTest.Target.xml“/>
-```
 
-
-
-```xml
   <arg line=‘@”${Common.PropertiesFile}”‘ />
-```
 
-
-
-```xml
   <arg line=“UnitTest.RunTests“/>
-```
 
-
-
-```xml
   <arg line=“-logger:NAnt.Core.XmlLogger“/>
-```
 
-
-
-```xml
   <arg line=‘-logfile:”${Common.ReportDirectory}\UnitTests.xml”‘ />
-```
 
-
-
-```xml
 </asyncexec>
-```
 
-
-
-```xml
 <waitforexit>
-```
 
-
-
-```xml
   <tasknames>
-```
 
-
-
-```xml
     <string value=“UnitTests“/>
-```
 
-
-
-```xml
   </tasknames>
-```
 
-
-
-```xml
 </waitforexit>
-```
 
-
-
-```xml
 <if test=“${int::parse(UnitTestsResult) != 0}“>
-```
 
-
-
-```xml
   <fail message=“Atleast one unit test failed!“/>
-```
 
-
-
-```xml
 </if>
 ```
-
 
 Functionally this will behave the same as simply calling that task exec.  Things get interesting when you start doing more:
 
 
 ```xml
 <asyncexec taskname=“UnitTests“ program=“${NantProcess}“ failonerror=“False“ resultproperty=“UnitTestsResult“>
-```
 
-
-
-```xml
   <arg line=“-buildfile:.\Packages\MSTest\UnitTest.Target.xml“/>
-```
 
-
-
-```xml
   <arg line=‘@”${Common.PropertiesFile}”‘ />
-```
 
-
-
-```xml
   <arg line=“UnitTest.RunTests“/>
-```
 
-
-
-```xml
   <arg line=“-logger:NAnt.Core.XmlLogger“/>
-```
 
-
-
-```xml
   <arg line=‘-logfile:”${Common.ReportDirectory}\UnitTests.xml”‘ />
-```
 
-
-
-```xml
 </asyncexec>
-```
 
-
-
-```xml
 <asyncexec taskname=“Simian“ program=“${NantProcess}“ failonerror=“False“>
-```
 
-
-
-```xml
   <arg line=“-buildfile:.\Packages\Simian\Simian.Target.xml“/>
-```
 
-
-
-```xml
   <arg line=‘@”${Common.PropertiesFile}”‘ />
-```
 
-
-
-```xml
   <arg line=“Simian.Run“/>
-```
 
-
-
-```xml
   <arg line=“-logger:NAnt.Core.XmlLogger“/>
-```
 
-
-
-```xml
   <arg line=‘-logfile:”${Common.ReportDirectory}\Simian.xml”‘ />
-```
 
-
-
-```xml
 </asyncexec>
-```
 
-
-
-```xml
 <asyncexec taskname=“NDepend“ program=“${NantProcess}“ failonerror=“False“>
-```
 
-
-
-```xml
   <arg line=“-buildfile:.\Packages\NDepend\NDepend.Target.xml“/>
-```
 
-
-
-```xml
   <arg line=‘@”${Common.PropertiesFile}”‘ />
-```
 
-
-
-```xml
   <arg line=“nDepend.Calculate“/>
-```
 
-
-
-```xml
   <arg line=“-logger:NAnt.Core.XmlLogger“/>
-```
 
-
-
-```xml
   <arg line=‘-logfile:”${Common.ReportDirectory}\NDepend.xml”‘ />
-```
 
-
-
-```xml
 </asyncexec>
-```
 
-
-
-```xml
 <waitforexit>
-```
 
-
-
-```xml
   <tasknames>
-```
 
-
-
-```xml
     <string value=“Simian“/>
-```
 
-
-
-```xml
     <string value=“UnitTests“/>
-```
 
-
-
-```xml
     <string value=“NDepend“/>
-```
 
-
-
-```xml
   </tasknames>
-```
 
-
-
-```xml
 </waitforexit>
-```
 
-
-
-```xml
 <if test=“${int::parse(UnitTestsResult) != 0}“>
-```
 
-
-
-```xml
   <fail message=“Atleast one unit test failed!“/>
-```
 
-
-
-```xml
 </if>
 ```
-
 
  This saved about 35 seconds on our build server from the old way:
 
 
 ```xml
 <call target=“UnitTest.RunTests“/>
-```
 
-
-
-```xml
 <call target=“Simian.Run“/>
-```
 
-
-
-```xml
 <call target=“nDepend.Calculate“/>
 ```
-
 
 I spent some time playing around with how best to use this.  We use CI Factory on this project.  I bring this up because it will give some background to how the build script is setup.  There is a target analogous to sub Main.  In this Main target targets from Packages are called.  The table below contains timing information about those targets:
 
@@ -355,7 +168,6 @@ Below is the nant script main target.  It has been color coded to match the tab
 <target name=“Triggered“ depends=“SetUps“ >
 ```
 
-
   <trycatch>
 
     <try>
@@ -363,538 +175,185 @@ Below is the nant script main target.  It has been color coded to match the tab
 
 ```xml
       <description>Begin Main Build</description>
-```
 
-
-
-```xml
       <description>Begin Pre Build Actions</description>
-```
 
-
-
-```xml
       <call target=“SourceModificationReport.ConsolidateReports“ />
-```
 
-
-
-```xml
       <call target=“Tracker.Queries“ />
-```
 
-
-
-```xml
 <asyncexec taskname=“TrackerReport“ program=“${NantProcess}“ failonerror=“False“>
-```
 
-
-
-```xml
         <arg line=“-buildfile:.\Packages\VisualSourceSafe\VSS.Target.xml“/>
-```
 
-
-
-```xml
         <arg line=‘@”${Common.PropertiesFile}”‘ />
-```
 
-
-
-```xml
         <arg line=“Tracker.Report“/>
-```
 
-
-
-```xml
         <arg line=“-D:Tracker.QueryScrList=${Tracker.QueryScrList}“ />
-```
 
-
-
-```xml
         <arg line=“-logger:NAnt.Core.XmlLogger“/>
-```
 
-
-
-```xml
         <arg line=‘-logfile:”${Common.ReportDirectory}\TrackerReport.xml”‘ />
-```
 
-
-
-```xml
       </asyncexec>
-```
 
-
-
-```xml
       <description>End Pre Build Actions</description>
-```
 
-
-
-```xml
       <description>Begin Clean Up Actions</description>
-```
 
-
-
-```xml
 <asyncexec taskname=“GetOfThirdPartyDirectory“ program=“${NantProcess}“ failonerror=“False“
-```
-
 
                 resultproperty=“GetOfThirdPartyDirectoryResult“>
 
-
-```xml
         <arg line=“-buildfile:.\Packages\VisualSourceSafe\VSS.Target.xml“/>
-```
 
-
-
-```xml
         <arg line=‘@”${Common.PropertiesFile}”‘ />
-```
 
-
-
-```xml
         <arg line=“SourceControl.GetOfThirdPartyDirectory“/>
-```
 
-
-
-```xml
         <arg line=“-logger:NAnt.Core.XmlLogger“/>
-```
 
-
-
-```xml
         <arg line=‘-logfile:”${Common.ReportDirectory}\GetOfThirdPartyDirectory.xml”‘ />
-```
 
-
-
-```xml
       </asyncexec>
-```
 
-
-
-```xml
 <call target=‘SourceControl.GetOfProductDirectory‘/>
-```
 
-
-
-```xml
       <waitforexit>
-```
 
-
-
-```xml
         <tasknames>
-```
 
-
-
-```xml
 <string value=“GetOfThirdPartyDirectory“/>
-```
 
-
-
-```xml
         </tasknames>
-```
 
-
-
-```xml
       </waitforexit>
-```
 
-
-
-```xml
       <if test=“${int::parse(GetOfThirdPartyDirectoryResult) != 0}“>
-```
 
-
-
-```xml
         <fail message=“Get latest of the Third Party directory failed!“/>
-```
 
-
-
-```xml
       </if>
-```
 
-
-
-```xml
       <description>End Clean Up Actions</description>
-```
 
-
-
-```xml
       <description>Begin Compile Actions</description>
-```
 
-
-
-```xml
       <touch millis=“1“ verbose=“true“>
-```
 
-
-
-```xml
         <fileset>
-```
 
-
-
-```xml
           <include name=“${ProductDirectory}\ProjectInfo.\*“/>
-```
 
-
-
-```xml
           <include name=“${ProductDirectory}\\*\*\AssemblyInfo.\*“/>
-```
 
-
-
-```xml
         </fileset>
-```
 
-
-
-```xml
       </touch>
-```
 
-
-
-```xml
       <delete dir=“${Compile.Bin}“ if=“${directory::exists(Compile.Bin)}“ />
-```
 
-
-
-```xml
       <call target=“Compile.CompileSource“ />
-```
 
-
-
-```xml
       <description>End Compile Actions</description>
-```
 
-
-
-```xml
       <description>Begin Varification Actions</description>
-```
 
-
-
-```xml
 <asyncexec taskname=“NDepend“ program=“${BuildDirectory}\nAnt\bin\nant.exe“ failonerror=“False“>
-```
 
-
-
-```xml
         <arg line=“-buildfile:.\Packages\NDepend\NDepend.Target.xml“/>
-```
 
-
-
-```xml
         <arg line=‘@”${Common.PropertiesFile}”‘ />
-```
 
-
-
-```xml
         <arg line=“nDepend.Calculate“/>
-```
 
-
-
-```xml
         <arg line=“-logger:NAnt.Core.XmlLogger“/>
-```
 
-
-
-```xml
         <arg line=‘-logfile:”${Common.ReportDirectory}\NDepend.xml”‘ />
-```
 
-
-
-```xml
       </asyncexec>
-```
 
-
-
-```xml
 <asyncexec taskname=“UnitTests“ program=“${NantProcess}“ failonerror=“False“ resultproperty=“UnitTestsResult“>
-```
 
-
-
-```xml
         <arg line=“-buildfile:.\Packages\MSTest\UnitTest.Target.xml“/>
-```
 
-
-
-```xml
         <arg line=‘@”${Common.PropertiesFile}”‘ />
-```
 
-
-
-```xml
         <arg line=“UnitTest.RunTests“/>
-```
 
-
-
-```xml
         <arg line=“-logger:NAnt.Core.XmlLogger“/>
-```
 
-
-
-```xml
         <arg line=‘-logfile:”${Common.ReportDirectory}\UnitTests.xml”‘ />
-```
 
-
-
-```xml
       </asyncexec>
-```
 
-
-
-```xml
 <asyncexec taskname=“Simian“ program=“${NantProcess}“ failonerror=“False“>
-```
 
-
-
-```xml
         <arg line=“-buildfile:.\Packages\Simian\Simian.Target.xml“/>
-```
 
-
-
-```xml
         <arg line=‘@”${Common.PropertiesFile}”‘ />
-```
 
-
-
-```xml
         <arg line=“Simian.Run“/>
-```
 
-
-
-```xml
         <arg line=“-logger:NAnt.Core.XmlLogger“/>
-```
 
-
-
-```xml
         <arg line=‘-logfile:”${Common.ReportDirectory}\Simian.xml”‘ />
-```
 
-
-
-```xml
       </asyncexec>
-```
 
-
-
-```xml
       <waitforexit>
-```
 
-
-
-```xml
         <tasknames>
-```
 
-
-
-```xml
 <string value=“UnitTests“/>
-```
 
-
-
-```xml
         </tasknames>
-```
 
-
-
-```xml
       </waitforexit>
-```
 
-
-
-```xml
       <if test=“${int::parse(UnitTestsResult) != 0}“>
-```
 
-
-
-```xml
         <fail message=“Atleast one unit test failed!“/>
-```
 
-
-
-```xml
       </if>
-```
 
-
-
-```xml
       <description>End Varification Actions</description>
-```
 
-
-
-```xml
       <description>Begin Post Build Actions</description>
-```
 
-
-
-```xml
       <call target=“Tracker.MoveTrackersTo“/>
-```
 
-
-
-```xml
       <waitforexit>
-```
 
-
-
-```xml
         <tasknames>
-```
 
-
-
-```xml
 <string value=“Simian“/>
-```
 
-
-
-```xml
           <string value=“NDepend“/>
-```
 
-
-
-```xml
 <string value=“TrackerReport“/>
-```
 
-
-
-```xml
         </tasknames>
-```
 
-
-
-```xml
       </waitforexit>
-```
 
-
-
-```xml
       <description>End Post Build Actions</description>
-```
 
-
-
-```xml
       <description>End Main Build</description>
-```
 
-
-
-```xml
     </try>
-```
 
-
-
-```xml
     <finally>
-```
 
-
-
-```xml
       <call target=“TearDowns“/>
-```
 
-
-
-```xml
     </finally>
-```
 
-
-
-```xml
   </trycatch>
-```
 
-
-
-```xml
 </target>
 ```
-
 
 **Download these tasks and more in** [**NAnt Stuff**](http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=select&id=2)**.**
 

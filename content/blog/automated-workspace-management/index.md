@@ -42,26 +42,13 @@ First you may not be able to reliably, or legally, script the download of an ins
 
 ```xml
 <property name=“Java.Installer.File.Name“ value=“jdk-6u13-windows-i586-p.exe“/>
-```
 
-
-
-```xml
 <property name=“Java.Installer.File.Path“ value=“C:\Temp\${Java.Installer.File.Name}“/>
-```
 
-
-
-```xml
 <property name=“Java.Installer.Download.URL“ value=“${Workspace.Ftp.Url}${Java.Installer.File.Name}“/>
-```
 
-
-
-```xml
 <get
 ```
-
 
   src=“${Java.Installer.Download.URL}“
 
@@ -76,14 +63,9 @@ Second you need to silently execute the installer.  Most installer technologies
 
 ```xml
 <property name=“Java.Install.Path“ value=“C:\Java\jdk1.6.0\_13“/>
-```
 
-
-
-```xml
 <exec
 ```
-
 
   workingdir=“${path::get-directory-name(Java.Installer.File.Path)}“
 
@@ -100,20 +82,11 @@ You will eventually run into a situation where you need to reverse engineer an i
 
 ```xml
 <largeproperty name=“SfxConfig.Content“>
-```
 
-
-
-```xml
   <value expand=“true“ xml=“false“>
-```
 
-
-
-```xml
     <![CDATA[;The comment below contains SFX script commands
 ```
-
 
 Path=C:\FuzzyBunnies
 
@@ -126,74 +99,29 @@ Title=My Example Installer]]>
 
 ```xml
   </value>
-```
 
-
-
-```xml
 </largeproperty>
-```
 
-
-
-```xml
 <property name=“SfxConfig.FilePath“ value=“C:\Temp\SfxConfig.txt“/>
-```
 
-
-
-```xml
 <echo message=“${SfxConfig.Content}“ file=“${SfxConfig.FilePath}“/>
-```
 
-
-
-```xml
 <property name=“InstallerZip.FileName“ value=“Example-Installer.zip“/>
-```
 
-
-
-```xml
 <property name=‘InstallerZip.FilePath‘ value=‘C:\Temp\${InstallerZip.FileName}‘/>
-```
 
-
-
-```xml
 <zip zipfile=“${InstallerZip.FilePath}“ verbose=“True“ >
-```
 
-
-
-```xml
   <fileset>
-```
 
-
-
-```xml
     <include name=“some stuff“/>
-```
 
-
-
-```xml
   </fileset>
-```
 
-
-
-```xml
 </zip>
-```
 
-
-
-```xml
 <exec
 ```
-
 
   program=“${WinRarProgramPath}“
 

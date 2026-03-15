@@ -28,7 +28,6 @@ The team I am working with at the moment has decided to use MSTest as their xUni
 </mstest>
 ```
 
-
 Notice how as long as the dev team places all test projects in the unit test directory, specified in the property UnitTest.TestPath, and follows the naming convetion Test.\*.dll that script will not need alteration.  This makes for light maintenance.
 
 So lets take a look at mstest.exe sub main to get an idea of what the NAnt task is going to need to do.

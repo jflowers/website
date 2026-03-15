@@ -56,7 +56,6 @@ This example is not contrived.  I have taken it from a project that I worked on
 <Test()> \_
 ```
 
-
 Public Sub SendUnWrapped()
 
 Me.Channel.SendMessage(Me.MsgSentWrapped)

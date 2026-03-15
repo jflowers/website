@@ -26,98 +26,37 @@ I quickly finished the port of the stats plugin to CCNET 1.0 and set Grant’s C
 
 ```xml
 <integration build-label=“Team1-1.0.0.647“ status=“Success“ day=“03“ month=“Nov“ year=“2006“>
-```
 
-
-
-```xml
 <statistic name=“BuildErrorType“>
-```
 
-
-
-```xml
 </statistic>
-```
 
-
-
-```xml
 <statistic name=“BuildErrorMessage“>
-```
 
-
-
-```xml
 </statistic>
-```
 
-
-
-```xml
 <statistic name=“StartTime“>11/3/2006 2:36:25 PM</statistic>
-```
 
-
-
-```xml
 <statistic name=“Duration“>00:11:16</statistic>
-```
 
-
-
-```xml
 <statistic name=“ProjectName“>dod.ahlta team1</statistic>
-```
 
-
-
-```xml
 <statistic name=“mainsubmitter“>Jdegraffenried</statistic>
-```
 
-
-
-```xml
 <statistic name=“submittercount“>1</statistic>
-```
 
-
-
-```xml
 <statistic name=“buildcondition“>IfModificationExists</statistic>
-```
 
-
-
-```xml
 <statistic name=“forcedby“>
-```
 
-
-
-```xml
 </statistic>
-```
 
-
-
-```xml
 <statistic name=“modificationcount“>8</statistic>
-```
 
-
-
-```xml
 <statistic name=“trackercount“>1</statistic>
-```
 
-
-
-```xml
 </integration>
 ```
-
 
 Adding just this little node becomes an increasingly expensive operation as the file grows in size. The operation got too expensive and I received an out of memory exception. This combined with the limited extensibility of the stats plugin prompted me to roll my own solution.
 
@@ -126,20 +65,11 @@ I knew I wanted to append. This was the key. Appending to the end of a file was 
 
 ```xml
 <?xml version=“1.0“?>
-```
 
-
-
-```xml
 <!DOCTYPE statistics [
-```
 
-
-
-```xml
 <!ENTITY content SYSTEM “..\..\Installs\MainAnalyticsReportContent.xml“>
 ```
-
 
 ]>
 
@@ -148,14 +78,12 @@ I knew I wanted to append. This was the key. Appending to the end of a file was 
 <statistics>
 ```
 
-
 &content
 
 
 ```xml
 </statistics>
 ```
-
 
 The file name has been changed as well to MainAnalyticsReport.xml. Now we have a file that we can append to: MainAnalyticsReportContent.xml.
 
@@ -181,350 +109,147 @@ The chart data format proved to be another issue to be overcome. The format is n
 
 ```xml
 <chart>
-```
 
-
-
-```xml
 <chart\_data>
-```
 
-
-
-```xml
 <row>
-```
 
-
-
-```xml
 <null/>
-```
 
-
-
-```xml
 <string>2001</string>
-```
 
-
-
-```xml
 <string>2002</string>
-```
 
-
-
-```xml
 <string>2003</string>
-```
 
-
-
-```xml
 <string>2004</string>
-```
 
-
-
-```xml
 </row>
-```
 
-
-
-```xml
 <row>
-```
 
-
-
-```xml
 <string>Region A</string>
-```
 
-
-
-```xml
 <number>5</number>
-```
 
-
-
-```xml
 <number>10</number>
-```
 
-
-
-```xml
 <number>30</number>
-```
 
-
-
-```xml
 <number>63</number>
-```
 
-
-
-```xml
 </row>
-```
 
-
-
-```xml
 <row>
-```
 
-
-
-```xml
 <string>Region B</string>
-```
 
-
-
-```xml
 <number>100</number>
-```
 
-
-
-```xml
 <number>20</number>
-```
 
-
-
-```xml
 <number>65</number>
-```
 
-
-
-```xml
 <number>55</number>
-```
 
-
-
-```xml
 </row>
-```
 
-
-
-```xml
 <row>
-```
 
-
-
-```xml
 <string>Region C</string>
-```
 
-
-
-```xml
 <number>56</number>
-```
 
-
-
-```xml
 <number>21</number>
-```
 
-
-
-```xml
 <number>5</number>
-```
 
-
-
-```xml
 <number>90</number>
-```
 
-
-
-```xml
 </row>
-```
 
-
-
-```xml
 </chart\_data>
-```
 
-
-
-```xml
 </chart>
 ```
-
 
 Again this situation looks to be solved best with DTD entities and appending. I created a chart data file that looked like:
 
 
 ```xml
 <?xml version=“1.0“ encoding=“utf-8“?>
-```
 
-
-
-```xml
 <!DOCTYPE chart [
-```
 
-
-
-```xml
 <!ENTITY XAxis SYSTEM “..\..\Installs\SuccessProgressXAxis.xml“>
-```
 
-
-
-```xml
 <!ENTITY Success SYSTEM “..\..\Installs\SuccessProgressSuccessful.xml“>
-```
 
-
-
-```xml
 <!ENTITY Fail SYSTEM “..\..\Installs\SuccessProgressFailed.xml“>
-```
 
-
-
-```xml
 <!ENTITY Exception SYSTEM “..\..\Installs\SuccessProgressException.xml“>
 ```
-
 
 ]>
 
 
 ```xml
 <chart>
-```
 
-
-
-```xml
 <chart\_data>
-```
 
-
-
-```xml
 <row>
-```
 
-
-
-```xml
 <null/>
 ```
-
 
 &XAxis;
 
 
 ```xml
 </row>
-```
 
-
-
-```xml
 <row>
-```
 
-
-
-```xml
 <string>Success</string>
 ```
-
 
 &Success
 
 
 ```xml
 </row>
-```
 
-
-
-```xml
 <row>
-```
 
-
-
-```xml
 <string>Fail</string>
 ```
-
 
 &Fail
 
 
 ```xml
 </row>
-```
 
-
-
-```xml
 <row>
-```
 
-
-
-```xml
 <string>Exception</string>
 ```
-
 
 &Exception
 
 
 ```xml
 </row>
-```
 
-
-
-```xml
 </chart\_data>
-```
 
-
-
-```xml
 <chart\_type>line</chart\_type>
-```
 
-
-
-```xml
 <axis\_category skip=‘100‘ />
-```
 
-
-
-```xml
 </chart>
 ```
-
 
 This should produce a line graph that shows the cumulative counts for successful, failed, and exception builds. There is one last problem to solve to create an xsl to produce the 4 files referenced by the chart data file. To produce each file I have to create 4 separate xsl files executing each one separately. That sounds to consume more time than I want to in the build. I looked around and found that exsl defines an element to output to multiple files: [<exsl:document>](http://www.exslt.org/exsl/elements/document/index.html).
 
@@ -532,7 +257,6 @@ This should produce a line graph that shows the cumulative counts for successful
 ```xml
 <exsl:document
 ```
-
 
 href = { “uri-reference“ }
 
@@ -559,28 +283,18 @@ media-type = { “string“ }>
 
 ```xml
 <–Content:template–>
-```
 
-
-
-```xml
 </exsl:document>
 ```
-
 
 This got me part of the way there. I still needed to append to them. After some more looking around I found an MSDN article, [Producing Multiple Outputs from an XSL Transformation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnexxml/html/xml06162003.asp), with code for an implementation of exsl:document. This gave me an easy in to add append to the implementation. I remembered seeing a post by Scott a long time ago about an Xml fragment writer: [XmlFragmentWriter - Omiting the Xml Declaration and the XSD and XSI namespaces](http://www.hanselman.com/blog/XmlFragmentWriterOmitingTheXmlDeclarationAndTheXSDAndXSINamespaces.aspx). I added the fragment writer to the msdn code plus some of my own. I found that the fragment writer was only good for one type of fragment. The kind with one root node. I had to add one more override to allow for multinode fragments. I added this to the mix as a nant task replacing the nant core task style in the script. Then I created the xsl script to create all the files.
 
 
 ```xml
 <?xml version=“1.0“?>
-```
 
-
-
-```xml
 <xsl:stylesheet version=“1.0“
 ```
-
 
 xmlns:xsl=“http://www.w3.org/1999/XSL/Transform“
 
@@ -589,158 +303,57 @@ xmlns:exsl=“http://exslt.org/common“ exclude-result-prefixes=“exsl“>
 
 ```xml
 <xsl:output method=“html“/>
-```
 
-
-
-```xml
 <xsl:variable name=“BuildAttemptCount“ select=“count(/statistics/integration)“/>
-```
 
-
-
-```xml
 <xsl:variable name=“SuccessfulBuildCount“ select=“count(/statistics/integration[@status=’Success’])“/>
-```
 
-
-
-```xml
 <xsl:variable name=“FailedBuildCount“ select=“count(/statistics/integration[@status=’Failure’])“/>
-```
 
-
-
-```xml
 <xsl:variable name=“ExceptionBuildCount“ select=“count(/statistics/integration[@status=’Exception’])“/>
-```
 
-
-
-```xml
 <xsl:template match=“/“>
-```
 
-
-
-```xml
 <number>
-```
 
-
-
-```xml
 <xsl:value-of select=“$BuildAttemptCount“/>
-```
 
-
-
-```xml
 </number>
-```
 
-
-
-```xml
 <exsl:document href=“..\..\Installs\SuccessProgressSuccessful.xml“ fragment=“yes“ append=“yes“ >
-```
 
-
-
-```xml
 <number>
-```
 
-
-
-```xml
 <xsl:value-of select=“$SuccessfulBuildCount“/>
-```
 
-
-
-```xml
 </number>
-```
 
-
-
-```xml
 </exsl:document>
-```
 
-
-
-```xml
 <exsl:document href=“..\..\Installs\SuccessProgressFailed.xml“ fragment=“yes“ append=“yes“ >
-```
 
-
-
-```xml
 <number>
-```
 
-
-
-```xml
 <xsl:value-of select=“$FailedBuildCount“/>
-```
 
-
-
-```xml
 </number>
-```
 
-
-
-```xml
 </exsl:document>
-```
 
-
-
-```xml
 <exsl:document href=“..\..\Installs\SuccessProgressException.xml“ fragment=“yes“ append=“yes“ >
-```
 
-
-
-```xml
 <number>
-```
 
-
-
-```xml
 <xsl:value-of select=“$ExceptionBuildCount“/>
-```
 
-
-
-```xml
 </number>
-```
 
-
-
-```xml
 </exsl:document>
-```
 
-
-
-```xml
 </xsl:template>
-```
 
-
-
-```xml
 </xsl:stylesheet>
 ```
-
 
 I refactored the main processing target to be more parameterized so that I could have it drive both the creation of the main statistics data and the chart data. This would leave it in a position to be use in the same way by me or anyone else in the future to add new charts and or statistics. I ran the script and was delighted to see the results. I had all sorts of xml files ready to be turned into html and flash charts. I really wanted to see the sharp looking chart so I skipped ahead and created a quick html file to view one. I was disappointed to find that it would not show. After some experimenting I found that XML/SWF Charts has no concept of a DTD entity in the chart data, bummer. It becomes important to know that I was copying off all the xml data files into an artifact directory for each build. I planned on having a build level plugin for the CCNET dashboard not a project level plugin like the Statistics plugin. This is important to know because if I am copying we could copy the xml document after expanding the entities. This shouldn’t be much more expensive than a regular file copy. I replaced the regular copy in the script with the xml copy, re-ran the script, and presto I had working graphs. Something interesting to note; the chart data xsl is passed the file MainAnalyticsReport.xml not the build log file.
 

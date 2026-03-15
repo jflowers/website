@@ -58,7 +58,6 @@ In the properties file of the package you need to choose which unit testing pack
 </buildPlugins>
 ```
 
-
 **5.** Edit the ccnetproject.xml to merge <your projects location>\Build\CoverageReports\CoverageReport.xml
 
 
@@ -82,7 +81,6 @@ In the properties file of the package you need to choose which unit testing pack
 ```xml
 </publishers>
 ```
-
 
 [**Download**](http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=select&id=12)
 
