@@ -36,7 +36,9 @@ International Software Testing Conference focused on advanced software testing m
 
 ## User Group Talks
 
-- **Capital Area .NET User Group** (August 29, 2007) -- CI Factory talk. [Writeup by Joey Beninghove](https://lostechies.com/joeybeninghove/2008/01/11/cifactory-create-richmonddnug/)
+- **Capital Area .NET User Group** (August 29, 2007) -- CI Factory talk.
+
+- **Richmond .NET User Group** (January 11, 2008) -- CI Factory demonstration. [Writeup by Joey Beninghove](https://lostechies.com/joeybeninghove/2008/01/11/cifactory-create-richmonddnug/)
 
 ## Screencasts & Podcasts
 
