@@ -1,0 +1,40 @@
+---
+title: TDD and Zen
+date: "2007-01-28"
+draft: false
+categories:
+  - "Unit Testing"
+aliases:
+  - "/WordPress/?p=129"
+  - "/WordPress/index.php?p=129"
+params:
+  wayback_url: "https://web.archive.org/web/20070217035944/http://jayflowers.com:80/WordPress/?p=129"
+  original_url: "http://jayflowers.com:80/WordPress/?p=129"
+  archived_from: Wayback Machine
+
+---
+
+## TDD and Zen
+
+Some time ago on the Yahoo TDD user group there was talk comparing learning TDD to [Zen](http://en.wikipedia.org/wiki/Zen).  I have since become interested in Zen and [Chán](http://en.wikipedia.org/wiki/Ch%C3%A1n).  My path to Zen was preceded by Buddhism as a whole, I looked at many schools besides Zen.  Zen uses a direct pointing approach to bring about [![Alan Watts](images/2007/01/WindowsLiveWriter/TDDandZen_9B34/Alan_Watts3.jpg)](http://en.wikipedia.org/wiki/Alan_Watts)enlightenment, to transfer the [Dharma](http://en.wikipedia.org/wiki/Dharma) (Natural Law).  That is to say that it values direct experience over study of the scriptures.  Use of lay words and stories are another means of pointing.  I have experienced some of this direct pointing in Zen from both [Alan Watts](http://en.wikipedia.org/wiki/Alan_Watts) and [Adyashanti](http://www.adyashanti.org/index.php?file=teachings).  It has changed me.  It would have taken a much longer time for me to have achieved as much change on my own.  That is to say that the alternative of uncovering these things for myself would have taken much longer.
+
+When Zen was brought up in conversation on the TDD user group it was, at least I interpreted it this way, in an expression of frustration.  Frustration over getting TDD.  It seemed that to get TDD required a very Zen way.  Frustration that one could not understand conceptually in the mind what TDD was.  That it had to be experienced to be understood.  Please notice the lack of the word conceptually on the end of the previous sentence.  To be fair I am not clear on if I truly understand TDD.  I remember going through a similar thing with Continuous Integration (CI) and not completely, truly, understanding until I had lived with CI for some time.  I don’t feel that I have had an adequate period of experience with TDD to truly understand, I do have strong suspicions.  To tie this back to my Zen experience for TDD I was not being taught with direct pointing.  For CI I had read Martin Fowler’s paper [Continuous Integration](http://martinfowler.com/articles/continuousIntegration.html) and the book [Software Configuration Management Patterns: Effective Teamwork, Practical Integration](http://www.scmpatterns.com/book/) by Steve Berczuk with Brad Appleton.  Martin’s paper spoke some about what might be experienced and noted that it could not really be explained.  I do think his paper was in the realm of direct pointing.  SCM Patterns was also in the realm of direct pointing.  These materials in conjunction with experience and active inquiry enlightened me.
+
+> [Design Patterns: Elements of Reusable Object-Oriented Software](http://www.amazon.com/Design-Patterns-Object-Oriented-Addison-Wesley-Professional/dp/0201633612/sr=8-1/qid=1170011463/ref=pd_bbs_sr_1/105-6244180-7165267?ie=UTF8&s=books) is to the scriptures as [Design Patterns Explained: A New Perspective on Object-Oriented Design](http://www.amazon.com/Design-Patterns-Explained-Perspective-Object-Oriented/dp/0321247140/sr=8-3/qid=1170011463/ref=pd_bbs_sr_3/105-6244180-7165267?ie=UTF8&s=books) is to direct pointing.
+
+They did so in a way that took much less time than with out them.  So far my approach to TDD has not followed the same recipe.  There has been plenty of active inquiry and[![Ron Jeffries](images/2007/01/WindowsLiveWriter/TDDandZen_9B34/rongraphic2light24.gif)](http://www.xprogramming.com/welcome.htm) less experience than I desired.  What has been almost completely missing was direct pointing teaching.  There is a chance that I will get to work with Object Mentor and gain some live direct pointing through training and coaching.  As well I have been fortunate to receive a copy of Ron Jeffries book [Extreme Programming Adventures in C#](http://www.xprogramming.com/xpmag/Books20040324.htm#book0735619492) (thanks again Ron).  Ron has been compassionate and repeatedly engaged me in my active inquiry about TDD.  I scanned all my conversations with Ron back through last summer.  I could not find the reason why I feel that he has been saying all along that direct pointing is an important part of learning TDD, maybe even an essential part of learning TDD in an economically feasible way (when you don’t have all the time in the world), yet I still credit Ron.  I am hopeful that I will see dramatic change in my relationship with TDD over the next few months.
+
+Now that I have some experience with awakening to something that can not be completely understood by the mind, Zen seems to be a fair analogy to TDD.  My big hang up with TDD has been my ego.  I have thought that I could figure it out all on my own, or at least with out someone else’s packaged guidance (like a book).  I was at most willing to engage in conversation about my ideas.  There was definitely an aspect of craving to leave a mark, to be original and independent.
+
+There is an element of [symbol sickness](http://jayflowers.com/WordPress/?p=128) here too.
+
+> What we mean by understanding and explaining things is being able to put them into words. We do that first by analyzing them into many bits. In the same way, when you want to measure the properties of a curve, which is complicated, in order to say how that curve is shaped, you have to reduce it to tiny points and measure them. So you put a grid of graph paper across, and by telling the position on the graph of where the curve is at every point, you get an accurate description of what that curve is, or how it is, in scientific terms. That is what we mean when we talk about understanding things, but obviously there is another sense of “to understand.” You understand how to walk even if you can’t explain it, because you can do it. Can you drive a car? Yes. How do you drive a car? If you could put it into words, it might be easier to teach people how to do it in the first place, but one understands and learns many things about driving a car that are never explained in words. You just watch somebody else do it, and you do the same thing. - [Alan Watts The Philosophies of Asia](http://www.terebess.hu/english/watts5.html)
+
+P.S.  When I use the term [enlightenment](http://en.wikipedia.org/wiki/Enlightenment_(concept)) I am making no distinction between [awakening](http://en.wikipedia.org/wiki/Awakening), [awareness](http://en.wikipedia.org/wiki/Awareness), and [embodiment](http://en.wikipedia.org/wiki/Embodied_philosophy).  As well when I have used the word understand in absence of conceptualization a better word is likely [awareness](http://en.wikipedia.org/wiki/Awareness).
+
+
+
+
+|
+
+|
