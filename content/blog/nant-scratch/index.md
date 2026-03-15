@@ -34,7 +34,7 @@ Some shops have self contained projects, meaning that everything the project nee
 
 This OpenSolution batch file will set the PATH to include nAnt.exe.
 
-```csharp
+```
 set PATH=%SystemRoot%system32;%SystemRoot%;%SystemRoot%System32Wbem;C:Program FilesSubversionbin;..BuildnAntbincall "C:Program FilesMicrosoft Visual Studio8VCvcvarsall.bat"devenv "Doubler.sln"
 ```
 

@@ -21,10 +21,10 @@ I hate Ant. I like NAnt better, and I hate NAnt too.  The intent of this series
 
 Did you know that you can mess with the Java objects of Ant in Ant script?  You can create tasks on the fly. You can even create a logger on the fly.  I have used the following example to insure that a log file is written to without having to count on a user supplying the needed command line arguments.
 
+
+```batch
 If you are not familiar with the scriptdef task in Ant you should read the help for the task [here](http://ant.apache.org/manual/OptionalTasks/scriptdef.html).  It is part of the optional Ant tasks, so you will need to have gotten your Ant install [setup correctly](http://ant.apache.org/manual/install.html#optionalTasks) for the optional tasks.  The scriptdef task supports several languages, here I will be using [JavaScript](http://www.mozilla.org/rhino/).
 
-
-```xml
 <?xml version=“1.0“ encoding=“UTF-8“?>
 
 <project name=“scratch“ default=“play“ basedir=“.“ >
@@ -40,9 +40,12 @@ If you are not familiar with the scriptdef task in Ant you should read the help 
     <![CDATA[
 
       self.log(”hello”);
+```
 
     ]]>
 
+
+```xml
   </scriptdef>
 
 </project>
@@ -65,7 +68,6 @@ You can import Java classes into the JavaScript with the importClass method: imp
 <scriptdef name=“explore.self“ language=“javascript“>
 
   <![CDATA[
-```
 
   for (member in self)
 
@@ -74,6 +76,7 @@ You can import Java classes into the JavaScript with the importClass method: imp
     self.log(member);
 
   }
+```
 
   ]]>
 
@@ -202,11 +205,14 @@ Self provides a reference to the Ant object project; pretty much the root of the
         logger.buildStarted(new BuildEvent(project));
 
         logger.targetStarted(new BuildEvent(self.getOwningTarget()));
+```
 
         logger.taskStarted(new BuildEvent(self))
 
     ]]>
 
+
+```xml
   </scriptdef>
 
 </project>
@@ -229,7 +235,10 @@ This is the console output:
 
 And here is the output to the logfile:
 
+
+```batch
 C:\Temp\play\scratch05.01.2010-10.00.33-EDT.log
+```
 
 > play:  
 > [echo] T minus  

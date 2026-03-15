@@ -50,7 +50,10 @@ Private Workspace In Active Development Line, you and other developers make freq
 
 Development workspace All developers and the Integration Build work in their own Private Workspaces yet there needs to be consistency between them. This pattern is a means to define the structure of the Private Workspace.
 
+
+```csharp
 private build A Private Workspace allows you, as a developer, to insulate yourself from external changes to your environment. But your changes need to work with the rest of the system too. To verify this, you need to build the system consistently, including building with your changes. This pattern explains how you can check whether your code will still be consistent with the latest published code base when you submit your changes.
+```
 
 Unit Test Sometimes a Smoke Test is not enough to test a change in detail when you are working on a module, especially when you are working on new code. This pattern shows you how to test detailed changes so that you can ensure the quality of your codeline.
 

@@ -851,9 +851,263 @@ def html_to_markdown(html_str):
         cleaned_html,
         heading_style="ATX",
         bullets="-",
-        code_language="csharp",  # Default for .NET content
+        code_language="",  # Auto-detect in clean_markdown instead
     )
     return md
+
+
+def _merge_consecutive_fences(md):
+    """Merge consecutive fenced code blocks of the same language into one block.
+
+    Handles patterns like:
+        ```csharp
+        line1
+        ```
+
+        ```csharp
+        line2
+        ```
+    And merges them into:
+        ```csharp
+        line1
+        line2
+        ```
+    """
+    # Match: closing fence, optional blank lines, opening fence with same language
+    # Repeat until no more merges possible
+    prev = None
+    while prev != md:
+        prev = md
+        md = re.sub(
+            r"```\s*\n(\s*\n)*```(\w*)\s*\n",
+            r"\n",
+            md,
+        )
+    return md
+
+
+def _detect_code_language(line):
+    """Detect what programming language a line of code likely belongs to."""
+    stripped = line.strip()
+
+    # XML/HTML-like tags (but not Markdown HTML like <a>, <img>, <div>, etc.)
+    html_tags = {
+        "<a ",
+        "<img ",
+        "<div",
+        "<span",
+        "<br",
+        "<p>",
+        "</p>",
+        "<table",
+        "<td",
+        "<tr",
+        "<th",
+        "<!-",
+        "<em>",
+        "<strong>",
+        "<http",
+        "<ul",
+        "<ol",
+        "<li",
+        "</ul",
+        "</ol",
+        "</li",
+        "<h1",
+        "<h2",
+        "<h3",
+        "<h4",
+        "<h5",
+        "<h6",
+        "<hr",
+        "<b>",
+        "</b>",
+        "<i>",
+        "</i>",
+        "</em>",
+        "</strong>",
+        "</div>",
+        "</span>",
+        "</a>",
+        "</table>",
+        "</td>",
+        "</tr>",
+        "</th>",
+    }
+    if stripped.startswith("<") and len(stripped) > 3:
+        lower = stripped.lower()
+        if not any(lower.startswith(tag) for tag in html_tags):
+            return "xml"
+
+    # C# patterns
+    if re.match(
+        r"^(public|private|protected|internal|static|abstract|sealed|partial|virtual|override)\s",
+        stripped,
+    ):
+        return "csharp"
+    if re.match(r"^(namespace|using)\s", stripped):
+        return "csharp"
+    if re.match(
+        r"^\[(Test|Row\(|RowTest|SetUp|TearDown|TestFixture|Attribute|Serializable)",
+        stripped,
+    ):
+        return "csharp"
+    if re.match(r"^(class|interface|enum|struct)\s", stripped):
+        return "csharp"
+    if re.match(
+        r"^(void|int|string|bool|var|return|if|else|for|foreach|while|try|catch|finally|throw|new)\s",
+        stripped,
+    ):
+        return "csharp"
+    if stripped.startswith("Assert.") or stripped.startswith("Console."):
+        return "csharp"
+    if stripped in ("{", "}") or stripped == "};":
+        return "csharp"
+
+    # Java patterns
+    if re.match(r"^(package|import)\s", stripped):
+        return "java"
+    if re.match(r"^@(Override|Test|Before|After)\b", stripped):
+        return "java"
+
+    # Batch/shell patterns
+    if re.match(r"^(set |@echo|rem |echo |call |if |goto |:)", stripped, re.I):
+        return "batch"
+    if re.match(r"^[A-Z]:\\", stripped):
+        return "batch"
+    if stripped.startswith("c:\\>") or stripped.startswith("C:\\>"):
+        return "text"
+
+    # Build output patterns
+    if re.match(
+        r"^\s*\[(exec|echo|delete|copy|mkdir|move|asyncexec|waitforexit|trycatch|if|loadtasks|property|target)\]",
+        stripped,
+    ):
+        return "text"
+    if re.match(r"^(BUILD SUCCEEDED|BUILD FAILED|Total time:)", stripped):
+        return "text"
+    if (
+        re.match(
+            r"^\s*(test|compile|package|deploy|clean|recompile|unittest):", stripped
+        )
+        and len(stripped) < 80
+    ):
+        return "text"
+
+    return None
+
+
+def _is_code_line(line):
+    """Check if a line looks like code (of any language)."""
+    return _detect_code_language(line) is not None
+
+
+def _is_code_continuation(line, in_code_run):
+    """Check if a line looks like it continues a code block."""
+    if not in_code_run:
+        return False
+    stripped = line.strip()
+    if stripped == "":
+        return True  # Blank lines inside code runs are kept
+    if _is_code_line(line):
+        return True
+    # Indented lines within a code run are likely continuations
+    if re.match(r"^    ", line) or re.match(r"^\t", line):
+        return True
+    # XML attribute continuations
+    if re.match(r'^\s+\w[\w\-]*\s*=\s*["\']', line):
+        return True
+    # Closing braces, brackets, parens
+    if stripped in ("}", "});", ");", "]", "/>", ">"):
+        return True
+    # Lines ending with { or ; (common in C#/Java)
+    if stripped.endswith("{") or stripped.endswith(";"):
+        return True
+    return False
+
+
+def _wrap_naked_code(md):
+    """Detect and wrap unfenced code blocks in fenced code blocks."""
+    lines = md.split("\n")
+    result_lines = []
+    in_fence = False
+    code_block = []
+    in_code_run = False
+    code_lang = None
+
+    for line in lines:
+        stripped = line.strip()
+
+        # Track existing fenced code blocks
+        if stripped.startswith("```"):
+            in_fence = not in_fence
+            if in_code_run:
+                _flush_code_block(result_lines, code_block, code_lang)
+                code_block = []
+                in_code_run = False
+                code_lang = None
+            result_lines.append(line)
+            continue
+
+        if in_fence:
+            result_lines.append(line)
+            continue
+
+        # Detect code lines
+        detected_lang = _detect_code_language(line)
+        if detected_lang:
+            if not in_code_run:
+                in_code_run = True
+                code_lang = detected_lang
+            elif code_lang == "csharp" and detected_lang == "csharp":
+                pass  # Same language, continue
+            elif detected_lang not in (None, code_lang):
+                # Language changed but could be mixed (e.g., C# with XML in same block)
+                # Keep the original language
+                pass
+            code_block.append(line)
+        elif _is_code_continuation(line, in_code_run):
+            code_block.append(line)
+        else:
+            if in_code_run:
+                _flush_code_block(result_lines, code_block, code_lang)
+                code_block = []
+                in_code_run = False
+                code_lang = None
+            result_lines.append(line)
+
+    # Flush any remaining code block
+    if in_code_run and code_block:
+        _flush_code_block(result_lines, code_block, code_lang)
+
+    return "\n".join(result_lines)
+
+
+def _flush_code_block(result_lines, code_block, lang):
+    """Write a collected code block as a fenced code block."""
+    # Strip trailing blank lines
+    while code_block and code_block[-1].strip() == "":
+        code_block.pop()
+    # Strip leading blank lines
+    while code_block and code_block[0].strip() == "":
+        code_block.pop(0)
+    if not code_block:
+        return
+
+    # Auto-detect language from content if not set
+    if not lang:
+        for line in code_block:
+            lang = _detect_code_language(line)
+            if lang:
+                break
+    if not lang:
+        lang = ""
+
+    result_lines.append("")
+    result_lines.append(f"```{lang}")
+    result_lines.extend(code_block)
+    result_lines.append("```")
+    result_lines.append("")
 
 
 def clean_markdown(md):
@@ -900,106 +1154,18 @@ def clean_markdown(md):
     # Remove "\[ Back \]" navigation
     md = re.sub(r"\[\\?\[?\s*Back\s*\\?\]?\]\(.*?\)", "", md)
 
-    # Wrap bare XML/HTML-like code blocks in fenced code blocks
-    # This catches lines that look like XML tags but aren't inside code fences
-    lines = md.split("\n")
-    result_lines = []
-    in_code_block = False
-    xml_block = []
-    in_xml_run = False
+    # ── Pass 1: Merge consecutive per-line fenced code blocks ──
+    # Converts patterns like:
+    #   ```csharp\nline1\n```\n\n```csharp\nline2\n```
+    # Into:
+    #   ```csharp\nline1\nline2\n```
+    md = _merge_consecutive_fences(md)
 
-    for line in lines:
-        # Track existing fenced code blocks
-        if line.strip().startswith("```"):
-            in_code_block = not in_code_block
-            if in_xml_run:
-                # Close the XML block we were building
-                result_lines.append("```xml")
-                result_lines.extend(xml_block)
-                result_lines.append("```")
-                xml_block = []
-                in_xml_run = False
-            result_lines.append(line)
-            continue
+    # ── Pass 2: Wrap naked code in fenced code blocks ──
+    md = _wrap_naked_code(md)
 
-        if in_code_block:
-            result_lines.append(line)
-            continue
-
-        # Detect lines that look like XML/Ant/NAnt code
-        stripped = line.strip()
-        looks_like_xml = (
-            stripped.startswith("<")
-            and not stripped.startswith("<http")
-            and not stripped.startswith("<a ")
-            and not stripped.startswith("<img ")
-            and not stripped.startswith("<div")
-            and not stripped.startswith("<span")
-            and not stripped.startswith("<br")
-            and not stripped.startswith("<p>")
-            and not stripped.startswith("</p>")
-            and not stripped.startswith("<table")
-            and not stripped.startswith("<td")
-            and not stripped.startswith("<tr")
-            and not stripped.startswith("<th")
-            and not stripped.startswith("<!-")
-            and not stripped.startswith("<em>")
-            and not stripped.startswith("<strong>")
-            and len(stripped) > 3
-        )
-
-        # Also detect XML attribute continuations (indented lines with attr="val" patterns)
-        looks_like_xml_continuation = (
-            in_xml_run
-            and stripped != ""
-            and not looks_like_xml
-            and (
-                # Indented attribute continuation: name="value" or name='value'
-                re.match(r'^\s+\w[\w\-]*\s*=\s*["\']', line)
-                # Indented attribute continuation: name="${...}" (NAnt/Ant properties)
-                or re.match(r'^\s+\w[\w\-]*\s*=\s*"\$\{', line)
-                # Closing > or /> on its own line
-                or stripped in (">", "/>", ">")
-                # Lines that are clearly part of XML content (indented text)
-                or (
-                    re.match(r"^\s{4,}", line)
-                    and not stripped.startswith("#")
-                    and not stripped.startswith("-")
-                )
-            )
-        )
-
-        if looks_like_xml or looks_like_xml_continuation:
-            if not in_xml_run:
-                in_xml_run = True
-            xml_block.append(line)
-        elif in_xml_run and stripped == "":
-            # Blank line inside an XML run -- keep it as part of the block
-            # (the original HTML often had blank lines between XML tags)
-            xml_block.append(line)
-        else:
-            if in_xml_run:
-                # End of XML run, flush it as a code block
-                # Strip trailing blank lines from the block
-                while xml_block and xml_block[-1].strip() == "":
-                    xml_block.pop()
-                result_lines.append("")
-                result_lines.append("```xml")
-                result_lines.extend(xml_block)
-                result_lines.append("```")
-                result_lines.append("")
-                xml_block = []
-                in_xml_run = False
-            result_lines.append(line)
-
-    # Flush any remaining XML block
-    if in_xml_run and xml_block:
-        result_lines.append("")
-        result_lines.append("```xml")
-        result_lines.extend(xml_block)
-        result_lines.append("```")
-
-    md = "\n".join(result_lines)
+    # ── Pass 3: Merge any new consecutive fences created by pass 2 ──
+    md = _merge_consecutive_fences(md)
 
     # Remove trailing pipe characters (leftover table fragments from WP theme layout)
     md = re.sub(r"(\n\s*\|\s*)+\s*$", "", md)

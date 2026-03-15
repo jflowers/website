@@ -18,7 +18,7 @@ params:
 
 Sometimes you just wish there was a way to make it secret.  It was really simple.
 
-```csharp
+```
 <target name=“test“ >
   <exec program=“ping“ commandline=“localhost“ output=“c:tempping.log“ />
   <echo message=“before“/>
@@ -29,7 +29,6 @@ Sometimes you just wish there was a way to make it secret.  It was really simpl
   </loglevel>
   <echo message=“after“/>
 </target>
-```
 
 test:
 
@@ -65,7 +64,6 @@ BUILD SUCCEEDED
 
 Total time: 7.1 seconds.
 
-```csharp
 [TaskName(“loglevel”)]
 public class LogLevelTask : Task
 {

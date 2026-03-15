@@ -21,6 +21,7 @@ I have been working to bring the build time for our developer facing build to so
 
 ```xml
 <asyncexec taskname=“UnitTests“
+```
 
       program=“${NantProcess}“
 
@@ -28,6 +29,8 @@ I have been working to bring the build time for our developer facing build to so
 
       resultproperty=“UnitTestsResult“>
 
+
+```xml
   <arg line=“-buildfile:.\Packages\MSTest\UnitTest.Target.xml“/>
 
   <arg line=‘@”${Common.PropertiesFile}”‘ />
@@ -203,9 +206,12 @@ Below is the nant script main target.  It has been color coded to match the tab
       <description>Begin Clean Up Actions</description>
 
 <asyncexec taskname=“GetOfThirdPartyDirectory“ program=“${NantProcess}“ failonerror=“False“
+```
 
                 resultproperty=“GetOfThirdPartyDirectoryResult“>
 
+
+```xml
         <arg line=“-buildfile:.\Packages\VisualSourceSafe\VSS.Target.xml“/>
 
         <arg line=‘@”${Common.PropertiesFile}”‘ />

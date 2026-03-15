@@ -39,7 +39,10 @@ This feature can be useful to maintain a mirror assembly of recorders. If the ab
 
 Lots and lots of fixes, I lost track. There is a new feature too!
 
+
+```batch
 If you right click on an assembly in the tree view of Reflector you can select to make Recorders for all abstract types found in the assembly. The drag and drop icon is attached to the folder where they are all written too. Drag that to the project in solution explorer to add to a project.
+```
 
 Know issue: Events with params by ref need to be edited by hand to pass the arguments received on the Fire<eventName> method to the event invocation.
 

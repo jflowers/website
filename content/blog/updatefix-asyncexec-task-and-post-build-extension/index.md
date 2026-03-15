@@ -30,6 +30,7 @@ One of the key things to note is that the output attribute does not work.  Take
   <delete file=“C:\temp\ping.txt“ if=“${file::exists(’C:\temp\ping.txt’)}“ />
 
   <asyncexec program=“cmd.exe“
+```
 
             commandline=“/C ping 192.168.1.3 > C:\temp\ping.txt“
 
@@ -41,6 +42,8 @@ One of the key things to note is that the output attribute does not work.  Take
 
             verbose=“true“ />
 
+
+```xml
   <asyncexec program=“notepad.exe“ waitforexit=“false“ />
 
   <waitforexit>
@@ -48,9 +51,9 @@ One of the key things to note is that the output attribute does not work.  Take
     <tasknames>
 
       <string value=“ping“/>
+```
 
     tasknames>
-```
 
   waitforexit>
 
@@ -67,6 +70,8 @@ target>
 
 This script will begin executing the ping command and continue on to opening notepad before the ping command has finished.  The ping command is being piped to the file ‘c:\temp\ping.txt’.  Here is the example scripts output:
 
+
+```text
 test:
 
 [delete] Deleting file C:\temp\ping.txt.  
@@ -90,6 +95,7 @@ test:
 BUILD SUCCEEDED - 1 non-fatal error(s), 0 warning(s)
 
 Total time: 21.3 seconds.
+```
 
 I have been working a good bit with the Post Build extension for [CI Factory](http://cifactory.org); I mention this in my post about the [Backup Package](http://jayflowers.com/WordPress/?p=111).  While getting this fine tuned I noticed the Post Shim continued to execute until the Post Build completed.  This of course defeated at least half the purpose of the Post Build and even more of the Post Shim.  The improvements that I have made to the asyncexec task forced a small change to the Post Shim as you can see here:
 

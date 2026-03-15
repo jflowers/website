@@ -32,7 +32,7 @@ Notice how as long as the dev team places all test projects in the unit test dir
 
 So lets take a look at mstest.exe sub main to get an idea of what the NAnt task is going to need to do.
 
-```csharp
+```
 [STAThread]
 private static int Main(string[] args)
 {
@@ -63,7 +63,7 @@ private static int Main(string[] args)
 
 Looks like Executor is the main class we will be working with so lets take a look at it.
 
-```csharp
+```
 internal class Executor : IDisposable
 {
       public Executor();
@@ -102,617 +102,301 @@ Ouch it’s internal.  At this point I knew that I was backed into a corner.  
 
 After some experimentation with reflection I decided that I should write reflection wrappers around these classes.  Idea being to encapsulate the reflection offering up an interface that looked normal to the consumer.  Take for example the Executor wrapper class.
 
-```csharp
+```
 public class Executor
-```
 
-```csharp
 {
-```
 
-```csharp
- 
-```
 
-```csharp
     private Object _WrappedSubject;
-```
 
-```csharp
     private MethodInfo _AddCommandMethod;
-```
 
-```csharp
     private MethodInfo _ExecuteMethod;
-```
 
-```csharp
     private MethodInfo _ValidateCommandsMethod;
-```
 
-```csharp
     private PropertyInfo _OutputProperty;
-```
 
-```csharp
- 
-```
 
-```csharp
     private PropertyInfo OutputProperty
-```
 
-```csharp
     {
-```
 
-```csharp
         get
-```
 
-```csharp
         {
-```
 
-```csharp
             if (_OutputProperty == null)
-```
 
-```csharp
             {
-```
 
-```csharp
                 _OutputProperty = this.WrappedSubject.GetType().GetProperty(”Output”);
-```
 
-```csharp
             }
-```
 
-```csharp
             return _OutputProperty;
-```
 
-```csharp
         }
-```
 
-```csharp
     }
-```
 
-```csharp
- 
-```
 
-```csharp
     private object Output
-```
 
-```csharp
     {
-```
 
-```csharp
         set
-```
 
-```csharp
         {
-```
 
-```csharp
             this.OutputProperty.SetValue(this.WrappedSubject, value, null);
-```
 
-```csharp
         }
-```
 
-```csharp
     }
-```
 
-```csharp
- 
-```
 
-```csharp
     private MethodInfo ValidateCommandsMethod
-```
 
-```csharp
     {
-```
 
-```csharp
         get
-```
 
-```csharp
         {
-```
 
-```csharp
             if (_ValidateCommandsMethod == null)
-```
 
-```csharp
             {
-```
 
-```csharp
                 _ValidateCommandsMethod = this.WrappedSubject.GetType().GetMethod(”ValidateCommands”);
-```
 
-```csharp
             }
-```
 
-```csharp
             return _ValidateCommandsMethod;
-```
 
-```csharp
         }
-```
 
-```csharp
     }
-```
 
-```csharp
- 
-```
 
-```csharp
     public void ValidateCommands()
-```
 
-```csharp
     {
-```
 
-```csharp
         this.ValidateCommandsMethod.Invoke(this.WrappedSubject, null);
-```
 
-```csharp
     }
-```
 
-```csharp
- 
-```
 
-```csharp
     private MethodInfo ExecuteMethod
-```
 
-```csharp
     {
-```
 
-```csharp
         get
-```
 
-```csharp
         {
-```
 
-```csharp
             if (_ExecuteMethod == null)
-```
 
-```csharp
             {
-```
 
-```csharp
                 _ExecuteMethod = this.WrappedSubject.GetType().GetMethod(”Execute”);
-```
 
-```csharp
             }
-```
 
-```csharp
             return _ExecuteMethod;
-```
 
-```csharp
         }
-```
 
-```csharp
     }
-```
 
-```csharp
- 
-```
 
-```csharp
     public Boolean Execute()
-```
 
-```csharp
     {
-```
 
-```csharp
         return (Boolean)this.ExecuteMethod.Invoke(this.WrappedSubject, null);
-```
 
-```csharp
     }
-```
 
-```csharp
- 
-```
 
-```csharp
     private MethodInfo AddCommandMethod
-```
 
-```csharp
     {
-```
 
-```csharp
         get
-```
 
-```csharp
         {
-```
 
-```csharp
             if (_AddCommandMethod == null)
-```
 
-```csharp
             {
-```
 
-```csharp
                 _AddCommandMethod = this.WrappedSubject.GetType().GetMethod(”Add”);
-```
 
-```csharp
             }
-```
 
-```csharp
             return _AddCommandMethod;
-```
 
-```csharp
         }
-```
 
-```csharp
     }
-```
 
-```csharp
- 
-```
 
-```csharp
     public void Add(Command command)
-```
 
-```csharp
     {
-```
 
-```csharp
         this.AddCommandMethod.Invoke(this.WrappedSubject, new object[1] { command.UnWrapObject });
-```
 
-```csharp
     }
-```
 
-```csharp
- 
-```
 
-```csharp
     private Object WrappedSubject
-```
 
-```csharp
     {
-```
 
-```csharp
         get
-```
 
-```csharp
         {
-```
 
-```csharp
             if (_WrappedSubject == null)
-```
 
-```csharp
             {
-```
 
-```csharp
                 foreach (Type Canidate in TestToolsHelper.CommandLineAssembly.GetTypes())
-```
 
-```csharp
                 {
-```
 
-```csharp
                     if (Canidate.FullName == “Microsoft.VisualStudio.TestTools.CommandLine.Executor”)
-```
 
-```csharp
                     {
-```
 
-```csharp
                         _WrappedSubject = Activator.CreateInstance(Canidate, null);
-```
 
-```csharp
                         break;
-```
 
-```csharp
                     }
-```
 
-```csharp
                 }
-```
 
-```csharp
             }
-```
 
-```csharp
             return _WrappedSubject;
-```
 
-```csharp
         }
-```
 
-```csharp
     }
-```
 
-```csharp
- 
-```
 
-```csharp
     public Executor()
-```
 
-```csharp
     {
-```
 
-```csharp
- 
-```
 
-```csharp
     }
-```
 
-```csharp
- 
-```
 
-```csharp
     public Executor(Boolean verbose)
-```
 
-```csharp
     {
-```
 
-```csharp
         if (!verbose)
-```
 
-```csharp
             this.Output = TestToolsHelper.CreateInstance(”Microsoft.VisualStudio.TestTools.CommandLine.EmptyOutput”);
-```
 
-```csharp
     }
-```
 
-```csharp
 }
 ```
 
 All the reflection is hiden allowing the NAnt task to easily drive the execution of mstest.  Here is the ExecuteTask override.
 
-```csharp
+```
 protected override void ExecuteTask()
-```
 
-```csharp
 {
-```
 
-```csharp
     Boolean Result = false;
-```
 
-```csharp
     this.SubvertConsoleOutput();
-```
 
-```csharp
     try
-```
 
-```csharp
     {
-```
 
-```csharp
         Executor TestExecutor = new Executor(this.Verbose);
-```
 
-```csharp
- 
-```
 
-```csharp
         foreach (String File in AssembliesFileNames)
-```
 
-```csharp
         {
-```
 
-```csharp
             TestExecutor.Add(new TestContainerCommand(File));
-```
 
-```csharp
         }
-```
 
-```csharp
- 
-```
 
-```csharp
         TestExecutor.Add(new ResultsOutputCommand(this.ResultsFile));
-```
 
-```csharp
         if (!String.IsNullOrEmpty(this.RunConfig))
-```
 
-```csharp
             TestExecutor.Add(new RunConfigCommand(this.RunConfig));
-```
 
-```csharp
- 
-```
 
-```csharp
         TestExecutor.Add(new NoIsolationCommand());
-```
 
-```csharp
- 
-```
 
-```csharp
         TestExecutor.ValidateCommands();
-```
 
-```csharp
- 
-```
 
-```csharp
         Result = TestExecutor.Execute();
-```
 
-```csharp
     }
-```
 
-```csharp
     finally
-```
 
-```csharp
     {
-```
 
-```csharp
         this.RestorConsoleOutput();
-```
 
-```csharp
         this.LogCapturedOutput();
-```
 
-```csharp
     }
-```
 
-```csharp
     if (!Result && this.FailOnTestFailure)
-```
 
-```csharp
         throw new BuildException(”At least one test failed!”);
-```
 
-```csharp
 }
 ```
 
 Because the reflection has been encapsulated this method is simple and easy to read.  There was one other interesting thing that I felt was needed.  Microsoft’s Executor class was outputing some information to the console.  I wanted this info to be logged when the verbose attribute was true.  After reading the code in Reflector I found that I had two options; figure out how to: inherit from the internally marked Output class or subvert the Console output during the use of the Executor object.  I went with the console subversion.  Notice the calls to SubvertConsoleOutput, RestorConsoleOutput, and LogCapturedOutput in the listing of ExecuteTask.
 
+
+```csharp
 private void SubvertConsoleOutput()  
 
-```csharp
 {
-```
 
-```csharp
     this.StandardOut = Console.Out;
-```
 
-```csharp
     FieldInfo OutFieldInfo = typeof(Console).GetField(”_out”, BindingFlags.Static | BindingFlags.NonPublic);
-```
 
-```csharp
     OutFieldInfo.SetValue(null, this.Captured);
-```
 
-```csharp
 }
-```
 
-```csharp
- 
-```
 
-```csharp
 private void RestorConsoleOutput()
-```
 
-```csharp
 {
-```
 
-```csharp
     FieldInfo OutFieldInfo = typeof(Console).GetField(”_out”, BindingFlags.Static | BindingFlags.NonPublic);
-```
 
-```csharp
     OutFieldInfo.SetValue(null, this.StandardOut);
-```
 
-```csharp
 }
 ```
 

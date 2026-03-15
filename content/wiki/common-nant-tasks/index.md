@@ -53,7 +53,7 @@ This is an assmebly of tasks, types, and functions that I found I could not live
 
 ## Quick Example
 
-```csharp
+```
 <strings id="Numbers">
   <string value="1"/>
   <string value="2"/>
@@ -85,9 +85,7 @@ This is an assmebly of tasks, types, and functions that I found I could not live
     <echo message="Number ${Number}!"/>
   </do>
 </loopthrough>
-```
 
-```csharp
 Copyright (C) 2001-2005 Gerry Shaw
 http://nant.sourceforge.net
 

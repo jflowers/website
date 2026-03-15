@@ -64,7 +64,10 @@ Me.WaitForMsg()
 
 Me.CheckExceptions()
 
+
+```csharp
     Assert.IsTrue( \_
+```
 
 Me.MsgRecievedUnWrapped.CompareTo( \_
 

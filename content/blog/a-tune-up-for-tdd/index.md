@@ -17,7 +17,10 @@ params:
 
 ## A Tune-Up for TDD?
 
+
+```batch
 If you have read many of my postings to the Yahoo TDD group you may have noticed that I feel that TDD is too difficult to learn. This is of great concern to me. I work in a large company on a large project. I think it should be of great concern to the rest of the Agile community too. It seems to me that TDD presents the greatest risk to successful adoption of an Agile methodology by large projects/organizations.
+```
 
 My gut has been pointing me in the general vicinity of testability for just over a year. About a month ago I realized why. The fifth step of TDD, refactor out duplication, is the culprit. The fifth step is geared toward a master not a beginner. Identifying duplication is not as simple as it might sound. Much more than copy and paste duplication is targeted. Behavioral duplication is the real target. Seeing this type of duplication is much more of a right brain activity than a left brain activity. This was the realization. This was the crack in the dam.
 

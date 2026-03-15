@@ -74,11 +74,7 @@ In the properties file of the package you need to choose which unit testing pack
     </files>  
   </merge>  
   <xmllogger />  
-```
-
   &email;  
-
-```xml
 </publishers>
 ```
 

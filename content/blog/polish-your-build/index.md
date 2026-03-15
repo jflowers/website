@@ -37,210 +37,140 @@ In my experience these things leave developers the head room to focus on things 
 
 To add download links to the main web dashboard edit the file:
 
+
+```batch
 C:\Projects\<project name>\Current\Build\dashboard\templatesFarmSideBar.vm
 
-```csharp
 <table width=“100%“>
-```
 
-```csharp
   #foreach ($link in $links)
-```
 
-```csharp
   <tr><td><a href=“$link.Url“ class=“$link.LinkClass“>$link.Text</a></td></tr>
-```
 
-```csharp
   #end
-```
 
-```csharp
   <tr>
-```
 
-```csharp
     <td>
-```
 
-```csharp
       <a href=“WorkspaceSetup/CreateWorkspace.bat.txt“ >
-```
 
-```csharp
         Workspace Setup Script
-```
 
-```csharp
         <br/>Save As .bat
-```
 
-```csharp
       </a>
-```
 
-```csharp
     </td>
-```
 
-```csharp
   </tr>
-```
 
-```csharp
 </table>
 ```
 
 Here is an example of some NAnt script added to the personal build that checks for VS 2005 SP1:
 
-```csharp
+```
 <property name=“VisualStudioServicePack“ value=“”/>
-```
 
-```csharp
 <readregistry hive=“LocalMachine“                 
-```
 
-```csharp
               key=“SOFTWAREMicrosoftDevDivVSServicing8.0SP“
-```
 
-```csharp
               property=“VisualStudioServicePack“ failonerror=“false“/>
-```
 
-```csharp
- 
-```
 
-```csharp
 <ifnot test=“${VisualStudioServicePack == ‘1′}“>
-```
 
-```csharp
   <ask answer=“Answer“
-```
 
-```csharp
       question=“It looks like Visual Studio 2005 SP1 is not installed.  Do you wish to continue?“
-```
 
-```csharp
       caption=“Proceed Without Required Software?“
-```
 
-```csharp
       showdialog=“true“ >
-```
 
-```csharp
     <options>
-```
 
-```csharp
       <string value=“Continue“/>
-```
 
-```csharp
       <string value=“Stop and Install SP1“/>
-```
 
-```csharp
       <string value=“Exit“/>
-```
 
-```csharp
     </options>
-```
 
-```csharp
   </ask>
-```
 
-```csharp
   <ifthenelse test=“${Answer == ‘Stop and Install SP1′}“>
-```
 
-```csharp
     <then>
-```
 
-```csharp
       <asyncexec program=“cmd“
-```
 
-```csharp
       commandline=‘/C ” explorer http://msdn2.microsoft.com/en-us/vstudio/bb265237.aspx”‘
-```
 
-```csharp
           createnowindow=“true“
-```
 
-```csharp
           redirectoutput=“false“
-```
 
-```csharp
           useshellexecute=“true“
-```
 
-```csharp
           waitforexit=“false“ />
-```
 
-```csharp
       <fail message=“Installing VS 2005 SP1!“ />
-```
 
-```csharp
     </then>
-```
 
-```csharp
     <elseif if=“${Answer == ‘Exit’}“>
-```
 
-```csharp
       <fail message=“Please install VS 2005 SP1!“ />
-```
 
-```csharp
     </elseif>
-```
 
-```csharp
   </ifthenelse>
-```
 
-```csharp
 </ifnot>
 ```
 
 The batch file for creating the workspace is a little clunky compared to NAnt script.  I have been mulling around the idea of including NAnt in a self extracting zip and executing a script instead of this batch file fun:
 
+
+```batch
 echo off  
 set ProjectName=CI Factory  
 set ProjectCodeLineName=Current  
 set ProjectCodeLineDirectory=C:\Projects\%ProjectName%\%ProjectCodeLineName%  
 set ProductDirectory=%ProjectCodeLineDirectory%\Product  
 set SVN.URL=<https://ci-factory.googlecode.com/svn/%ProjectCodeLineName%>
+```
 
 mkdir “%ProjectCodeLineDirectory%”
 
+
+```batch
 SET /P Anonymous=”Do you wish to do an anonymous checkout of the source? Yes for patch creators, No for submitters:(y,n)”
 
 IF %Anonymous%==y set SVN.URL=<http://ci-factory.googlecode.com/svn/%ProjectCodeLineName%>
 
 IF EXIST “%ProgramFiles%\TortoiseSVN\bin\TortoiseProc.exe” GOTO UseTortoise
+```
 
 svn –version  
+
+```batch
 IF NOT %ERRORLEVEL%==0 (set PATH=%PATH%;%ProgramFiles%\Subversion\bin) ELSE GOTO UseSubversion
+```
 
 svn –version  
+
+```batch
 IF NOT %ERRORLEVEL%==0 (set PATH=%PATH%;%ProgramFiles%\CollabNet Subversion Server\bin) ELSE GOTO UseSubversion
+```
 
 svn –version  
+
+```batch
 IF %ERRORLEVEL%==0 (GOTO UseSubversion) ELSE GOTO NoSubversion
 
 :UseSubversion  
@@ -248,9 +178,12 @@ IF %Anonymous%==n SET /P SvnUserName=”What is the user name you wish to use to
 
 set Credentials=  
 IF DEFINED SvnUserName set Credentials=–username “%SvnUserName%”
+```
 
 svn checkout %Credentials% “%SVN.URL%” “%ProjectCodeLineDirectory%”
 
+
+```batch
 IF %ERRORLEVEL%==0 (GOTO OpenFolder) ELSE GOTO END
 
 :NoSubversion  
@@ -258,11 +191,20 @@ echo I can’t find where you have Subversion installed!
 GOTO END
 
 :UseTortoise  
+```
+
 “%ProgramFiles%\TortoiseSVN\bin\TortoiseProc.exe” /command:checkout /url:”%SVN.URL%” /path:”%ProjectCodeLineDirectory%”
 
+
+```batch
 IF %ERRORLEVEL%==0 (GOTO OpenFolder) ELSE GOTO END
 
 :OpenFolder  
+```
+
 explorer “%ProductDirectory%”
 
+
+```batch
 :END
+```

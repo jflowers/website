@@ -20,71 +20,39 @@ Shell Glue is a![iStock_000001915932XSmall](images/2007/08/iStock_000001915932XS
 
 ![SimpleBuild](images/2007/08/SimpleBuild.png)
 
-```csharp
+```
 <?xml version=“1.0“ encoding=“utf-8“ ?>
-```
 
-```csharp
 <Settings>
-```
 
-```csharp
   <Actions>
-```
 
-```csharp
     <ActionItem>
-```
 
-```csharp
       <Name>Build</Name>
-```
 
-```csharp
       <Verb>Build</Verb>
-```
 
-```csharp
       <Help>Build</Help>
-```
 
-```csharp
       <TargetListMode>File</TargetListMode>
-```
 
-```csharp
       <IconFilePath>C:Program FilesShell Glue.Netmsbuild.ico</IconFilePath>
-```
 
-```csharp
       <ExtentionFilter>
-```
 
-```csharp
         <string>^.*.sln$</string>
-```
 
-```csharp
         <string>^.*..*proj$</string>
-```
 
-```csharp
       </ExtentionFilter>
-```
 
-```csharp
       <ProgramPath>C:Program FilesShell Glue.NetBuild.bat</ProgramPath>
-```
 
-```csharp
     </ActionItem>
-```
 
-```csharp
   </Actions>
-```
 
-```csharp
 </Settings>
 ```
 
@@ -105,99 +73,53 @@ And here is the result of selecting the menu item:
 
 So lets take a look at what config options there are and what they do.  Here is a bogas example of all the config options:
 
-```csharp
+```
 <?xml version=“1.0“ encoding=“utf-16“?>
-```
 
-```csharp
 <ActionItem>
-```
 
-```csharp
   <Name>Name</Name><!–Menu Item Caption–>
-```
 
-```csharp
   <Verb>Verb</Verb><!–Optional - Cruft–>
-```
 
-```csharp
   <Help>Help</Help><!–Optional - HelpString for the Menu Item–>
-```
 
-```csharp
   <IconFilePath>Path</IconFilePath><!–Optional - Full path to ico file 16×16–>
-```
 
-```csharp
   <Actions><!–Optional - List of sub menu items–>
-```
 
-```csharp
     <ActionItem>
-```
 
-```csharp
       <Name>Child</Name>
-```
 
-```csharp
       <TargetListMode>File</TargetListMode><!–Optional - Default is File–>
-```
 
-```csharp
       <ProgramPath>path</ProgramPath><!–Program to be executed–>
-```
 
-```csharp
       <ExtentionFilter><!–Optional–>
-```
 
-```csharp
         <string>Regex Pattern</string>
-```
 
-```csharp
         <string>^.*.txt$</string>
-```
 
-```csharp
       </ExtentionFilter>
-```
 
-```csharp
     </ActionItem>
-```
 
-```csharp
     <ActionItem>
-```
 
-```csharp
       <Name>Child2</Name>
-```
 
-```csharp
       <TargetListMode>CommandLine</TargetListMode>
-```
 
-```csharp
       <ArgumentsFormat>something {0} /something</ArgumentsFormat><!–Optional–>
-```
 
-```csharp
       <ProgramPath>path</ProgramPath>
-```
 
-```csharp
     </ActionItem>
-```
 
-```csharp
   </Actions>
-```
 
-```csharp
 </ActionItem>
 ```
 
@@ -207,27 +129,17 @@ This config file is located: C:\Program Files\Shell Glue\Settings.xml.
 
 I originally start on this to create a poor mans Tortoise for Team Foundation Server(TFS).  Here is an example entry for a menu item to add files and folders to TFS:
 
-```csharp
+```
 <ActionItem>
-```
 
-```csharp
   <Name>Add</Name>
-```
 
-```csharp
   <TargetListMode>CommandLine</TargetListMode>
-```
 
-```csharp
   <ArgumentsFormat>add {0} /recursive</ArgumentsFormat>
-```
 
-```csharp
   <ProgramPath>C:Program FilesMicrosoft Visual Studio 8Common7IDETF.exe</ProgramPath>
-```
 
-```csharp
 </ActionItem>
 ```
 

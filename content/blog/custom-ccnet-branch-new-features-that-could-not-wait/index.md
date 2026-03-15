@@ -25,11 +25,14 @@ So I have written in previous posts about a project that I am helping automate t
      <projectFilters>
 
        <projectFilter
+```
 
             serverUri=“tcp://localhost:21247/CruiseManager.rem“
 
             project=“experimental2“>
 
+
+```xml
          <exclusionFilters>
 
            <activities>
@@ -54,17 +57,23 @@ Nor should 1 be triggerable when 2 is building, checking modifications, or faile
 
 ```xml
 <projectTriggerFilter>
+```
 
      <trigger type=“intervalTrigger“ seconds=“60“ />
 
+
+```xml
      <projectFilters>
 
        <projectFilter
+```
 
             serverUri=“tcp://localhost:21247/CruiseManager.rem“
 
             project=“experimental2“>
 
+
+```xml
          <exclusionFilters>
 
            <conditions>
@@ -99,6 +108,7 @@ The build servers that I mentions above are working in an incremental fashion, n
 
 ```xml
 <userForceFilter
+```
 
             domainName=“chcsii“
 
@@ -106,6 +116,8 @@ The build servers that I mentions above are working in an incremental fashion, n
 
             password=“password“>
 
+
+```xml
      <includedUsers>
 
        <includedUser>jflowers</includedUser>
@@ -155,21 +167,30 @@ Here is a complete example:
   <project name=“experimental1“>
 
     <state type=“state“ />
+```
 
     <triggers>
 
+
+```xml
       <projectTriggerFilter>
+```
 
         <trigger type=“intervalTrigger“ seconds=“60“ />
 
+
+```xml
         <projectFilters>
 
           <projectFilter
+```
 
             serverUri=“tcp://localhost:21247/CruiseManager.rem“
 
             project=“experimental2“>
 
+
+```xml
             <exclusionFilters>
 
               <conditions>
@@ -203,11 +224,14 @@ Here is a complete example:
         <projectFilters>
 
           <projectFilter
+```
 
             serverUri=“tcp://localhost:21247/CruiseManager.rem“
 
             project=“experimental2“>
 
+
+```xml
             <exclusionFilters>
 
               <activities>
@@ -227,6 +251,7 @@ Here is a complete example:
       </projectForceFilter>
 
       <userForceFilter
+```
 
             domainName=“chcsii“
 
@@ -234,6 +259,8 @@ Here is a complete example:
 
             password=“password“>
 
+
+```xml
         <includedUsers>
 
           <includedUser>jflowers</includedUser>
@@ -251,9 +278,12 @@ Here is a complete example:
     </forceFilters>
 
     <integrationFilter>
+```
 
       <triggeredIntegrationFilter>
 
+
+```xml
         <allowed>
 
           <modificationsRequired condition=“true“ />
@@ -265,10 +295,14 @@ Here is a complete example:
       <forcedIntegrationFilter>
 
         <blocked>
+```
 
           <trackerRequired condition=“false“>
 
+
+```xml
             <connectionInformation
+```
 
               username=“build“
 
@@ -288,6 +322,8 @@ Here is a complete example:
 
             />
 
+
+```xml
             <query name=“For Me“/>
 
           </trackerRequired>
@@ -329,21 +365,30 @@ Here is a complete example:
   <project name=“experimental2“>
 
      <state type=“state“ />
+```
 
     <triggers>
 
+
+```xml
       <projectTriggerFilter>
+```
 
         <trigger type=“intervalTrigger“ seconds=“60“ />
 
+
+```xml
         <projectFilters>
 
           <projectFilter
+```
 
             serverUri=“tcp://localhost:21247/CruiseManager.rem“
 
             project=“experimental1“>
 
+
+```xml
             <exclusionFilters>
 
               <conditions>
@@ -377,11 +422,14 @@ Here is a complete example:
         <projectFilters>
 
           <projectFilter
+```
 
             serverUri=“tcp://localhost:21247/CruiseManager.rem“
 
             project=“experimental1“>
 
+
+```xml
             <exclusionFilters>
 
               <activities>
@@ -401,6 +449,7 @@ Here is a complete example:
       </projectForceFilter>
 
       <userForceFilter
+```
 
             domainName=“chcsii“
 
@@ -408,6 +457,8 @@ Here is a complete example:
 
             password=“password“>
 
+
+```xml
         <includedUsers>
 
           <includedUser>joflowers</includedUser>
@@ -419,9 +470,12 @@ Here is a complete example:
     </forceFilters>
 
     <integrationFilter>
+```
 
       <triggeredIntegrationFilter>
 
+
+```xml
         <allowed>
 
           <modificationsRequired condition=“true“ />

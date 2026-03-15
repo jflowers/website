@@ -18,13 +18,13 @@ params:
 
 For a long time now CI Factory has had the concept of a Package: a set of NAnt targets, properties, tasks, and functions that can be loaded by the Main.Build.xml or the Post.Build.xml and later call targets on them.
 
-```csharp
+```
 <include buildfile="${PackagesDirectory}MSBuildCompile.Target.xml" />
 ```
 
 ……
 
-```csharp
+```
 <include buildfile="${PackagesDirectory}MSBuildCompile.Target.xml" />
 ```
 
@@ -42,67 +42,37 @@ By convention the target file would include the properties file.  There was no 
 
 To load packages there is a new task:
 
-```csharp
+```
 <loadpackages>
-```
 
-```csharp
   <package name="Publish" />
-```
 
-```csharp
   <package name="Subversion" type="SourceControl" />
-```
 
-```csharp
   <package name="SourceModificationReport" />
-```
 
-```csharp
   <package name="TargetProcess" />
-```
 
-```csharp
   <package name="Simian" />
-```
 
-```csharp
   <package name="Ant" />
-```
 
-```csharp
   <package name="Selenium" />
-```
 
-```csharp
   <package name="FitNesse" />
-```
 
-```csharp
   <package name="JUnit" type="UnitTest" />
-```
 
-```csharp
   <package name="IntegrationTest" />
-```
 
-```csharp
   <package name="Corbertura" type="Coverage" />
-```
 
-```csharp
   <package name="Workspace" />
-```
 
-```csharp
   <package name="GlassFish" />
-```
 
-```csharp
   <package name="SoapUI" />
-```
 
-```csharp
 </loadpackages>
 ```
 
@@ -130,15 +100,11 @@ When a Package is loaded these types of property are set, for example the Ant Pa
 
 Notice there is the optional attribute type.  Type is something similar to an interface, it says that I offer these common pieces of functionality for you to make use of. This will likely become something that is enforced in a future version.  At the moment how much of that interface is implemented is up to the creator/maintainer.  The concept of a type of Package allows us to do things like:
 
-```csharp
+```
 <loadpackages>
-```
 
-```csharp
   <package name="${package::find-name-by-type(’SourceControl’)}" type="SourceControl" />
-```
 
-```csharp
 </loadpackages>
 ```
 
@@ -155,61 +121,39 @@ There are two new files that can optional be included in a Package: [PackageName
 
 Here is an example to illustrate the override and call by full name.  Let say the following target was defined in the package Example targets file Example.Targets.xml:
 
-```csharp
+```
 <?xml version="1.0" encoding="utf-8"?>
-```
 
-```csharp
 <project name="Example" xmlns="http://nant.sf.net/schemas/nant.xsd">
-```
 
-```csharp
   <target name="Hello">
-```
 
-```csharp
     <echo message="Hello World"/>
-```
 
-```csharp
   </target>
-```
 
-```csharp
 </project>
 ```
 
 We could then override that target in the Example.Custom.xml file of the package like so:
 
-```csharp
+```
 <?xml version="1.0" encoding="utf-8"?>
-```
 
-```csharp
 <project name="Example.Custom" xmlns="http://nant.sf.net/schemas/nant.xsd">
-```
 
-```csharp
   <target name="Hello" override="true">
-```
 
-```csharp
     <call target="Example::Hello"/>
-```
 
-```csharp
     <echo message="Bend to my will"/>
-```
 
-```csharp
   </target>
-```
 
-```csharp
 </project>
-```
 
 If you were to call the target Hello the output would be:
+```
 
 > [echo] Hello World  
 >   
@@ -219,221 +163,112 @@ Notice in the example of the original target I included the entire file.  The p
 
 The MacroDefs file opens the door for sharing not just targets between Packages, now you can share tasks.  The Ant package defines the following macro:
 
-```csharp
+```
 <?xml version="1.0" encoding="utf-8"?>
-```
 
-```csharp
 <project xmlns="http://nant.sf.net/schemas/nant.xsd" name="Ant.MacroDefs">
-```
 
-```csharp
- 
-```
 
-```csharp
   <macrodef name="ant">
-```
 
-```csharp
     <attributes>
-```
 
-```csharp
       <attribute name="antbat" default="${Ant.Bat}" type="string"/>
-```
 
-```csharp
       <attribute name="logfile" type="string"/>
-```
 
-```csharp
       <attribute name="target" type="string" require="true"/>
-```
 
-```csharp
       <attribute name="buildfile" type="string" require="true"/>
-```
 
-```csharp
     </attributes>
-```
 
-```csharp
     <elementgroups>
-```
 
-```csharp
       <elementgroup name="args" type="NAnt.Core.Types.Argument" elementname="arg"/>
-```
 
-```csharp
     </elementgroups>
-```
 
-```csharp
     <elements>
-```
 
-```csharp
       <element name="environment" type="NAnt.Core.Types.EnvironmentSet"/>
-```
 
-```csharp
     </elements>
-```
 
-```csharp
     <sequential>
-```
 
-```csharp
       <ifthenelse test="${property::exists(’logfile’)}">
-```
 
-```csharp
         <then>
-```
 
-```csharp
           <property name="Ant.LogParams" value=‘-logger com.agilex.ant.GoodXmlLogger -logfile "${logfile}"‘ overwrite="true"/>
-```
 
-```csharp
           <ifnot test="${directory::exists(path::get-directory-name(logfile))}">
-```
 
-```csharp
             <mkdir dir="${path::get-directory-name(logfile)}"/>
-```
 
-```csharp
           </ifnot>
-```
 
-```csharp
         </then>
-```
 
-```csharp
         <else>
-```
 
-```csharp
           <property name="Ant.LogParams" value=‘’ overwrite="true"/>
-```
 
-```csharp
         </else>
-```
 
-```csharp
       </ifthenelse>
-```
 
-```csharp
- 
-```
 
-```csharp
       <exec program="${antbat}" failonerror="true" verbose="true">
-```
 
-```csharp
         <element name="environment"/>
-```
 
-```csharp
- 
-```
 
-```csharp
         <arg line=‘${target} -buildfile "${buildfile}"‘ />
-```
 
-```csharp
         <arg line=‘${Ant.LogParams}‘ />
-```
 
-```csharp
         <arg line=‘-Dprogress-filepath="${CCNetListenerFile}"‘ />
-```
 
-```csharp
         <arg line=‘-DProductVersion="${CCNetLabel}"‘ />
-```
 
-```csharp
         <arg line=‘-Ddebug="${Ant.Debug}"‘ />
-```
 
-```csharp
- 
-```
 
-```csharp
         <elementgroup name="args"/>
-```
 
-```csharp
       </exec>
-```
 
-```csharp
     </sequential>
-```
 
-```csharp
   </macrodef>
-```
 
-```csharp
- 
-```
 
-```csharp
 </project>
 ```
 
 The ant macro is used by the JUnit Package as well as several others.  See how easy it is to call ant now:
 
-```csharp
+```
 <ant
-```
 
-```csharp
   target="unittest.run"
-```
 
-```csharp
   buildfile="${Ant.Build.File.Path}"
-```
 
-```csharp
   logfile="${Ant.Log.Directory.Path}unittest_log.xml"
-```
 
-```csharp
 >
-```
 
-```csharp
   <environment refid="${Common.EnvironmentVariables.RefId}"/>
-```
 
-```csharp
   <args>
-```
 
-```csharp
     <arg line="-Dcompile.debug=${Compile.Debug}"/>
-```
 
-```csharp
   </args>
-```
 
-```csharp
 </ant>
 ```
 

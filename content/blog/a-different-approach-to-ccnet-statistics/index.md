@@ -91,7 +91,7 @@ I mentioned earlier that I would like the solution to be wildly extensible. Well
 
 I decided to work on a chart next. I wanted to use [maani.us’s XML/SWF Charts](http://www.maani.us/xml_charts/index.php). Scott Hanselman turned me on to them in his post [Ohloh? Oo la la - Open Source Project Analysis](http://www.hanselman.com/blog/OhlohOoLaLaOpenSourceProjectAnalysis.aspx). The gist of how XML/SWF Chart works is you past their swf file your xml data like so:
 
-```csharp
+```
 <HTML>
 <BODY bgcolor="#FFFFFF">
 
@@ -201,12 +201,9 @@ Again this situation looks to be solved best with DTD entities and appending. I 
 <row>
 
 <null/>
-```
 
 &XAxis;
 
-
-```xml
 </row>
 
 <row>

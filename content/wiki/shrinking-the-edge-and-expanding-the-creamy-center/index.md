@@ -47,31 +47,19 @@ The edge of a system has external dependencies and most types exposed in third p
 
 To keep the examples simple and easy for you to get working on your machine the file system will be used instead of a database. The test subject is going to be *very* simple in the article: I want the focus to stay on how to apply indirection. It uses a FileInfo object to create a text file and write one line, “Hello World!”.
 
-```csharp
+```
 public void UseIt(FileInfo file)
-```
 
-```csharp
 {
-```
 
-```csharp
     using (StreamWriter Writer = file.CreateText())
-```
 
-```csharp
     {
-```
 
-```csharp
         Writer.WriteLine("Hello World!");
-```
 
-```csharp
     }
-```
 
-```csharp
 }
 ```
 
@@ -83,93 +71,52 @@ Think about what this test subject will be like to test. You should be listing t
 2. Write one line of the text “Hello World!\n”.
 3. Close the File.
 
+
+```batch
 If the file exists then #1 must have been satisfied. If we can open the file to read the contents then #3 must have been satisfied. We would need to compare the contents to what we expect for #2, “Hello Word!\n”.
+```
 
 ## Testing With the Real Deal
 
 Below is a simple test using the file system.
 
-```csharp
+```
 [Test]
-```
 
-```csharp
 public void TestUseItWithTheFileSystem()
-```
 
-```csharp
 {
-```
 
-```csharp
     FileConsumer TestSubject = new FileConsumer();
-```
 
-```csharp
- 
-```
 
-```csharp
     if (!Directory.Exists(@"C:\Temp"))
-```
 
-```csharp
         Directory.CreateDirectory(@"C:\Temp");
-```
 
-```csharp
     if (File.Exists(@"C:\Temp\TestFile.txt"))
-```
 
-```csharp
         File.Delete(@"C:\Temp\TestFile.txt");
-```
 
-```csharp
- 
-```
 
-```csharp
     FileInfo TestFile = new FileInfo(@"C:\Temp\TestFile.txt");
-```
 
-```csharp
- 
-```
 
-```csharp
     TestSubject.UseIt(TestFile);
-```
 
-```csharp
- 
-```
 
-```csharp
     String FileName = @"C:\Temp\TestFile.txt";
-```
 
-```csharp
     Assert.IsTrue(File.Exists(FileName));
-```
 
-```csharp
     String Contents;
-```
 
-```csharp
     using (TextReader Reader = File.OpenText(FileName))
-```
 
-```csharp
         Contents = Reader.ReadToEnd();
-```
 
-```csharp
     Assert.AreEqual(string.Format("Hello World!{0}", System.Environment.NewLine), Contents);
-```
 
-```csharp
 }
 ```
 
@@ -183,7 +130,10 @@ First we make an instance of the test subject. The test subject will be creating
 | Sidebar |
 | [It is Always Indirectionreveal hidden content](#folded_1 "reveal")  Well it’s all most always indirection. The answer that is to why is it hard to unit test this test subject. This is due to tight coupling, specifically interfaces knowing of non-abstract types. When implementations are tightly coupled you can not isolate one from the tightly coupled mass. When indirection isn’t the answer it is usually the case that you have a class that is trying to do too much and needs to be split into multiple classes. With all this encouragement to use abstractions there is a need to mention: you need to temper your application of this tool. Interfaces are more difficult to abuse than abstract classes. Please learn the appropriate use of each. One more hint. Testing of the Template Method Pattern is not simple, testing of aggregation is easier. |
 
+
+```batch
 If you knew of a way to test that was easier for you and was not brittle (e.g. resource contention issues) I bet you would use it. Well here is the key: indirection, same as last time. To make things better we need to introduce some indirection. But where and why? It is needed in front of the file system. Specificaly the FileInfo type, the StreamWriter type is abstract. It is needed to allow substitution of test doubles[1)](#fn__1). This is the control that we can exert to shrink the edge and expand the creamy center.
+```
 
 |  |
 | --- |
@@ -209,82 +159,48 @@ How can indirection be introduced when not all the file system classes are deriv
 
 Will this indirection the test subject will need to alter a bit. Notice only the type of the parameter file was changed from FileInfo to IWrapperFileInfo.
 
-```csharp
+```
 public void UseIt(IWrapperFileInfo file)
-```
 
-```csharp
 {
-```
 
-```csharp
     using (StreamWriter Writer = file.CreateText())
-```
 
-```csharp
     {
-```
 
-```csharp
         Writer.WriteLine("Hello World!");
-```
 
-```csharp
     }
-```
 
-```csharp
 }
 ```
 
   
 Now the test can adjust to use Recording Test Stubs[3)](#fn__3).
 
-```csharp
+```
 [Test]
-```
 
-```csharp
 public void TestUseItWithRecorders()
-```
 
-```csharp
 {
-```
 
-```csharp
     FileConsumer TestSubject = new FileConsumer();
-```
 
-```csharp
     RecorderIWrapperFileInfo FileRecorder = new RecorderIWrapperFileInfo("A Bogas Bunch of Junk!");
-```
 
-```csharp
     RecorderStreamWriter Streamrecorder = new RecorderStreamWriter(new MemoryStream());
-```
 
-```csharp
     FileRecorder.Recordings.CreateTextRecording.ReturnValue = Streamrecorder;
-```
 
-```csharp
     TestSubject.UseIt(FileRecorder);
-```
 
-```csharp
     Assert.IsTrue(Streamrecorder.Recordings.WriteLineStringRecording.Called);
-```
 
-```csharp
     Assert.AreEqual("Hello World!", Streamrecorder.Recordings.WriteLineStringRecording.PassedStringvalue);
-```
 
-```csharp
     Assert.IsTrue(Streamrecorder.Recordings.CloseRecording.Called);
-```
 
-```csharp
 }
 ```
 

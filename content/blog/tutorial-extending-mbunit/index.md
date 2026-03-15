@@ -34,6 +34,8 @@ Now that you have some idea about the players lets get into the problem we will 
 
 Lets start with the custom fixture attribute:
 
+
+```csharp
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
 
 public class XHtmlFixtureAtttribute : TestFixturePatternAttribute
@@ -73,29 +75,41 @@ return Sequence;
     }
 
 }
+```
 
 Besides the normal attribute stuff notice the override GetRun.  This is were the sequence of functions that will make up the test is created: SetUp, Test, TearDown.  Instead of the normal test an XHTMLFixtureRun is created.
 
+
+```csharp
 public class XHtmlFixtureRun : IRun
 
 {
+```
 
     #region IRun Members
 
+
+```csharp
 public bool IsTest
 
     {
+```
 
 get { return false; }
 
+
+```csharp
     }
 
 public string Name
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return “XHtmlFixture”;
@@ -105,6 +119,7 @@ return “XHtmlFixture”;
     }
 
 public void Reflect(
+```
 
         MbUnit.Core.Invokers.RunInvokerTree tree,
 
@@ -112,6 +127,8 @@ public void Reflect(
 
 Type subjectType)
 
+
+```csharp
     {
 
 FileInfo[] Files = null;
@@ -119,32 +136,42 @@ FileInfo[] Files = null;
 if (XHtmlFileTester.File != null)
 
         {
+```
 
             Files = new FileInfo[1]
 
                 { new FileInfo(XHtmlFileTester.File) };
 
+
+```csharp
         }
 
 else if (XHtmlFileTester.Directory != null)
 
         {
+```
 
             Files = new DirectoryInfo(XHtmlFileTester.Directory)
 
                 .GetFiles(“\*.html”);
 
+
+```csharp
         }
+```
 
 MethodInfo ValidateTest = TypeHelper.GetAttributedMethod(
 
             subjectType, typeof(XHtmlFileAttribute));
 
+
+```csharp
 foreach (FileInfo XHtmlFile in Files)
 
         {
 
 Object[] Args = new Object[1] { XHtmlFile };
+```
 
 String TestName = String.Format(“File {0}”,
 
@@ -160,16 +187,24 @@ this, ValidateTest, Args, TestName);
 
             tree.AddChild(parent, TestInvoker);
 
+
+```csharp
         }
 
     }
+```
 
     #endregion
 
+
+```csharp
 }
+```
 
 This guys main responsibility is expressed in the Reflect method, as mentioned earlier.  We are only going to place one test method attribute on our test fixture so we only look for one.  You could search for more than one and add to the tree for each that you find.  Call GetAttributeMethods, plural, for such a situation.  Here thou we will be add to the tree for each file that we find.  Note that the name of the test will include the name of the file.  We also want to pass that file to the test method when it is being executed.  That is were the MultiParameterRunInvoker comes in.
 
+
+```csharp
 public class MultiParameterRunInvoker : MethodRunInvoker
 
 {
@@ -181,17 +216,23 @@ private Object[] \_Args;
 public Object[] Args
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return \_Args;
 
         }
+```
 
 set
 
+
+```csharp
         {
 
             \_Args = value;
@@ -203,9 +244,12 @@ set
 public override string Name
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return this.\_Name;
@@ -215,6 +259,7 @@ return this.\_Name;
     }
 
 public MultiParameterRunInvoker(
+```
 
 IRun generator,
 
@@ -222,6 +267,8 @@ MethodInfo methodInformation,
 
 Object[] args, String testName)
 
+
+```batch
         : base(generator, methodInformation)
 
     {
@@ -249,12 +296,16 @@ return base.Execute(o, args);
     }
 
 }
+```
 
 There is not much to this one.  We store the MethodInfo and the arguments to pass to it and execute it when Execute is called.
 
 Before we get to far away from the XHtmlFixtureRun.Reflect: the one test method attribute that we looked for.  It is very simple:
 
+
+```csharp
 [AttributeUsage(
+```
 
 AttributeTargets.Method,
 
@@ -264,16 +315,21 @@ AttributeTargets.Method,
 
 ]
 
+
+```csharp
 public class XHtmlFileAttribute : Attribute
 
 {
 
 }
+```
 
 It is just a method attribute type and that is it.  So we have all our extension pieces, lets use them.  Here is the test fixture:
 
 [XHtmlFixtureAtttribute()]
 
+
+```csharp
 public class XHtmlFileTester
 
 {
@@ -289,17 +345,23 @@ private XmlSchemaException \_ValidationException;
 public XmlSchemaException ValidationException
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return \_ValidationException;
 
         }
+```
 
 set
 
+
+```csharp
         {
 
             \_ValidationException = value;
@@ -311,17 +373,23 @@ set
 public bool IsValid
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return \_IsValid;
 
         }
+```
 
 set
 
+
+```csharp
         {
 
             \_IsValid = value;
@@ -333,17 +401,23 @@ set
 public static string File
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return \_File;
 
         }
+```
 
 set
 
+
+```csharp
         {
 
             \_File = value;
@@ -355,17 +429,23 @@ set
 public static string Directory
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return \_Directory;
 
         }
+```
 
 set
 
+
+```csharp
         {
 
             \_Directory = value;
@@ -373,9 +453,12 @@ set
         }
 
     }
+```
 
     [XHtmlFile]
 
+
+```csharp
 public void FileTester(FileInfo file)
 
     {
@@ -393,6 +476,7 @@ XmlReaderSettings Settings = new XmlReaderSettings();
         Settings.ValidationType = ValidationType.DTD;
 
         Settings.ValidationEventHandler += new ValidationEventHandler(TestValidationEventHandler);
+```
 
         XHmlReader = XmlReader.Create(
 
@@ -402,6 +486,8 @@ XmlReaderSettings Settings = new XmlReaderSettings();
 
 try
 
+
+```csharp
         {
 
 while (XHmlReader.Read() && this.IsValid)
@@ -425,21 +511,30 @@ Assert.Fail(“Xml Error: {0}”, ex.Message);
         Settings.ValidationEventHandler -= new ValidationEventHandler(TestValidationEventHandler);
 
 if (this.ValidationException != null
+```
 
             && this.ValidationException.Message != null)
 
+
+```csharp
         {
 
 Assert.IsTrue(
+```
 
 this.IsValid,
 
 this.ValidationException.Message);
 
+
+```csharp
         }
+```
 
 else
 
+
+```csharp
         {
 
 Assert.IsTrue(this.IsValid);
@@ -449,11 +544,14 @@ Assert.IsTrue(this.IsValid);
     }
 
 public void TestValidationEventHandler(
+```
 
 object sender,
 
 ValidationEventArgs args)
 
+
+```csharp
     {
 
 this.ValidationException = args.Exception;
@@ -463,11 +561,14 @@ this.IsValid = false;
     }
 
 }
+```
 
 To begin notice that the class is decorated with the attribute XHtmlFixture.  Next skip on down to the FileTester method.  It to is decorated with one of our new custom methods: XHtmlFile.  It will create an xml reader, configure it for validation, and read the file.  The validator events when there is a violation exception.  This event is handled by the method TestValidationEventHandler.  It will set a flag and store the violation exception.  If a violation occurs the reading will stop.  After the reading has stop, for a violation or EOF the flag will be asserted on.  So if there are any errors the assertion will fail.  Now we just need to get files pumped into this rig.
 
 I you look back at the method XHtmlFixtureRun.Reflect you will notice that it is calling on the static properties Directory and File of the XHtmlFileTester fixture that we just examined.  These static properties are how we are going to pump the files in, we need to get them from the commandline.  I like to use Param.NET and you can read about it on the Code Project if you like.  It will allow us to keep sub main nice and clean:
 
+
+```csharp
 static class Program
 
 {
@@ -487,6 +588,7 @@ CommandLineOptions Options = new CommandLineOptions();
 if (Options.File == null && Options.Directory == null)
 
         {
+```
 
             System.Windows.Forms.MessageBox.Show(
 
@@ -494,6 +596,8 @@ if (Options.File == null && Options.Directory == null)
 
 “A little help please!”);
 
+
+```csharp
 return -1;
 
         }
@@ -519,6 +623,7 @@ return runner.ExitCode;
     }
 
 }
+```
 
 Notice how we populate the static properties XHtmlFileTester.Directory and XHtmlFileTester.File.  I am sure that you also see the AutoRunner.  That is a MbUnit class.  It will load the fixture XHtmlFileTester, execute it, create a report, and present it. Very easy!  All that is left is to compile and execute.  In the example project you will find an install.reg file.  Edit the paths to reflect the location where you compiled to.  This reg file will add a menu item to the context menu for directories in Windows Explorer.  Right click the web directory in example project and select Validate xHtml.  A web browser should open with a report showing one passing file and one failing file.  This is pretty cool and all but if you know the MbUnit fixture attributes I am sure you are thinking that this could have been more easily coded with the TestSuiteFixture.  Your right, but we aren’t done yet.
 
@@ -528,6 +633,8 @@ It would be really nice to know how many violations there are in a non-compliant
 
 [XHtmlFixtureAtttribute()]
 
+
+```csharp
 public class XHtmlFileTester
 
 {
@@ -539,17 +646,23 @@ private static string \_File;
 public static string File
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return \_File;
 
         }
+```
 
 set
 
+
+```csharp
         {
 
             \_File = value;
@@ -561,17 +674,23 @@ set
 public static string Directory
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return \_Directory;
 
         }
+```
 
 set
 
+
+```csharp
         {
 
             \_Directory = value;
@@ -579,17 +698,23 @@ set
         }
 
     }
+```
 
     [XHtmlFilePass]
 
+
+```csharp
 public void GoodFile()
 
     {
 
     }
+```
 
     [XHtmlFileFail]
 
+
+```csharp
 public void Violation(String message)
 
     {
@@ -621,17 +746,23 @@ private FileInfo \_CurrentFile;
 public FileInfo CurrentFile
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return \_CurrentFile;
 
         }
+```
 
 set
 
+
+```csharp
         {
 
             \_CurrentFile = value;
@@ -643,17 +774,23 @@ set
 public MbUnit.Core.Invokers.RunInvokerTree Tree
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return \_Tree;
 
         }
+```
 
 set
 
+
+```csharp
         {
 
             \_Tree = value;
@@ -665,17 +802,23 @@ set
 public MbUnit.Core.Invokers.RunInvokerVertex Parent
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return \_Parent;
 
         }
+```
 
 set
 
+
+```csharp
         {
 
             \_Parent = value;
@@ -687,17 +830,23 @@ set
 public Type TestFixture
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return \_TestFixture;
 
         }
+```
 
 set
 
+
+```csharp
         {
 
             \_TestFixture = value;
@@ -709,17 +858,23 @@ set
 public MethodInfo PassMethod
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 if (\_PassMethod == null)
+```
 
                 \_PassMethod = TypeHelper.GetAttributedMethod(
 
 this.TestFixture, typeof(XHtmlFilePassAttribute));
 
+
+```csharp
 return \_PassMethod;
 
         }
@@ -729,17 +884,23 @@ return \_PassMethod;
 public MethodInfo FailMethod
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 if (\_FailMethod == null)
+```
 
                 \_FailMethod = TypeHelper.GetAttributedMethod(
 
 this.TestFixture, typeof(XHtmlFileFailAttribute));
 
+
+```csharp
 return \_FailMethod;
 
         }
@@ -749,17 +910,23 @@ return \_FailMethod;
 public bool IsValid
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return \_IsValid;
 
         }
+```
 
 set
 
+
+```csharp
         {
 
             \_IsValid = value;
@@ -767,23 +934,32 @@ set
         }
 
     }
+```
 
     #region IRun Members
 
+
+```csharp
 public bool IsTest
 
     {
+```
 
 get { return false; }
 
+
+```csharp
     }
 
 public string Name
 
     {
+```
 
 get
 
+
+```csharp
         {
 
 return “XHtmlFixture”;
@@ -793,6 +969,7 @@ return “XHtmlFixture”;
     }
 
 public void Reflect(
+```
 
         MbUnit.Core.Invokers.RunInvokerTree tree,
 
@@ -800,6 +977,8 @@ public void Reflect(
 
 Type subjectType)
 
+
+```csharp
     {
 
 this.Tree = tree;
@@ -813,21 +992,27 @@ FileInfo[] Files = null;
 if (XHtmlFileTester.File != null)
 
         {
+```
 
             Files = new FileInfo[1]
 
                 { new FileInfo(XHtmlFileTester.File) };
 
+
+```csharp
         }
 
 else if (XHtmlFileTester.Directory != null)
 
         {
+```
 
             Files = new DirectoryInfo(XHtmlFileTester.Directory)
 
                 .GetFiles(“\*.html”);
 
+
+```csharp
         }
 
 foreach (FileInfo XHtmlFile in Files)
@@ -841,9 +1026,12 @@ this.FileTester();
         }
 
     }
+```
 
     #endregion
 
+
+```csharp
 public void FileTester()
 
     {
@@ -859,6 +1047,7 @@ XmlReaderSettings Settings = new XmlReaderSettings();
         Settings.ValidationType = ValidationType.DTD;
 
         Settings.ValidationEventHandler += new ValidationEventHandler(TestValidationEventHandler);
+```
 
         XHmlReader = XmlReader.Create(
 
@@ -868,6 +1057,8 @@ this.CurrentFile.FullName,
 
 try
 
+
+```csharp
         {
 
 while (XHmlReader.Read())
@@ -881,6 +1072,7 @@ while (XHmlReader.Read())
 catch (XmlException ex)
 
         {
+```
 
 this.AddFailure(
 
@@ -888,6 +1080,8 @@ String.Format(“Xml Error: {0}”, ex.Message),
 
 String.Format(“File {0}”, this.CurrentFile.Name));
 
+
+```csharp
         }
 
         XHmlReader.Close();
@@ -897,22 +1091,29 @@ String.Format(“File {0}”, this.CurrentFile.Name));
 if (this.IsValid)
 
         {
+```
 
 this.AddSuccess(
 
 String.Format(“File {0}”, this.CurrentFile.Name));
 
+
+```csharp
         }
 
     }
 
 public void TestValidationEventHandler(
+```
 
 object sender,
 
 ValidationEventArgs args)
 
+
+```csharp
     {
+```
 
 String TestName = String.Format(“File {0} Line {1} Position {2}”,
 
@@ -926,6 +1127,8 @@ this.AddFailure(args.Exception.Message, TestName);
 
 this.IsValid = false;
 
+
+```csharp
     }
 
 public void AddFailure(String message, String testName)
@@ -933,6 +1136,7 @@ public void AddFailure(String message, String testName)
     {
 
 Object[] Args = new Object[1] { message };
+```
 
 IRunInvoker TestInvoker = new MultiParameterRunInvoker(
 
@@ -944,6 +1148,8 @@ this.FailMethod, TestInvoker);
 
 this.Tree.AddChild(this.Parent, TestInvoker);
 
+
+```csharp
     }
 
 public void AddSuccess(String testName)
@@ -951,6 +1157,7 @@ public void AddSuccess(String testName)
     {
 
 Object[] Args = new Object[0] {  };
+```
 
 IRunInvoker TestInvoker = new MultiParameterRunInvoker(
 
@@ -962,9 +1169,12 @@ this.PassMethod, TestInvoker);
 
 this.Tree.AddChild(this.Parent, TestInvoker);
 
+
+```csharp
     }
 
 }
+```
 
 This turns things around a bit.  The unit test execution normally happens in the test fixture but here the test fixture is used just to relay the results.  The design of MbUnit is very flexible.  I would say that using it in this way is beyond its intended use but it works well.  Now when we execute we get a report that shows more than just one failing test and one passing test.  We get one passing test and 5 failing tests: one failure for each violation.  One key thing to take not of is that the while loop reading the file no longer looks to see if the file has proven to be in valid and stop reading if so.  This allows the reading to continue to the end of the file collecting all the violations.  Below is the report out.  Notice the names of the tests.  The first test name is **XHtmlFileTester.File bad.html Line 10 Position 2**.  The first part of the name is contributed by XHtmlFixtureRun.Name.  The second part is made in XHtmlFixtureRun.Reflect but is provided to the MbUnit framework by MultiParameterRunInvoker.Name.  So the format for the name is **<XHtmlFixtureRun.Name>.<MultiParameterRunInvoker.Name>**.
 
@@ -996,7 +1206,7 @@ Expand AllCollapse All
 | 6/1/5/0/0/0 |
 | XHtmlFileTester.XHtmlFileTester.XHtmlFileTester (0.02s) |
 | MbUnit.Cons.exe -filter-type:XHtmlFileTester.XHtmlFileTester “file:///C:/Projects/MbUnit Extension Tutorial/FileTester/bin/Debug/XHtmlFileTester.exe” |
-| |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ||  |  |  |  |  | | --- | --- | --- | --- | --- | | |  |  | | --- | --- | | - | XHtmlFileTester.File bad.html Line 10 Position 2 | | 15.625ms | 0.82 Kb, 0 | | |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | | |  | | --- | | **Type:**MbUnit.Core.Exceptions.AssertionException | | **Message:**The element ‘body’ has invalid child element ‘br’. List of possible elements expected: ‘p h1 h2 h3 h4 h5 h6 div ul ol dl pre hr blockquote address fieldset table form noscript ins del script’. | | **Source:**MbUnit.Framework | | TargetSite:Void Fail(System.String) | | HelpLink:null | | **StackTrace:**    ```csharp    at MbUnit.Framework.Assert.Fail(String message)    at XHtmlFileTester.XHtmlFileTester.Violation(String message) in C:ProjectsMbUnit Extension TutorialFileTesterXHtmlFileTester.cs:line 47 ``` | | | | |  |  | | --- | --- | | - | XHtmlFileTester.File bad.html Line 10 Position 5 | | 0.000ms | 0.82 Kb, 0 | | |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | | |  | | --- | | **Type:**MbUnit.Core.Exceptions.AssertionException | | **Message:**The element cannot contain white space. Content model is empty. | | **Source:**MbUnit.Framework | | TargetSite:Void Fail(System.String) | | HelpLink:null | | **StackTrace:**    ```csharp    at MbUnit.Framework.Assert.Fail(String message)    at XHtmlFileTester.XHtmlFileTester.Violation(String message) in C:ProjectsMbUnit Extension TutorialFileTesterXHtmlFileTester.cs:line 47 ``` | | | | |  |  | | --- | --- | | - | XHtmlFileTester.File bad.html Line 11 Position 2 | | 0.000ms | 0.82 Kb, 0 | | |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | | |  | | --- | | **Type:**MbUnit.Core.Exceptions.AssertionException | | **Message:**The element ‘br’ cannot contain child element ‘hr’ because the parent element’s content model is empty. | | **Source:**MbUnit.Framework | | TargetSite:Void Fail(System.String) | | HelpLink:null | | **StackTrace:**    ```csharp    at MbUnit.Framework.Assert.Fail(String message)    at XHtmlFileTester.XHtmlFileTester.Violation(String message) in C:ProjectsMbUnit Extension TutorialFileTesterXHtmlFileTester.cs:line 47 ``` | | | | |  |  | | --- | --- | | - | XHtmlFileTester.File bad.html Line 11 Position 5 | | 0.000ms | 0.82 Kb, 0 | | |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | | |  | | --- | | **Type:**MbUnit.Core.Exceptions.AssertionException | | **Message:**The element cannot contain text. Content model is empty. | | **Source:**MbUnit.Framework | | TargetSite:Void Fail(System.String) | | HelpLink:null | | **StackTrace:**    ```csharp    at MbUnit.Framework.Assert.Fail(String message)    at XHtmlFileTester.XHtmlFileTester.Violation(String message) in C:ProjectsMbUnit Extension TutorialFileTesterXHtmlFileTester.cs:line 47 ``` | | | | |  |  | | --- | --- | | - | XHtmlFileTester.File bad.html | | 0.000ms | 0.82 Kb, 0 | | |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | | |  | | --- | | **Type:**MbUnit.Core.Exceptions.AssertionException | | **Message:**Xml Error: The ‘hr’ start tag on line 11 does not match the end tag of ‘body’. Line 13, position 3. | | **Source:**MbUnit.Framework | | TargetSite:Void Fail(System.String) | | HelpLink:null | | **StackTrace:**    ```csharp    at MbUnit.Framework.Assert.Fail(String message)    at XHtmlFileTester.XHtmlFileTester.Violation(String message) in C:ProjectsMbUnit Extension TutorialFileTesterXHtmlFileTester.cs:line 47 ``` | | | | |  |  | | --- | --- | | - | XHtmlFileTester.File good.html | | 0.000ms | 0.00 Kb, 0 | |  | |
+| |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ||  |  |  |  |  | | --- | --- | --- | --- | --- | | |  |  | | --- | --- | | - | XHtmlFileTester.File bad.html Line 10 Position 2 | | 15.625ms | 0.82 Kb, 0 | | |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | | |  | | --- | | **Type:**MbUnit.Core.Exceptions.AssertionException | | **Message:**The element ‘body’ has invalid child element ‘br’. List of possible elements expected: ‘p h1 h2 h3 h4 h5 h6 div ul ol dl pre hr blockquote address fieldset table form noscript ins del script’. | | **Source:**MbUnit.Framework | | TargetSite:Void Fail(System.String) | | HelpLink:null | | **StackTrace:**    ```    at MbUnit.Framework.Assert.Fail(String message)    at XHtmlFileTester.XHtmlFileTester.Violation(String message) in C:ProjectsMbUnit Extension TutorialFileTesterXHtmlFileTester.cs:line 47 ``` | | | | |  |  | | --- | --- | | - | XHtmlFileTester.File bad.html Line 10 Position 5 | | 0.000ms | 0.82 Kb, 0 | | |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | | |  | | --- | | **Type:**MbUnit.Core.Exceptions.AssertionException | | **Message:**The element cannot contain white space. Content model is empty. | | **Source:**MbUnit.Framework | | TargetSite:Void Fail(System.String) | | HelpLink:null | | **StackTrace:**    ```    at MbUnit.Framework.Assert.Fail(String message)    at XHtmlFileTester.XHtmlFileTester.Violation(String message) in C:ProjectsMbUnit Extension TutorialFileTesterXHtmlFileTester.cs:line 47 ``` | | | | |  |  | | --- | --- | | - | XHtmlFileTester.File bad.html Line 11 Position 2 | | 0.000ms | 0.82 Kb, 0 | | |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | | |  | | --- | | **Type:**MbUnit.Core.Exceptions.AssertionException | | **Message:**The element ‘br’ cannot contain child element ‘hr’ because the parent element’s content model is empty. | | **Source:**MbUnit.Framework | | TargetSite:Void Fail(System.String) | | HelpLink:null | | **StackTrace:**    ```    at MbUnit.Framework.Assert.Fail(String message)    at XHtmlFileTester.XHtmlFileTester.Violation(String message) in C:ProjectsMbUnit Extension TutorialFileTesterXHtmlFileTester.cs:line 47 ``` | | | | |  |  | | --- | --- | | - | XHtmlFileTester.File bad.html Line 11 Position 5 | | 0.000ms | 0.82 Kb, 0 | | |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | | |  | | --- | | **Type:**MbUnit.Core.Exceptions.AssertionException | | **Message:**The element cannot contain text. Content model is empty. | | **Source:**MbUnit.Framework | | TargetSite:Void Fail(System.String) | | HelpLink:null | | **StackTrace:**    ```    at MbUnit.Framework.Assert.Fail(String message)    at XHtmlFileTester.XHtmlFileTester.Violation(String message) in C:ProjectsMbUnit Extension TutorialFileTesterXHtmlFileTester.cs:line 47 ``` | | | | |  |  | | --- | --- | | - | XHtmlFileTester.File bad.html | | 0.000ms | 0.82 Kb, 0 | | |  |  |  |  |  |  |  | | --- | --- | --- | --- | --- | --- | --- | | |  | | --- | | **Type:**MbUnit.Core.Exceptions.AssertionException | | **Message:**Xml Error: The ‘hr’ start tag on line 11 does not match the end tag of ‘body’. Line 13, position 3. | | **Source:**MbUnit.Framework | | TargetSite:Void Fail(System.String) | | HelpLink:null | | **StackTrace:**    ```    at MbUnit.Framework.Assert.Fail(String message)    at XHtmlFileTester.XHtmlFileTester.Violation(String message) in C:ProjectsMbUnit Extension TutorialFileTesterXHtmlFileTester.cs:line 47 ``` | | | | |  |  | | --- | --- | | - | XHtmlFileTester.File good.html | | 0.000ms | 0.00 Kb, 0 | |  | |
 
 ![](images/2006/10/mbuniticon.gif) This report was generated using [MbUnit](http://www.mbunit.org/).
 
@@ -1010,11 +1220,14 @@ When I asked the [MbUnit Google Groups](http://groups.google.com/group/MbUnitUse
 
     DtdFile=@”path\document.dtd”)]
 
+
+```csharp
 public class MyXmlTester : XmlValidationFixture
 
 {
 
 }
+```
 
 You could then use this in any project that included xml files that must conform to a dtd specification.  You could also use it in projects that produce xml that must conform with a dtd.  I am sure that you get the idea, I will leave you to it. ![](images/2006/10/smile1.gif)
 

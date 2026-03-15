@@ -30,6 +30,9 @@ The most important capability missing is extensibility,
 
 The most important feature missing is light weight parameterized unit testing.  Please don’t confuse this with what Pex is.  Pex is a great solution for the limitations of what MSTest is right now.  This needs to be baked in, be a first class citizen of the grand design.  I want to use attributes to define parameters.  I want each set of parameters to be reported on as a separate test result.  I also want the option to use a factory to provide the parameters.  I want elegant solutions.
 
+
+```batch
 If I did not think that the MSTest team was competent I would not have written this post.
+```
 
 Don’t forget that you have to innovate on top of everything that I have asked for.  MbUnit, NUnit, and TD.NET are not going to wait for you to catch up.

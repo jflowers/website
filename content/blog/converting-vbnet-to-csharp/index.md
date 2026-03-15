@@ -21,7 +21,7 @@ It has been so long I can’t remember why I started the project off in VB.Net t
 
 It took very little work to create a Filter for NAnt to convert from one language to the other.  Here is the script that I ended up with:
 
-```csharp
+```
 <target name=“ConvertVBToCSharp“>
   <copy todir=“C:Temp“ overwrite=“true“ newext=“.cs“>
     <fileset basedir=“C:ProjectsCI FactoryCurrentProductProductionNant“>
@@ -36,7 +36,7 @@ It took very little work to create a Filter for NAnt to convert from one languag
 
 The source for the Filter is [here](http://ci-factory.googlecode.com/svn/Current/Product/Production/Nant/CIFactory.NAnt.Tasks/Filters/CodeConvertFilter.cs).  The gist of it is:
 
-```csharp
+```
 public string Convert()
 {
     TextReader Reader = this.GetReader();
@@ -73,27 +73,45 @@ It was not a flawless conversion from VB.Net to C#.  There were several minor i
 
 VB.Net:
 
+
+```batch
 If Not Something = SomethingElse Then
+```
 
 Converted to:
 
+
+```batch
 If (!Something == SomethingElse)
+```
 
 Should have been:
 
+
+```batch
 If (Something != SomethingElse)
+```
 
 VB.Net:
 
+
+```csharp
 var = hashtable(”key”)
+```
 
 Converted to:
 
+
+```csharp
 var = hashtable(”key”);
+```
 
 Should have been:
 
+
+```csharp
 var = hashtable[”key”];
+```
 
 VB.Net
 

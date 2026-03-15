@@ -41,6 +41,9 @@ We have been encountering this from MSTest intermitently:
 [mstest] Results file: c:\Projects\dod.ahlta\Current\Build\Unit Test Reports\dod.ahltaUnitTests.xml  
 [mstest] Run Configuration: Local Test Run
 
+
+```batch
 If we rerun it will succeed.  To help the developer know that they did not do something to fail the build and that it is a bug in the tool I added this to the build report.
+```
 
 ![](images/2007/03/WindowsLiveWriter/MSTestDied_F609/CropperCapture%5B8%5D%5B3%5D.gif)
