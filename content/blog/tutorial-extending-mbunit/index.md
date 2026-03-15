@@ -158,20 +158,16 @@ else if (XHtmlFileTester.Directory != null)
 
 ```csharp
         }
-```
 
 MethodInfo ValidateTest = TypeHelper.GetAttributedMethod(
 
             subjectType, typeof(XHtmlFileAttribute));
 
-
-```csharp
 foreach (FileInfo XHtmlFile in Files)
 
         {
 
 Object[] Args = new Object[1] { XHtmlFile };
-```
 
 String TestName = String.Format(“File {0}”,
 
@@ -180,6 +176,7 @@ String TestName = String.Format(“File {0}”,
 IRunInvoker TestInvoker = new MultiParameterRunInvoker(
 
 this, ValidateTest, Args, TestName);
+```
 
             TestInvoker = DecoratorPatternAttribute.DecoreInvoker(
 
@@ -520,21 +517,15 @@ if (this.ValidationException != null
         {
 
 Assert.IsTrue(
-```
 
 this.IsValid,
 
 this.ValidationException.Message);
 
-
-```csharp
         }
-```
 
 else
 
-
-```csharp
         {
 
 Assert.IsTrue(this.IsValid);
@@ -588,9 +579,9 @@ CommandLineOptions Options = new CommandLineOptions();
 if (Options.File == null && Options.Directory == null)
 
         {
-```
 
             System.Windows.Forms.MessageBox.Show(
+```
 
 “No file or directory specified!”,
 
@@ -871,10 +862,10 @@ if (\_PassMethod == null)
 
                 \_PassMethod = TypeHelper.GetAttributedMethod(
 
-this.TestFixture, typeof(XHtmlFilePassAttribute));
-
 
 ```csharp
+this.TestFixture, typeof(XHtmlFilePassAttribute));
+
 return \_PassMethod;
 
         }
@@ -897,10 +888,10 @@ if (\_FailMethod == null)
 
                 \_FailMethod = TypeHelper.GetAttributedMethod(
 
-this.TestFixture, typeof(XHtmlFileFailAttribute));
-
 
 ```csharp
+this.TestFixture, typeof(XHtmlFileFailAttribute));
+
 return \_FailMethod;
 
         }
@@ -1051,9 +1042,12 @@ XmlReaderSettings Settings = new XmlReaderSettings();
 
         XHmlReader = XmlReader.Create(
 
+
+```csharp
 this.CurrentFile.FullName,
 
             Settings);
+```
 
 try
 
@@ -1072,7 +1066,6 @@ while (XHmlReader.Read())
 catch (XmlException ex)
 
         {
-```
 
 this.AddFailure(
 
@@ -1080,8 +1073,6 @@ String.Format(“Xml Error: {0}”, ex.Message),
 
 String.Format(“File {0}”, this.CurrentFile.Name));
 
-
-```csharp
         }
 
         XHmlReader.Close();
@@ -1091,14 +1082,11 @@ String.Format(“File {0}”, this.CurrentFile.Name));
 if (this.IsValid)
 
         {
-```
 
 this.AddSuccess(
 
 String.Format(“File {0}”, this.CurrentFile.Name));
 
-
-```csharp
         }
 
     }
@@ -1113,22 +1101,22 @@ ValidationEventArgs args)
 
 ```csharp
     {
-```
 
 String TestName = String.Format(“File {0} Line {1} Position {2}”,
 
 this.CurrentFile.Name,
+```
 
             args.Exception.LineNumber,
 
             args.Exception.LinePosition);
 
+
+```csharp
 this.AddFailure(args.Exception.Message, TestName);
 
 this.IsValid = false;
 
-
-```csharp
     }
 
 public void AddFailure(String message, String testName)
@@ -1136,20 +1124,20 @@ public void AddFailure(String message, String testName)
     {
 
 Object[] Args = new Object[1] { message };
-```
 
 IRunInvoker TestInvoker = new MultiParameterRunInvoker(
 
 this, this.FailMethod, Args, testName);
+```
 
         TestInvoker = DecoratorPatternAttribute.DecoreInvoker(
 
+
+```csharp
 this.FailMethod, TestInvoker);
 
 this.Tree.AddChild(this.Parent, TestInvoker);
 
-
-```csharp
     }
 
 public void AddSuccess(String testName)
@@ -1157,20 +1145,20 @@ public void AddSuccess(String testName)
     {
 
 Object[] Args = new Object[0] {  };
-```
 
 IRunInvoker TestInvoker = new MultiParameterRunInvoker(
 
 this, this.PassMethod, Args, testName);
+```
 
         TestInvoker = DecoratorPatternAttribute.DecoreInvoker(
 
+
+```csharp
 this.PassMethod, TestInvoker);
 
 this.Tree.AddChild(this.Parent, TestInvoker);
 
-
-```csharp
     }
 
 }

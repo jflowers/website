@@ -961,13 +961,26 @@ def _detect_code_language(line):
         return "csharp"
     if stripped.startswith("Assert.") or stripped.startswith("Console."):
         return "csharp"
-    if stripped in ("{", "}") or stripped == "};":
+    if stripped in ("{", "}", "};", "});"):
+        return "csharp"
+    # Single-line comments
+    if stripped.startswith("//"):
+        return "csharp"
+    # this.method() calls
+    if stripped.startswith("this."):
+        return "csharp"
+    # Bare else / else if
+    if (
+        stripped == "else"
+        or stripped.startswith("else {")
+        or stripped.startswith("else if")
+    ):
         return "csharp"
 
     # Java patterns
     if re.match(r"^(package|import)\s", stripped):
         return "java"
-    if re.match(r"^@(Override|Test|Before|After)\b", stripped):
+    if re.match(r"^@\w+", stripped):
         return "java"
 
     # Batch/shell patterns
@@ -1018,10 +1031,34 @@ def _is_code_continuation(line, in_code_run):
     if re.match(r'^\s+\w[\w\-]*\s*=\s*["\']', line):
         return True
     # Closing braces, brackets, parens
-    if stripped in ("}", "});", ");", "]", "/>", ">"):
+    if stripped in ("}", "});", ");", "]", "/>", ">", "};"):
         return True
     # Lines ending with { or ; (common in C#/Java)
     if stripped.endswith("{") or stripped.endswith(";"):
+        return True
+    # Method calls: something.something(...)
+    if re.match(r"^[\w\.]+\(", stripped):
+        return True
+    # Variable assignment: Type var = ...
+    if re.match(r"^[A-Z]\w+\s+\w+\s*=", stripped):
+        return True
+    # Bare keywords that can appear on their own line
+    if stripped in (
+        "else",
+        "else {",
+        "try {",
+        "finally {",
+        "do {",
+        "break;",
+        "continue;",
+    ):
+        return True
+    # Comments
+    if (
+        stripped.startswith("//")
+        or stripped.startswith("/*")
+        or stripped.startswith("*")
+    ):
         return True
     return False
 

@@ -48,12 +48,9 @@ public void Add(InventoryItem inventoryItem, int amount)
         this.Inventory[inventoryItem] = (int) this.Inventory[inventoryItem] + amount;
 
     }
-```
 
     else
 
-
-```csharp
     {
 
         this.Inventory[inventoryItem] = amount;
@@ -80,12 +77,9 @@ public void Add(InventoryItem inventoryItem, int amount)
         System.Diagnostics.Debug.Assert(this.Inventory[inventoryItem] > amount, “The inventory should be more than the amount that was just added.”);
 
     }
-```
 
     else
 
-
-```csharp
     {
 
         this.Inventory[inventoryItem] = amount;

@@ -67,11 +67,11 @@ Me.CheckExceptions()
 
 ```csharp
     Assert.IsTrue( \_
-```
 
 Me.MsgRecievedUnWrapped.CompareTo( \_
 
 DirectCast( \_
+```
 
 Me.MsgSentWrapped.Envelop.Body.Content, \_
 

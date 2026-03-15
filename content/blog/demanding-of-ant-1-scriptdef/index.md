@@ -205,9 +205,9 @@ Self provides a reference to the Ant object project; pretty much the root of the
         logger.buildStarted(new BuildEvent(project));
 
         logger.targetStarted(new BuildEvent(self.getOwningTarget()));
-```
 
         logger.taskStarted(new BuildEvent(self))
+```
 
     ]]>
 

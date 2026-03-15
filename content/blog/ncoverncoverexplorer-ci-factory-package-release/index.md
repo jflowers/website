@@ -56,12 +56,9 @@ In the properties file of the package you need to choose which unit testing pack
   <xslReportBuildPlugin description=“.NET Compile Details“ actionName=“DevEnvCompileDetails“ xslFileName=“Packages\VS.NETCompile\DevEnvCompileDetails.xsl“ />  
   <xslReportBuildPlugin description=“NCover Report“ actionName=“NCoverBuildReport“ xslFileName=“Packages\NCover\NCoverExplorer.xsl“ />  
 </buildPlugins>
-```
 
 **5.** Edit the ccnetproject.xml to merge <your projects location>\Build\CoverageReports\CoverageReport.xml
 
-
-```xml
 <publishers>  
   <merge>  
     <files>  
