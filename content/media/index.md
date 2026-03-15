@@ -30,15 +30,13 @@ International Software Testing Conference focused on advanced software testing m
 
 - **Why We Do What We Do** -- [Slides](https://docs.google.com/presentation/u/0/d/1GUVZLa-BYuslInORIY1MZksZXgrXLjO3kdivlAyUQTQ/edit)
 
-### DevOps DC Meetup -- August 2016
-
-- **Performance Testing** -- With a little bit of discipline, performance/load/stress testing can be that "But wait, there's more!" from what DevOps provides. Do you do performance monitoring? Do you do automated acceptance testing? Do you run the tests in parallel to keep execution time low? If you said yes, then you too can have performance testing for next to nothing. [Slides](https://docs.google.com/presentation/u/0/d/1stkBd_XAgkG_vSUFd4SNbOg2Sgc-m7yDqL5IDgM_2-E/edit)
-
 ## User Group Talks
 
 - **Capital Area .NET User Group** (August 29, 2007) -- CI Factory talk.
 
 - **Richmond .NET User Group** (January 11, 2008) -- CI Factory demonstration. [Writeup by Joey Beninghove](https://lostechies.com/joeybeninghove/2008/01/11/cifactory-create-richmonddnug/)
+
+- **DevOps DC Meetup** (August 23, 2016) -- Performance Testing. With a little bit of discipline, performance/load/stress testing can be that "But wait, there's more!" from what DevOps provides. Do you do performance monitoring? Do you do automated acceptance testing? Do you run the tests in parallel to keep execution time low? If you said yes, then you too can have performance testing for next to nothing. [Slides](https://docs.google.com/presentation/u/0/d/1stkBd_XAgkG_vSUFd4SNbOg2Sgc-m7yDqL5IDgM_2-E/edit)
 
 ## Screencasts & Podcasts
 
