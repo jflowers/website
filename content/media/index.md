@@ -16,6 +16,12 @@ ShowToc: false
 
 - **dnrTV** -- [Building a Continuous Integration Process in an Hour](https://haacked.com/archive/2007/04/29/building-a-continuous-integration-process-in-an-hour-on-dnrtv.aspx/) -- With Phil Haack, demonstrating CI setup from scratch.
 
+## Book Acknowledgments
+
+- **Continuous Delivery** (Addison-Wesley, 2010) by Jez Humble & David Farley -- [Acknowledged](https://books.google.com/books?id=6ADDuzere-YC&pg=PT47&dq=jay+flowers+continuous+delivery) in the book's acknowledgments section.
+
+- **The Art of Unit Testing** (Manning, 2009) by Roy Osherove -- [Acknowledged as a reviewer](https://www.oreilly.com/library/view/the-art-of/9781933988276/kindle_split_011.html) who provided valuable feedback during the book's development.
+
 ## Community Mentions
 
 - **Scott Hanselman** -- ["MbUnit - Unit Testing on Crack"](https://www.hanselman.com/blog/mbunit-unit-testing-on-crack) -- Discusses MbUnit features including Jay's contributions.
