@@ -14,33 +14,39 @@ ShowToc: true
 
 ### OpenForce '07 / DevConnections -- Las Vegas, November 2007
 
-Co-located with DevConnections at Mandalay Bay Resort and Casino (November 5--8, 2007). The inaugural DotNetNuke conference track drew roughly 5,000 attendees.
+Co-located with DevConnections at Mandalay Bay Resort and Casino (November 5--8, 2007). Part of the inaugural DotNetNuke conference track, which drew roughly 5,000 attendees.
 
-- **DOS202: Continuous Integration Using CI Factory** -- Co-presented with [Charlie Poole](https://charliepoole.com/) (creator of NUnit). Demonstrated how CI Factory could automate the setup and configuration of Continuous Integration environments.
+- **DOS202: Continuous Integration Using CI Factory** -- Co-presented with [Charlie Poole](https://charliepoole.com/) (creator of NUnit). Demonstrated how CI Factory could automate the setup and configuration of CI environments.
 
 - **.NET Open Source Architectural Models** -- Architectural patterns within the .NET open-source community.
 
 ### Agile DC
 
-Featured as a keynote speaker alongside industry leaders including Ken Schwaber.
+- **Workspace Management** -- A technical presentation (28-slide deck) on defining, creating, and maintaining software tool stacks for developers and testers. [Slides](https://docs.google.com/presentation/u/0/d/0B31NnkfcmRfBeEVlV1FBOXFQazg/edit?resourcekey=0-q68a4gI-eQFYLczQupoBUQ)
 
 ### VERIFY 2006 -- Washington, DC, October 2006
 
 International Software Testing Conference focused on advanced software testing methodologies.
 
-### Workspace Management
+- **Why We Do What We Do** -- [Slides](https://docs.google.com/presentation/u/0/d/1GUVZLa-BYuslInORIY1MZksZXgrXLjO3kdivlAyUQTQ/edit)
 
-A technical presentation (28-slide deck) on defining, creating, and maintaining software tool stacks for developers and testers.
+### DevOps DC Meetup -- August 2016
+
+- **Performance Testing** -- With a little bit of discipline, performance/load/stress testing can be that "But wait, there's more!" from what DevOps provides. Do you do performance monitoring? Do you do automated acceptance testing? Do you run the tests in parallel to keep execution time low? If you said yes, then you too can have performance testing for next to nothing. [Slides](https://docs.google.com/presentation/u/0/d/1stkBd_XAgkG_vSUFd4SNbOg2Sgc-m7yDqL5IDgM_2-E/edit)
+
+## User Group Talks
+
+- **Capital Area .NET User Group** (August 29, 2007) -- CI Factory talk. [Writeup by Joey Beninghove](https://lostechies.com/joeybeninghove/2008/01/11/cifactory-create-richmonddnug/)
 
 ## Screencasts & Podcasts
 
-- **dnrTV, Episode 64** (April 2007) -- [Continuous Integration Screencast](https://www.hanselman.com/blog/continuous-integration-screencast-jay-flowers-and-i-on-dnrtv) with Scott Hanselman and Carl Franklin. Demonstrated setting up a complete CI system from a totally fresh machine using CI Factory and Subversion.
+- **dnrTV, Episode 64** (April 2007) -- [Continuous Integration Screencast](https://www.hanselman.com/blog/continuous-integration-screencast-jay-flowers-and-i-on-dnrtv) with Scott Hanselman and Carl Franklin. Demonstrated setting up a complete CI system from a fresh machine using CI Factory and Subversion.
 
-- **dnrTV** -- [Building a Continuous Integration Process in an Hour](https://haacked.com/archive/2007/04/29/building-a-continuous-integration-process-in-an-hour-on-dnrtv.aspx/) -- With Phil Haack, demonstrating CI setup from scratch.
+- **dnrTV** -- [Building a Continuous Integration Process in an Hour](https://haacked.com/archive/2007/04/29/building-a-continuous-integration-process-in-an-hour-on-dnrtv.aspx/) -- With Phil Haack.
 
-- **Hanselminutes, Show #54** (March 2007) -- "Squeezing the most out of Continuous Integration." Discussion on the internal workings of CI Factory and the benefits of automated accelerators.
+- **Hanselminutes, Show #54** (March 2007) -- "Squeezing the most out of Continuous Integration." Discussion on the internal workings of CI Factory and automated accelerators.
 
-- **Hanselminutes, Show #4** (February 2006) -- Early discussion on the foundational principles of Continuous Integration.
+- **Hanselminutes, Show #4** (February 2006) -- Discussion on the foundational principles of Continuous Integration.
 
 ## Book Acknowledgments
 
