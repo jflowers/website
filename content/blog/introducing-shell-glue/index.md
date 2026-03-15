@@ -16,7 +16,7 @@ params:
 
 ## Introducing Shell Glue
 
-Shell Glue is a![iStock_000001915932XSmall](images/2007/08/iStock_000001915932XSmall.jpg) Windows Explorer Shell Extension, more specifically to add context menu items to files and folders.  What menu items and sub items are added to the context menu is controlled through a configuration file.  For a simple example lets create a configuration that will give a menu item that will build solution and or project files with MSBuild when selected.
+Shell Glue is a![iStock_000001915932XSmall](iStock_000001915932XSmall.jpg) Windows Explorer Shell Extension, more specifically to add context menu items to files and folders.  What menu items and sub items are added to the context menu is controlled through a configuration file.  For a simple example lets create a configuration that will give a menu item that will build solution and or project files with MSBuild when selected.
 
 ![SimpleBuild](images/2007/08/SimpleBuild.png)
 

@@ -17,7 +17,7 @@ params:
 
 ## CI Factory, Where are you?
 
-CI Factory and I have been stuck in the Java world for over a year now.  I have not had much reason to keep up with the Dot Net packages.  I ![iStock_000000778473XSmall](images/2009/08/iStock_000000778473XSmall.jpg "iStock_000000778473XSmall")know there are new versions of most of the Dot Net tools CI Factory offers packages for.  I have let this keep me from releasing a new version of CI Factory.  There have been many new features in the core of CI Factory and several new packages around Java tools.  I will not sacrifice my personal life to maintain all of CI Factory.  As well I see no good reason for delaying a release of a new version of CI Factory for out-of-date Dot Net packages.  I welcome anyone’s help in updating the Dot Net packages.
+CI Factory and I have been stuck in the Java world for over a year now.  I have not had much reason to keep up with the Dot Net packages.  I ![iStock_000000778473XSmall](iStock_000000778473XSmall.jpg "iStock_000000778473XSmall")know there are new versions of most of the Dot Net tools CI Factory offers packages for.  I have let this keep me from releasing a new version of CI Factory.  There have been many new features in the core of CI Factory and several new packages around Java tools.  I will not sacrifice my personal life to maintain all of CI Factory.  As well I see no good reason for delaying a release of a new version of CI Factory for out-of-date Dot Net packages.  I welcome anyone’s help in updating the Dot Net packages.
 
 That said I hope to finish a release version of 1.2 in August.
 

@@ -20,4 +20,4 @@ Gary Feldman pointed out that it would helpful to see what the display of the [A
 
 This is a very tailored version. I doubt that other projects would have any need for some of this data. For example, this project experienced a bug in VS.NET 2005 devenv command line builds for VB.NET (shown as compiler bug).
 
-[![](images/2006/12/WindowsLiveWriter/AnalyticsPackageScreenCapture_94E3/AnalyticsScreenCapture_thumb%5B1%5D.gif)](http://jayflowers.com/WordPress/wp-content/uploads/2006/12/WindowsLiveWriter/AnalyticsPackageScreenCapture_94E3/AnalyticsScreenCapture%5B3%5D.gif)
+[![](AnalyticsScreenCapture_thumb[1].gif)](http://jayflowers.com/WordPress/wp-content/uploads/2006/12/WindowsLiveWriter/AnalyticsPackageScreenCapture_94E3/AnalyticsScreenCapture%5B3%5D.gif)

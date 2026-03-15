@@ -27,6 +27,6 @@ Today is [Windows Developer Tools Day](http://www.oreillynet.com/windows/blog/20
 
 CI Factory is the tool that I wrote about for [Windows Developer Power Tools](http://www.oreilly.com/catalog/9780596527549/): 12.7 Easing the Burden of Implementing a Continuous Integration Process with CI Factory (pg 637-649).
 
-[![](images/2007/01/WindowsLiveWriter/MyFavoriteTool_9744/Book%5B4%5D.gif)](http://www.oreilly.com/catalog/9780596527549/)
+[![](Book[4].gif)](http://www.oreilly.com/catalog/9780596527549/)
 
 In a [recent post](http://jayflowers.com/WordPress/?p=122) I questioned NAnt’s rate of progress and mused about committing to maintaining a private branch for CI Factory.  I have since worked with Gert Driesen, a NAnt project Admin, to become a developer on the NAnt project.  I hope to make a significant impact and give back to a tool that has done so much for me.

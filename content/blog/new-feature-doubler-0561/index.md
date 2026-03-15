@@ -23,7 +23,7 @@ I guess the talk about Doubler got me motivated: I added a new feature. You can 
 
 The options page looks much the same as for generating a single test stub recorder.
 
-![ManyRecordingsGeneratorView](images/2006/09/BlogFiles/ManyRecordingsGeneratorView.png)
+![ManyRecordingsGeneratorView](ManyRecordingsGeneratorView.png)
 
 Notice the icon in the bottom right this is dragable like a folder is dragable from Windows Explorer. It is tied to the a folder named after the root namespace.
 

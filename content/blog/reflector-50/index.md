@@ -21,7 +21,7 @@ So there is a new version of Reflector out. As always you can get Reflector at L
 
 Doubler has been recompiled against this new version of Reflector. There are no new features in the release of Doubler. Please find Doubler [0.5.6.2](http://code.google.com/p/doubler/) at the new Google Code project site.
 
-There are some new features of Reflector that you should know about. The first thing that you should do is run the register commandline switch. Go to the command prompt that execute **Reflector.exe /register**. This will make dlls open with Reflector, you can double click them ![Shell Context Menu](images/2007/02/WindowsLiveWriter/Reflactor5.0_132A8/ShellContextMenu%5B4%5D.gif) and they open in Reflector. I think this was in the previous version. He has added some more integration into the shell with a **code** URI. I can see how this will be used in blogging and I bet there will be a Reflector add-in for that in the near future.
+There are some new features of Reflector that you should know about. The first thing that you should do is run the register commandline switch. Go to the command prompt that execute **Reflector.exe /register**. This will make dlls open with Reflector, you can double click them ![Shell Context Menu](ShellContextMenu[4].gif) and they open in Reflector. I think this was in the previous version. He has added some more integration into the shell with a **code** URI. I can see how this will be used in blogging and I bet there will be a Reflector add-in for that in the near future.
 
 [code://mscorlib/System.IO.Directory](code://mscorlib/System.IO.Directory "code://mscorlib/System.IO.Directory")
 
@@ -37,6 +37,6 @@ There are three new types of Analyzer results: Exposed By, Instantiated By, and 
 
 The last big thing for me has been the Expand Methods functionality in the Disassembler window. You can now view the entire type on one page.
 
-![Expand Methods](images/2007/02/WindowsLiveWriter/Reflactor5.0_132A8/ExpandMethods%5B3%5D.gif)
+![Expand Methods](ExpandMethods[3].gif)
 
 I have not jumped into the LINQ thing yet but for those of you that have Reflector now supports it.

@@ -29,7 +29,7 @@ In a [recent post](http://jayflowers.com/WordPress/?p=135) I mentioned that I mi
 
 I used the OrganizeWithRegions command, here is a quick screen cast:
 
-![CR_ClassCleaner](images/2007/02/CR_ClassCleaner.gif)
+![CR_ClassCleaner](CR_ClassCleaner.gif)
 
 To get the using statements organized I used [Travis Illig’s](http://www.paraesthesia.com/blog/) [CR\_SortLines](http://www.paraesthesia.com/blog/comments.php?id=889_0_1_0_C). Here is a screen cast from his site:
 
@@ -41,7 +41,7 @@ First lets look a what Rory Becker has put together. I think he may have written
 
 I use [MoveIt](http://www.rorybecker.me.uk/MoveIt.html) and [UnusedVars](http://www.rorybecker.me.uk/UnusedVars.html). I am [PaintIt’s](http://www.rorybecker.me.uk/PaintIt.html) (used to be ColorcodeVars) number one fan. Here just take a look at what PaintIt does:
 
-![PaintIt](images/2007/02/PaintIt.gif)
+![PaintIt](PaintIt.gif)
 
 It makes reading the code so much easier, It is much more of an in your face media rich experience. The highlighting is the main feature for me. When you place the cursor on a var/member/ref it highlights all the refs and declaration of that var/member. The highlighting coupled with CodeRush’s new [reference jumping](http://www.doitwith.net/2006/12/16/StillLookingForReferences.aspx) feature is spectacular. There used to be a a great video of the feature with Mark Miller and Julian Bucknall but they seem to have removed it ![:-(](http://jayflowers.com/WordPress/wp-includes/images/smilies/icon_sad.gif) . Here is my weak replacement:
 
@@ -55,7 +55,7 @@ Placing your cursor on a ref will populate the tool window when Live Sync is on,
 
 Rory’s UnusedVars plugin is simple. It shows you any unused vars:
 
-![NotUsed](images/2007/02/NotUsed.gif)
+![NotUsed](NotUsed.gif)
 
 Again this is helping to create a media rich experience. The realtime nature of these plugins is a key aspect as well.
 
@@ -71,7 +71,7 @@ Here is a [complete list](http://www.doitwith.net/2006/12/27/MyNewYear'sResoluti
 
 Lastly is [Code Style Enforcer](http://joel.fjorden.se/static.php?page=CodeStyleEnforcer) by [Joel Fjordén](http://joel.fjorden.se/index.php). It has three main rule types: member visibility, interface implementation. and basic naming conventions. The naming convention is the most interesting to me. It uses user defined regular expressions to evaluate compliance. It comes predefined so if you are not a regex wiz the defaults are where it’s at. The tool tips don’t show in the animated gif below, they are what gives you a clue as to what you have done wrong so that you can fix it.
 
-![CodeStyle](images/2007/02/CodeStyle.gif)
+![CodeStyle](CodeStyle.gif)
 
 [http://www.rorybecker.co.uk/](http://www.rorybecker.co.uk/ "http://www.rorybecker.co.uk/")
 

@@ -17,7 +17,7 @@ params:
 
 ## Automated Workspace Management
 
-Recently I was at [CITCON 2010](http://citconf.com/raleigh-durham2010/) (Continuous Integration and Testing Conference) in Raleigh-Durham. One of the sessions I participated in was on [automated workspace management](http://citconf.com/wiki/index.php?title=Automated_Workspace_Setup).  I thought I would share more on my related experiences here.![workbench](images/2010/04/iStock_000006864190XSmall.jpg "workbench")
+Recently I was at [CITCON 2010](http://citconf.com/raleigh-durham2010/) (Continuous Integration and Testing Conference) in Raleigh-Durham. One of the sessions I participated in was on [automated workspace management](http://citconf.com/wiki/index.php?title=Automated_Workspace_Setup).  I thought I would share more on my related experiences here.![workbench](iStock_000006864190XSmall.jpg "workbench")
 
 First what is automated workspace management?  Think of a new person on your project.  How do they get a workspace created?  Most projects have a document or documents, maybe on the wiki, that is supposed to give instructions on how to get setup.  We all know that these are never up to date.  Often they lie and confuse.  In the end it always requires someone on the team to help them figure out how to get them up and running.   And I would put money on that most times, in the end, when it starts working no one is really sure why it finally starts working.  In essence private workspaces are works of art.  We are not in the business of making works of art.  Our workspaces should be easy to create, destroy, and recreate: they should be disposable.  A new person should be able to click a button to setup their workspace.  All team members should be able to click a button to update their workspaces’ to be in sync with the latest from source control.
 
@@ -135,8 +135,8 @@ Title=My Example Installer]]>
 
 The end result would be C:\Temp\Example-Installer.exe.  I would unzip to the directory C:\FuzzyBunnies and echo Hippied Hop in a command window.  The title of the install window would be My Example Installer.  You can read the help for WinRar or play with the GUI to see all the options.
 
-![WinRar SFX](images/2010/04/CropperCapture2.jpg "WinRar SFX")
+![WinRar SFX](CropperCapture2.jpg "WinRar SFX")
 
 The Workspace Package in CI Factory creates a SFX that bundles up NAnt and all the scripts needed to bootstrap the process of creating a new workspace.
 
-![Workspace Setup](images/2010/04/CropperCapture4.jpg "Workspace Setup")
+![Workspace Setup](CropperCapture4.jpg "Workspace Setup")

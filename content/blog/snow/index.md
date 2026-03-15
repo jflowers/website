@@ -20,15 +20,15 @@ We finally got our first snow fall.  Things had been weird with out the snow. 
 
 [![](images/2007/01/WindowsLiveWriter/Snow_C48B/WaterTower21.jpg)![](http://jayflowers.com/WordPress/wp-content/uploads/2007/01/WindowsLiveWriter/Snow_C48B/Ian_thumb14.jpg)](http://jayflowers.com/WordPress/wp-content/uploads/2007/01/WindowsLiveWriter/Snow_C48B/Ian16.jpg)
 
-[![](images/2007/01/WindowsLiveWriter/Snow_C48B/Tub_thumb4.jpg)](http://jayflowers.com/WordPress/wp-content/uploads/2007/01/WindowsLiveWriter/Snow_C48B/Tub6.jpg)
+[![](Tub_thumb4.jpg)](http://jayflowers.com/WordPress/wp-content/uploads/2007/01/WindowsLiveWriter/Snow_C48B/Tub6.jpg)
 
-[![](images/2007/01/WindowsLiveWriter/Snow_C48B/Hill_thumb4.jpg)](http://jayflowers.com/WordPress/wp-content/uploads/2007/01/WindowsLiveWriter/Snow_C48B/Hill6.jpg)
+[![](Hill_thumb4.jpg)](http://jayflowers.com/WordPress/wp-content/uploads/2007/01/WindowsLiveWriter/Snow_C48B/Hill6.jpg)
 
 **Urgent Update:**
 
 Due to a nap Chili and Salsa have become the focus of the day.  If you were here I would share.
 
-[![](images/2007/01/WindowsLiveWriter/Snow_C48B/Chili_thumb%5B1%5D.jpg)](http://jayflowers.com/WordPress/wp-content/uploads/2007/01/WindowsLiveWriter/Snow_C48B/Chili%5B3%5D.jpg) [![](images/2007/01/WindowsLiveWriter/Snow_C48B/Salsa_thumb%5B1%5D.jpg)](http://jayflowers.com/WordPress/wp-content/uploads/2007/01/WindowsLiveWriter/Snow_C48B/Salsa%5B3%5D.jpg)
+[![](Chili_thumb[1].jpg)](http://jayflowers.com/WordPress/wp-content/uploads/2007/01/WindowsLiveWriter/Snow_C48B/Chili%5B3%5D.jpg) [![](Salsa_thumb[1].jpg)](http://jayflowers.com/WordPress/wp-content/uploads/2007/01/WindowsLiveWriter/Snow_C48B/Salsa%5B3%5D.jpg)
 
 My chilis are always different.  This time:
 

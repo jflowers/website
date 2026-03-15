@@ -49,7 +49,7 @@ So far the 0.8 release has racked up 234 commits.
 
 Some the coolest new features are in the setup. It can setup your new CI Factory project, load it into the source control repository, configure IIS, start CCNet, and open the Build Script Solution. But don’t take my word for it look at this [screencast](http://jayflowers.com/CI%20Factory/Videos/CI%20Factory%20Beta%200.8/CI%20Factory%20Beta%200.8.html).
 
-[![CI Factory Beta 0.8.0.27 ScreenCast](images/2007/03/CI_20Factory_20Beta_200.8.0.27_20ScreenCast.jpg)](http://jayflowers.com/CI%20Factory/Videos/CI%20Factory%20Beta%200.8/CI%20Factory%20Beta%200.8.html)
+[![CI Factory Beta 0.8.0.27 ScreenCast](CI_20Factory_20Beta_200.8.0.27_20ScreenCast.jpg)](http://jayflowers.com/CI%20Factory/Videos/CI%20Factory%20Beta%200.8/CI%20Factory%20Beta%200.8.html)
 
 You can download the bits from [here](http://code.google.com/p/ci-factory/downloads/detail?name=CI-Factory-Beta-0.8.0.27.zip&can=2&q=).
 
