@@ -6,6 +6,8 @@ ShowToc: false
 
 ## Jay Flowers
 
+![Jay Flowers](/images/FramedMeditationIconMedium.jpg)
+
 Software engineer, automation advocate, and continuous integration pioneer.
 
 ### Notable Work

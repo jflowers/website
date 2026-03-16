@@ -15,9 +15,18 @@ theme = 'PaperMod'
   defaultTheme = 'auto'
   disableThemeToggle = false
 
-  [params.homeInfoParams]
-    Title = 'Jay Flowers'
-    Content = 'Software engineer and CI pioneer. Creator of CI Factory, MbUnit contributor, and author on Continuous Integration, testing patterns, and software craftsmanship.'
+  [params.profileMode]
+    enabled = true
+    title = 'Jay Flowers'
+    subtitle = 'Software engineer and CI pioneer. Creator of CI Factory, MbUnit contributor, and author on Continuous Integration, testing patterns, and software craftsmanship.'
+    imageUrl = '/images/portrait.png'
+    imageTitle = 'Jay Flowers'
+    imageWidth = 200
+    imageHeight = 200
+
+  [[params.socialIcons]]
+    name = 'linkedin'
+    url = 'https://www.linkedin.com/in/jfl0wers/'
 
   [[params.socialIcons]]
     name = 'github'
