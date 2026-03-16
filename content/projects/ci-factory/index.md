@@ -1,6 +1,7 @@
 ---
-title: "CI Factory"
+title: "CI Factory (Retired)"
 description: "Open-source accelerator for setting up Continuous Integration systems"
+weight: 10
 ---
 
 ## CI Factory

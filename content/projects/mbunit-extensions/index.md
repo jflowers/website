@@ -1,6 +1,7 @@
 ---
-title: "MbUnit Extensions"
+title: "MbUnit Extensions (Retired)"
 description: "Custom extensions and patterns for the MbUnit testing framework"
+weight: 11
 ---
 
 ## MbUnit Extensions
