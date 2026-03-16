@@ -2,6 +2,7 @@ baseURL = 'https://www.jayflowers.com/'
 languageCode = 'en-us'
 title = 'Jay Flowers'
 theme = 'PaperMod'
+googleAnalytics = 'G-HWBKQ6GQ8T'
 
 [params]
   author = 'Jay Flowers'
