@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=communication_lines_patlet"
+  - "/wiki/communication-lines-patlet/"
 params:
-  wayback_url: "https://web.archive.org/web/20190718194014/http://jayflowers.com/doku/doku.php?id=communication_lines_patlet"
-  original_url: "http://jayflowers.com/doku/doku.php?id=communication_lines_patlet"
+  wayback_url: "https://web.archive.org/web/20190718194014//wiki/communication-lines-patlet/"
+  original_url: "/wiki/communication-lines-patlet/"
   archived_from: Wayback Machine
 
 ---
 
-[[[communication\_lines\_patlet](/doku/doku.php?id=communication_lines_patlet&do=backlink)]]
+[[[communication\_lines\_patlet](/wiki/communication-lines-patlet/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [communication\_lines\_patlet](/doku/doku.php?id=communication_lines_patlet "communication_lines_patlet")
+
+Trace: » [communication\_lines\_patlet](/wiki/communication-lines-patlet/ "communication_lines_patlet")
 
 Need to write this one.
 

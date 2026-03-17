@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=integration_build_patlet"
+  - "/wiki/integration-build-patlet/"
 params:
-  wayback_url: "https://web.archive.org/web/20190922023230/http://jayflowers.com/doku/doku.php?id=integration_build_patlet"
-  original_url: "http://jayflowers.com/doku/doku.php?id=integration_build_patlet"
+  wayback_url: "https://web.archive.org/web/20190922023230//wiki/integration-build-patlet/"
+  original_url: "/wiki/integration-build-patlet/"
   archived_from: Wayback Machine
 
 ---
 
-[[[integration\_build\_patlet](/doku/doku.php?id=integration_build_patlet&do=backlink)]]
+[[[integration\_build\_patlet](/wiki/integration-build-patlet/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [integration\_build\_patlet](/doku/doku.php?id=integration_build_patlet "integration_build_patlet")
+
+Trace: » [integration\_build\_patlet](/wiki/integration-build-patlet/ "integration_build_patlet")
 
 ## Context
 

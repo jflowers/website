@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=task_level_commit_patlet"
+  - "/wiki/task-level-commit-patlet/"
 params:
-  wayback_url: "https://web.archive.org/web/20190922022844/http://jayflowers.com/doku/doku.php?id=task_level_commit_patlet"
-  original_url: "http://jayflowers.com/doku/doku.php?id=task_level_commit_patlet"
+  wayback_url: "https://web.archive.org/web/20190922022844//wiki/task-level-commit-patlet/"
+  original_url: "/wiki/task-level-commit-patlet/"
   archived_from: Wayback Machine
 
 ---
 
-[[[task\_level\_commit\_patlet](/doku/doku.php?id=task_level_commit_patlet&do=backlink)]]
+[[[task\_level\_commit\_patlet](/wiki/task-level-commit-patlet/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [task\_level\_commit\_patlet](/doku/doku.php?id=task_level_commit_patlet "task_level_commit_patlet")
+
+Trace: » [task\_level\_commit\_patlet](/wiki/task-level-commit-patlet/ "task_level_commit_patlet")
 
 ## Context
 

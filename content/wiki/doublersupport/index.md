@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=doublersupport"
+  - "/wiki/doublersupport/"
 params:
-  wayback_url: "https://web.archive.org/web/20071109182110/http://jayflowers.com:80/doku/doku.php?id=doublersupport"
-  original_url: "http://jayflowers.com:80/doku/doku.php?id=doublersupport"
+  wayback_url: "https://web.archive.org/web/20071109182110//wiki/doublersupport/"
+  original_url: "/wiki/doublersupport/"
   archived_from: Wayback Machine
 
 ---
 
-[[[doublersupport](/doku/doku.php?id=doublersupport&do=backlink)]]
+[[[doublersupport](/wiki/doublersupport/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [doublersupport](/doku/doku.php?id=doublersupport "doublersupport")
+
+Trace: » [doublersupport](/wiki/doublersupport/ "doublersupport")
 
 |  |  |  |
 | --- | --- | --- |

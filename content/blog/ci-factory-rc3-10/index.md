@@ -23,37 +23,37 @@ Announcing the third release candidate for version 1.0 of CI Factory!
 | --- | --- | --- |
 | |  |  | | --- | --- | |  | [**Download CI Factory**](http://ci-factory.googlecode.com/files/CI-Factory-RC3-1.0.0.53.exe "CI-Factory-RC3-1.0.0.53.exe")  [*Version RC3 1.0*](http://ci-factory.googlecode.com/files/CI-Factory-RC3-1.0.0.53.exe "CI-Factory-RC3-1.0.0.53.exe") | |
 
-This release, as you would expect, is mostly fixes and polish.  Before I share with you the most notable changes I would like to ask for your help.  Would you please help us with the CI Factory documentation?  We plan to release the final version 1.0 the first week of February.  There is not much time left and even just an hour or two of your time will make a difference.  To help please [register an account at the CI Factory home page](http://www.cifactory.org/joomla/index.php?option=com_registration&task=register).  I will grant you rights to edit and author pages.  We need help with these pages:
+This release, as you would expect, is mostly fixes and polish.  Before I share with you the most notable changes I would like to ask for your help.  Would you please help us with the CI Factory documentation?  We plan to release the final version 1.0 the first week of February.  There is not much time left and even just an hour or two of your time will make a difference.  To help please register an account at the CI Factory home page *[Link removed: content not recovered during site restoration]*.  I will grant you rights to edit and author pages.  We need help with these pages:
 
 ![DocPic](images/2008/01/DocPic.jpg)
 
-- [Getting Started for the Build Master](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=50&Itemid=41)
-- [Getting Started for the Developer](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=49&Itemid=41)
-- [Wix](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=68&Itemid=41)
-- [VSTSVersionControl](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=67&Itemid=41)
-- [VS.NETDeploy](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=66&Itemid=41)
-- [VS.NETCompile](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=65&Itemid=41)
-- [Versioning](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=64&Itemid=41)
-- [Simian](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=63&Itemid=41)
-- [Perforce](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=62&Itemid=41)
-- [NUnit](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=61&Itemid=41)
-- [NDepend](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=60&Itemid=41)
-- [NCover](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=59&Itemid=41)
-- [MSTest](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=58&Itemid=41)
-- [MSBuild](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=57&Itemid=41)
-- [FxCop](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=56&Itemid=41)
-- [What is a Package?](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=55&Itemid=41)
-- [DotNetUnitTest](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=54&Itemid=41)
-- [Deployment](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=53&Itemid=41)
-- [Backup](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=52&Itemid=41)
-- [Archive](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=51&Itemid=41)
-- [Vault](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=42&Itemid=41)
-- [MSBuild](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=41&Itemid=41)
-- [Alerts](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=40&Itemid=41)
-- [Subversion](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=33&Itemid=41)
-- [VisualSourceSafe](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=32&Itemid=41)
+- Getting Started for the Build Master *[Link removed: content not recovered during site restoration]*
+- Getting Started for the Developer *[Link removed: content not recovered during site restoration]*
+- Wix *[Link removed: content not recovered during site restoration]*
+- VSTSVersionControl *[Link removed: content not recovered during site restoration]*
+- VS.NETDeploy *[Link removed: content not recovered during site restoration]*
+- VS.NETCompile *[Link removed: content not recovered during site restoration]*
+- Versioning *[Link removed: content not recovered during site restoration]*
+- Simian *[Link removed: content not recovered during site restoration]*
+- Perforce *[Link removed: content not recovered during site restoration]*
+- NUnit *[Link removed: content not recovered during site restoration]*
+- NDepend *[Link removed: content not recovered during site restoration]*
+- NCover *[Link removed: content not recovered during site restoration]*
+- MSTest *[Link removed: content not recovered during site restoration]*
+- MSBuild *[Link removed: content not recovered during site restoration]*
+- FxCop *[Link removed: content not recovered during site restoration]*
+- What is a Package? *[Link removed: content not recovered during site restoration]*
+- DotNetUnitTest *[Link removed: content not recovered during site restoration]*
+- Deployment *[Link removed: content not recovered during site restoration]*
+- Backup *[Link removed: content not recovered during site restoration]*
+- Archive *[Link removed: content not recovered during site restoration]*
+- Vault *[Link removed: content not recovered during site restoration]*
+- MSBuild *[Link removed: content not recovered during site restoration]*
+- Alerts *[Link removed: content not recovered during site restoration]*
+- Subversion *[Link removed: content not recovered during site restoration]*
+- VisualSourceSafe *[Link removed: content not recovered during site restoration]*
 
-Once you are logged in with editor rights you will see ![](http://www.cifactory.org/joomla/images/M_images/edit.png) buttons next to pages you can edit.  You can even add/edit items to/in the [FAQ section](http://www.cifactory.org/joomla/index.php?option=com_content&task=section&id=3&Itemid=32).  The FAQs and the Documentation are now included in the release exe with a nice [index](images/2008/01/Index.htm).
+Once you are logged in with editor rights you will see *[Image: image -- not recovered during site restoration]* buttons next to pages you can edit.  You can even add/edit items to/in the FAQ section *[Link removed: content not recovered during site restoration]*.  The FAQs and the Documentation are now included in the release exe with a nice [index](images/2008/01/Index.htm).
 
 ## What’s Changed That’s Notable?
 
@@ -61,4 +61,4 @@ First off CI Factory’s NAnt now supports .NET 3.5.  Next there is a new Packa
 
 There were some notable fixes too:  The Subversion Package will now recognize \_svn admin folders.  The VSTSVersionControl Package now fully supports automated setup/install of a new CI Factory instance.  Improved intellisense for NAnt, the xsd creation was fixed, all task containers now show the correct intellisense.
 
-As always you can read the [release notes](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=44&Itemid=1) for a complete list of changes.
+As always you can read the release notes *[Link removed: content not recovered during site restoration]* for a complete list of changes.

@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=a_recipe_for_build_maintainability_and_reusability"
+  - "/wiki/a-recipe-for-build-maintainability-and-reusability/"
 params:
-  wayback_url: "https://web.archive.org/web/20160910022614/http://jayflowers.com/doku/doku.php?id=a_recipe_for_build_maintainability_and_reusability"
-  original_url: "http://jayflowers.com/doku/doku.php?id=a_recipe_for_build_maintainability_and_reusability"
+  wayback_url: "https://web.archive.org/web/20160910022614//wiki/a-recipe-for-build-maintainability-and-reusability/"
+  original_url: "/wiki/a-recipe-for-build-maintainability-and-reusability/"
   archived_from: Wayback Machine
 
 ---
 
-[[[a\_recipe\_for\_build\_maintainability\_and\_reusability](/doku/doku.php?id=a_recipe_for_build_maintainability_and_reusability&do=backlink)]]
+[[[a\_recipe\_for\_build\_maintainability\_and\_reusability](/wiki/a-recipe-for-build-maintainability-and-reusability/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [traceability\_and\_continuous\_integration](/doku/doku.php?id=traceability_and_continuous_integration "traceability_and_continuous_integration") » [a\_recipe\_for\_build\_maintainability\_and\_reusability](/doku/doku.php?id=a_recipe_for_build_maintainability_and_reusability "a_recipe_for_build_maintainability_and_reusability")
+
+Trace: » [traceability\_and\_continuous\_integration](/wiki/traceability-and-continuous-integration/ "traceability_and_continuous_integration") » [a\_recipe\_for\_build\_maintainability\_and\_reusability](/wiki/a-recipe-for-build-maintainability-and-reusability/ "a_recipe_for_build_maintainability_and_reusability")
 
 ## Continuous Integration
 
@@ -41,7 +41,7 @@ Before we move on lets make sure we understand the system, or pattern language, 
 
 |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Figure 1 | | Patlets | | --- | | [Active Development Line Patlet](/doku/doku.php?id=active_development_line_patlet "active_development_line_patlet") | | [Integration Build Patlet](/doku/doku.php?id=integration_build_patlet "integration_build_patlet") | | [Private Workspace Patlet](/doku/doku.php?id=private_workspace_patlet "private_workspace_patlet") | | [Private Build System Patlet](/doku/doku.php?id=private_build_system_patlet "private_build_system_patlet") | | [Unit Test Patlet](/doku/doku.php?id=unit_test_patlet "unit_test_patlet") | | [Task Level Commit Patlet](/doku/doku.php?id=task_level_commit_patlet "task_level_commit_patlet") | | [Development Workspace Patlet](/doku/doku.php?id=development_workspace_patlet "development_workspace_patlet") | | [Communication Lines Patlet](/doku/doku.php?id=communication_lines_patlet "communication_lines_patlet") | | [Repository Patlet](/doku/doku.php?id=repository_patlet "repository_patlet") | | [Third Party Codeline Patlet](/doku/doku.php?id=third_party_codeline_patlet "third_party_codeline_patlet") | |
+| Figure 1 | | Patlets | | --- | | [Active Development Line Patlet](/wiki/active-development-line-patlet/ "active_development_line_patlet") | | [Integration Build Patlet](/wiki/integration-build-patlet/ "integration_build_patlet") | | Private Workspace Patlet *[Link removed: content not recovered during site restoration]* | | Private Build System Patlet *[Link removed: content not recovered during site restoration]* | | [Unit Test Patlet](/wiki/unit-test-patlet/ "unit_test_patlet") | | [Task Level Commit Patlet](/wiki/task-level-commit-patlet/ "task_level_commit_patlet") | | [Development Workspace Patlet](/wiki/development-workspace-patlet/ "development_workspace_patlet") | | [Communication Lines Patlet](/wiki/communication-lines-patlet/ "communication_lines_patlet") | | Repository Patlet *[Link removed: content not recovered during site restoration]* | | [Third Party Codeline Patlet](/wiki/third-party-codeline-patlet/ "third_party_codeline_patlet") | |
 
   
 
@@ -90,7 +90,7 @@ Automated unit testing is needed to verify that the code does what the developer
 
 #### Homogeneous Development Workspace
 
-A homogeneous development workspace structure is probably the most overlooked. There should be no variation between developer workspace structures, and the build server will use the developer workspace structure. This is implied in the Pattern Repository[5)](#fn__5). My experience is pushing me to extract [Development Workspace](/doku/doku.php?id=development_workspace "development_workspace") as an individual pattern.
+A homogeneous development workspace structure is probably the most overlooked. There should be no variation between developer workspace structures, and the build server will use the developer workspace structure. This is implied in the Pattern Repository[5)](#fn__5). My experience is pushing me to extract [Development Workspace](/wiki/development-workspace/ "development_workspace") as an individual pattern.
 
 | Development Workspace Patlet |
 | --- |
@@ -220,7 +220,7 @@ In figure 5 you can see another solution with the product name. This solution is
 
 ### CI Server Configuration
 
-In the Cruise Control project configuration file. The only variation is the ProductName and the credintials for VSS. The resposiblities detailed in [Build Responsibilities](/doku/doku.php?id=a_recipe_for_build_maintainability_and_reusability#build_responsibilities "a_recipe_for_build_maintainability_and_reusability") handled by CCNET are listed below.
+In the Cruise Control project configuration file. The only variation is the ProductName and the credintials for VSS. The resposiblities detailed in [Build Responsibilities](/wiki/a-recipe-for-build-maintainability-and-reusability/ "a_recipe_for_build_maintainability_and_reusability") handled by CCNET are listed below.
 
 - Monitor for trigger
 - Publish results and artifacts
@@ -228,7 +228,7 @@ In the Cruise Control project configuration file. The only variation is the Prod
 
 ### Build Script
 
-The resposiblities detailed in [Build Responsibilities](/doku/doku.php?id=a_recipe_for_build_maintainability_and_reusability#build_responsibilities "a_recipe_for_build_maintainability_and_reusability") handled by nAnt scripts are listed below.
+The resposiblities detailed in [Build Responsibilities](/wiki/a-recipe-for-build-maintainability-and-reusability/ "a_recipe_for_build_maintainability_and_reusability") handled by nAnt scripts are listed below.
 
 - Cleanup and verify build enviroment
 - Control version of product and artifacts

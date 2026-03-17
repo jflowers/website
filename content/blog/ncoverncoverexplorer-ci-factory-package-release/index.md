@@ -75,4 +75,4 @@ In the properties file of the package you need to choose which unit testing pack
 </publishers>
 ```
 
-[**Download**](http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=select&id=12)
+**Download** *[Link removed: content not recovered during site restoration]*

@@ -39,7 +39,7 @@ Independent Packages :
 
 It’s not all done but it is closer than it ever has been.  I hope to have some videos added this week as well as get the rest of the packages documented.
 
-You can download CI Factory 0.7 RC1 and independent packages [here](http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=select&id=6).
+You can download CI Factory 0.7 RC1 and independent packages here *[Link removed: content not recovered during site restoration]*.
 
 |  |  |  |
 | --- | --- | --- |

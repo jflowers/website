@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=third_party_codeline_patlet"
+  - "/wiki/third-party-codeline-patlet/"
 params:
-  wayback_url: "https://web.archive.org/web/20190922023628/http://jayflowers.com/doku/doku.php?id=third_party_codeline_patlet"
-  original_url: "http://jayflowers.com/doku/doku.php?id=third_party_codeline_patlet"
+  wayback_url: "https://web.archive.org/web/20190922023628//wiki/third-party-codeline-patlet/"
+  original_url: "/wiki/third-party-codeline-patlet/"
   archived_from: Wayback Machine
 
 ---
 
-[[[third\_party\_codeline\_patlet](/doku/doku.php?id=third_party_codeline_patlet&do=backlink)]]
+[[[third\_party\_codeline\_patlet](/wiki/third-party-codeline-patlet/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [third\_party\_codeline\_patlet](/doku/doku.php?id=third_party_codeline_patlet "third_party_codeline_patlet")
+
+Trace: » [third\_party\_codeline\_patlet](/wiki/third-party-codeline-patlet/ "third_party_codeline_patlet")
 
 ## Context
 

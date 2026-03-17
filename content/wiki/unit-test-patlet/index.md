@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=unit_test_patlet"
+  - "/wiki/unit-test-patlet/"
 params:
-  wayback_url: "https://web.archive.org/web/20190922022556/http://jayflowers.com/doku/doku.php?id=unit_test_patlet"
-  original_url: "http://jayflowers.com/doku/doku.php?id=unit_test_patlet"
+  wayback_url: "https://web.archive.org/web/20190922022556//wiki/unit-test-patlet/"
+  original_url: "/wiki/unit-test-patlet/"
   archived_from: Wayback Machine
 
 ---
 
-[[[unit\_test\_patlet](/doku/doku.php?id=unit_test_patlet&do=backlink)]]
+[[[unit\_test\_patlet](/wiki/unit-test-patlet/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [unit\_test\_patlet](/doku/doku.php?id=unit_test_patlet "unit_test_patlet")
+
+Trace: » [unit\_test\_patlet](/wiki/unit-test-patlet/ "unit_test_patlet")
 
 This needs a rewrite
 

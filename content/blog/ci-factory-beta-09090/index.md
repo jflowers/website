@@ -17,7 +17,7 @@ params:
 
 ## CI Factory Beta 0.9.0.90
 
-This is the third release of the 0.9 series, build 90.  You can read the [release notes here](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=44&Itemid=1) and [download from here](http://ci-factory.googlecode.com/files/CI-Factory-Beta-0.9.0.90.exe).
+This is the third release of the 0.9 series, build 90.  You can read the release notes here *[Link removed: content not recovered during site restoration]* and [download from here](http://ci-factory.googlecode.com/files/CI-Factory-Beta-0.9.0.90.exe).
 
 There is a new source control Package: Perforce!
 

@@ -5,27 +5,27 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=doubler"
+  - "/wiki/doubler/"
 params:
-  wayback_url: "https://web.archive.org/web/20060629125321/http://jayflowers.com:80/doku/doku.php?id=doubler"
-  original_url: "http://jayflowers.com:80/doku/doku.php?id=doubler"
+  wayback_url: "https://web.archive.org/web/20060629125321//wiki/doubler/"
+  original_url: "/wiki/doubler/"
   archived_from: Wayback Machine
 
 ---
 
-[[[doubler](/doku/doku.php?id=doubler&do=backlink&DokuWiki=3c1751e7f9ebc4ab59f4756836c60e6d)]]
+[[[doubler](/wiki/doubler/)]]
 
-[JayFlowers](/doku/doku.php?id=&DokuWiki=3c1751e7f9ebc4ab59f4756836c60e6d "[ALT+H]")
+
 
 # This page has moved and you will be redirected.
 
-![](/joomla/templates/mp_chinook/images/logo.jpg)
+
 
 ---
 
 |  |  |  |
 | --- | --- | --- |
-| **[Install](/doku/doku.php?id=doulberinstall&DokuWiki=3c1751e7f9ebc4ab59f4756836c60e6d "doulberinstall")** | **[Usage](/doku/doku.php?id=doublerusage&DokuWiki=3c1751e7f9ebc4ab59f4756836c60e6d "doublerusage")** | **[Support](/doku/doku.php?id=doublersupport&DokuWiki=3c1751e7f9ebc4ab59f4756836c60e6d "doublersupport")** |
+| **[Install](/wiki/doulberinstall/ "doulberinstall")** | **[Usage](/wiki/doublerusage/ "doublerusage")** | **[Support](/wiki/doublersupport/ "doublersupport")** |
 
   
 
@@ -46,6 +46,6 @@ params:
 
 | Download |
 | --- |
-| Version 0.5.5.12  [0.5.5.12-doubler.zip](/doku/lib/exe/fetch.php?id=doubler&cache=cache&media=0.5.5.12-doubler.zip&DokuWiki=3c1751e7f9ebc4ab59f4756836c60e6d "0.5.5.12-doubler.zip")  0.5.5.12   - Fixed Wrapper/Interface: creates interface again, no duplicate members - Fixed Recorder: no duplicate members - Minor changes   0.5.5 Changes:   - Added logging tab. - Unit Test generator can now tracks calls to named parameters, writting test code for how each parameter is used. - No longer locks assemblies.   0.5 Changes:   - Added drag file control. - Wrapper class members are all final. - Recorder method names that are shared wiht Object are marked with override or overload. - Wrapper class internals are marked as private and not part of the wrapper interface.   Example: [unit\_test\_patterns.zip](/doku/lib/exe/fetch.php?id=doubler&cache=cache&media=unit_test_patterns.zip&DokuWiki=3c1751e7f9ebc4ab59f4756836c60e6d "unit_test_patterns.zip") |
+| Version 0.5.5.12  0.5.5.12-doubler.zip *[Link removed: content not recovered during site restoration]*  0.5.5.12   - Fixed Wrapper/Interface: creates interface again, no duplicate members - Fixed Recorder: no duplicate members - Minor changes   0.5.5 Changes:   - Added logging tab. - Unit Test generator can now tracks calls to named parameters, writting test code for how each parameter is used. - No longer locks assemblies.   0.5 Changes:   - Added drag file control. - Wrapper class members are all final. - Recorder method names that are shared wiht Object are marked with override or overload. - Wrapper class internals are marked as private and not part of the wrapper interface.   Example: unit\_test\_patterns.zip *[Link removed: content not recovered during site restoration]* |
 
 doubler.txt · Last modified: 2006/05/04 14:51 by jflowers

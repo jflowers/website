@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=active_development_line_patlet"
+  - "/wiki/active-development-line-patlet/"
 params:
-  wayback_url: "https://web.archive.org/web/20190718193919/http://jayflowers.com/doku/doku.php?id=active_development_line_patlet"
-  original_url: "http://jayflowers.com/doku/doku.php?id=active_development_line_patlet"
+  wayback_url: "https://web.archive.org/web/20190718193919//wiki/active-development-line-patlet/"
+  original_url: "/wiki/active-development-line-patlet/"
   archived_from: Wayback Machine
 
 ---
 
-[[[active\_development\_line\_patlet](/doku/doku.php?id=active_development_line_patlet&do=backlink)]]
+[[[active\_development\_line\_patlet](/wiki/active-development-line-patlet/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [active\_development\_line\_patlet](/doku/doku.php?id=active_development_line_patlet "active_development_line_patlet")
+
+Trace: » [active\_development\_line\_patlet](/wiki/active-development-line-patlet/ "active_development_line_patlet")
 
 ## Context
 

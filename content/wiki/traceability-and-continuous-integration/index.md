@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=traceability_and_continuous_integration"
+  - "/wiki/traceability-and-continuous-integration/"
 params:
-  wayback_url: "https://web.archive.org/web/20070903201747/http://jayflowers.com:80/doku/doku.php?id=traceability_and_continuous_integration"
-  original_url: "http://jayflowers.com:80/doku/doku.php?id=traceability_and_continuous_integration"
+  wayback_url: "https://web.archive.org/web/20070903201747//wiki/traceability-and-continuous-integration/"
+  original_url: "/wiki/traceability-and-continuous-integration/"
   archived_from: Wayback Machine
 
 ---
 
-[[[traceability\_and\_continuous\_integration](/doku/doku.php?id=traceability_and_continuous_integration&do=backlink)]]
+[[[traceability\_and\_continuous\_integration](/wiki/traceability-and-continuous-integration/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [traceability\_and\_continuous\_integration](/doku/doku.php?id=traceability_and_continuous_integration "traceability_and_continuous_integration")
+
+Trace: » [traceability\_and\_continuous\_integration](/wiki/traceability-and-continuous-integration/ "traceability_and_continuous_integration")
 
 ## Introduction
 
@@ -79,7 +79,7 @@ There are three benefits to integrating the build process and the ticket trackin
 
 Here is a partial screenshot of a build report from a project that correlates tickets (SCRs) with builds.
 
-[![correlation.jpg](/doku/lib/exe/fetch.php?w=&h=&cache=cache&media=correlation.jpg "correlation.jpg")](/doku/lib/exe/detail.php?id=traceability_and_continuous_integration&cache=cache&media=correlation.jpg "correlation.jpg")
+*[Image: correlation.jpg -- not recovered during site restoration]*
 
 Notice that the check in comments link to the ticket numbers (1596 and 1629). This means that source control, the build page, and the ticket tracking system are all correlated. From any one of them you can track to the others.
 

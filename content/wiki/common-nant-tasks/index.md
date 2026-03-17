@@ -5,25 +5,25 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=common_nant_tasks"
+  - "/wiki/common-nant-tasks/"
 params:
-  wayback_url: "https://web.archive.org/web/20060514160925/http://jayflowers.com:80/doku/doku.php?id=common_nant_tasks&amp;DokuWiki=2e807874e3c3eed68c9d7bab1c907781"
-  original_url: "http://jayflowers.com:80/doku/doku.php?id=common_nant_tasks&amp;DokuWiki=2e807874e3c3eed68c9d7bab1c907781"
+  wayback_url: "https://web.archive.org/web/20060514160925//wiki/common-nant-tasks/"
+  original_url: "/wiki/common-nant-tasks/"
   archived_from: Wayback Machine
 
 ---
 
-[[[common\_nant\_tasks](/doku/doku.php?id=common_nant_tasks&do=backlink&DokuWiki=76309d334572ff0c1c62e8625f7f41cd)]]
+[[[common\_nant\_tasks](/wiki/common-nant-tasks/)]]
 
-[JayFlowers](/doku/doku.php?id=&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "[ALT+H]")
 
-### [Articles](/doku/doku.php?id=articles&DokuWiki=76309d334572ff0c1c62e8625f7f41cd) :: [Software Projects](/doku/doku.php?id=software_projects&DokuWiki=76309d334572ff0c1c62e8625f7f41cd) :: [Works in Progress](/doku/doku.php?id=works_in_progress&DokuWiki=76309d334572ff0c1c62e8625f7f41cd)
+
+### [Articles](/wiki/articles/) :: [Software Projects](/wiki/software-projects/) :: [Works in Progress](/wiki/works-in-progress/)
 
 ---
 
 # This page has moved and you will be redirected.
 
-![](/joomla/templates/mp_chinook/images/logo.jpg)
+
 
 ## Description
 
@@ -31,25 +31,25 @@ This is an assmebly of tasks, types, and functions that I found I could not live
 
 **Tasks:**
 
-- [LargeProperty](/doku/doku.php?id=nant.largeproperty&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.largeproperty")
-- [LoopThrough](/doku/doku.php?id=nant.loopthrough&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.loopthrough")
-- [Replace](/doku/doku.php?id=nant.replace&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.replace")
-- [SaveProperties](/doku/doku.php?id=nant.saveproperties&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.saveproperties")
-- [Strings](/doku/doku.php?id=nant.strings&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.strings")
-- [Write](/doku/doku.php?id=nant.write&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.write")
-- [IfThenElse](/doku/doku.php?id=nant.ifthenelse&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.ifthenelse")
-- [Function](/doku/doku.php?id=nant.function&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.function")
+- LargeProperty *[Link removed: content not recovered during site restoration]*
+- LoopThrough *[Link removed: content not recovered during site restoration]*
+- Replace *[Link removed: content not recovered during site restoration]*
+- SaveProperties *[Link removed: content not recovered during site restoration]*
+- Strings *[Link removed: content not recovered during site restoration]*
+- Write *[Link removed: content not recovered during site restoration]*
+- IfThenElse *[Link removed: content not recovered during site restoration]*
+- Function *[Link removed: content not recovered during site restoration]*
 
 **Functions:**
 
-- [FileSet](/doku/doku.php?id=nant.filesetfunctions&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.filesetfunctions")
-- [StringList](/doku/doku.php?id=nant.stringlistfunctions&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.stringlistfunctions")
+- FileSet *[Link removed: content not recovered during site restoration]*
+- StringList *[Link removed: content not recovered during site restoration]*
 
 **Type:**
 
-- [SaveProperty](/doku/doku.php?id=nant.saveproperty&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.saveproperty")
-- [StringItem](/doku/doku.php?id=nant.stringitem&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.stringitem")
-- [TextElement](/doku/doku.php?id=nant.textelement&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "nant.textelement")
+- SaveProperty *[Link removed: content not recovered during site restoration]*
+- StringItem *[Link removed: content not recovered during site restoration]*
+- TextElement *[Link removed: content not recovered during site restoration]*
 
 ## Quick Example
 
@@ -110,6 +110,6 @@ Total time: 0.1 seconds.
 
 ## Download
 
-[common.tasks.zip](/doku/lib/exe/fetch.php?id=common_nant_tasks&cache=cache&media=common.tasks.zip&DokuWiki=76309d334572ff0c1c62e8625f7f41cd "common.tasks.zip")
+common.tasks.zip *[Link removed: content not recovered during site restoration]*
 
 common\_nant\_tasks.txt · Last modified: 2006/05/04 14:54 by jflowers

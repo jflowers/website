@@ -19,7 +19,7 @@ params:
 
 ## CI Factory Version 1.0
 
-Well it has been a long time coming, version 1.0 is here ([release notes](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=44&Itemid=1)).
+Well it has been a long time coming, version 1.0 is here (release notes *[Link removed: content not recovered during site restoration]*).
 
 |  |  |  |
 | --- | --- | --- |

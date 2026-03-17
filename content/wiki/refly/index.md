@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=refly"
+  - "/wiki/refly/"
 params:
-  wayback_url: "https://web.archive.org/web/20060514160703/http://jayflowers.com:80/doku/doku.php?id=refly&amp;DokuWiki=2e807874e3c3eed68c9d7bab1c907781"
-  original_url: "http://jayflowers.com:80/doku/doku.php?id=refly&amp;DokuWiki=2e807874e3c3eed68c9d7bab1c907781"
+  wayback_url: "https://web.archive.org/web/20060514160703//wiki/refly/"
+  original_url: "/wiki/refly/"
   archived_from: Wayback Machine
 
 ---
 
-[[[refly](/doku/doku.php?id=refly&do=backlink&DokuWiki=389c2869d6f94b1922aeaf8e673e1b79)]]
+[[[refly](/wiki/refly/)]]
 
-[JayFlowers](/doku/doku.php?id=&DokuWiki=389c2869d6f94b1922aeaf8e673e1b79 "[ALT+H]")
 
-### [Articles](/doku/doku.php?id=articles&DokuWiki=389c2869d6f94b1922aeaf8e673e1b79) :: [Software Projects](/doku/doku.php?id=software_projects&DokuWiki=389c2869d6f94b1922aeaf8e673e1b79) :: [Works in Progress](/doku/doku.php?id=works_in_progress&DokuWiki=389c2869d6f94b1922aeaf8e673e1b79)
+
+### [Articles](/wiki/articles/) :: [Software Projects](/wiki/software-projects/) :: [Works in Progress](/wiki/works-in-progress/)
 
 ---
 

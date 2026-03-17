@@ -5,23 +5,23 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=shrinking_the_edge_and_expanding_the_creamy_center"
+  - "/wiki/shrinking-the-edge-and-expanding-the-creamy-center/"
 params:
-  wayback_url: "https://web.archive.org/web/20190823134932/http://jayflowers.com/doku/doku.php?id=shrinking_the_edge_and_expanding_the_creamy_center"
-  original_url: "http://jayflowers.com/doku/doku.php?id=shrinking_the_edge_and_expanding_the_creamy_center"
+  wayback_url: "https://web.archive.org/web/20190823134932//wiki/shrinking-the-edge-and-expanding-the-creamy-center/"
+  original_url: "/wiki/shrinking-the-edge-and-expanding-the-creamy-center/"
   archived_from: Wayback Machine
 
 ---
 
-[[[shrinking\_the\_edge\_and\_expanding\_the\_creamy\_center](/doku/doku.php?id=shrinking_the_edge_and_expanding_the_creamy_center&do=backlink)]]
+[[[shrinking\_the\_edge\_and\_expanding\_the\_creamy\_center](/wiki/shrinking-the-edge-and-expanding-the-creamy-center/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [shrinking\_the\_edge\_and\_expanding\_the\_creamy\_center](/doku/doku.php?id=shrinking_the_edge_and_expanding_the_creamy_center "shrinking_the_edge_and_expanding_the_creamy_center")
+
+Trace: » [shrinking\_the\_edge\_and\_expanding\_the\_creamy\_center](/wiki/shrinking-the-edge-and-expanding-the-creamy-center/ "shrinking_the_edge_and_expanding_the_creamy_center")
 
 ## Introduction
 
-In the article [Introduction to Unit Testing](http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=25 "http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=25") a recipe was identified that could test any class in a system except for the edge. The recipe depends on the test subject knowing of other types through abstractions. The abstraction allows for indirection to be used to insert a test double. This methodology of testing is known as interaction based testing.
+In the article [Introduction to Unit Testing](/wiki/shrinking-the-edge-and-expanding-the-creamy-center/ "/wiki/shrinking-the-edge-and-expanding-the-creamy-center/") a recipe was identified that could test any class in a system except for the edge. The recipe depends on the test subject knowing of other types through abstractions. The abstraction allows for indirection to be used to insert a test double. This methodology of testing is known as interaction based testing.
 
 **Interaction Based Recipe:**
 

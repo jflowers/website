@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=development_workspace_patlet"
+  - "/wiki/development-workspace-patlet/"
 params:
-  wayback_url: "https://web.archive.org/web/20190922022435/http://jayflowers.com/doku/doku.php?id=development_workspace_patlet"
-  original_url: "http://jayflowers.com/doku/doku.php?id=development_workspace_patlet"
+  wayback_url: "https://web.archive.org/web/20190922022435//wiki/development-workspace-patlet/"
+  original_url: "/wiki/development-workspace-patlet/"
   archived_from: Wayback Machine
 
 ---
 
-[[[development\_workspace\_patlet](/doku/doku.php?id=development_workspace_patlet&do=backlink)]]
+[[[development\_workspace\_patlet](/wiki/development-workspace-patlet/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [development\_workspace\_patlet](/doku/doku.php?id=development_workspace_patlet "development_workspace_patlet")
+
+Trace: » [development\_workspace\_patlet](/wiki/development-workspace-patlet/ "development_workspace_patlet")
 
 ## Context
 

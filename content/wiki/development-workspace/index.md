@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=development_workspace"
+  - "/wiki/development-workspace/"
 params:
-  wayback_url: "https://web.archive.org/web/20190922022739/http://jayflowers.com/doku/doku.php?id=development_workspace"
-  original_url: "http://jayflowers.com/doku/doku.php?id=development_workspace"
+  wayback_url: "https://web.archive.org/web/20190922022739//wiki/development-workspace/"
+  original_url: "/wiki/development-workspace/"
   archived_from: Wayback Machine
 
 ---
 
-[[[development\_workspace](/doku/doku.php?id=development_workspace&do=backlink)]]
+[[[development\_workspace](/wiki/development-workspace/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [development\_workspace](/doku/doku.php?id=development_workspace "development_workspace")
+
+Trace: » [development\_workspace](/wiki/development-workspace/ "development_workspace")
 
 ## Context
 

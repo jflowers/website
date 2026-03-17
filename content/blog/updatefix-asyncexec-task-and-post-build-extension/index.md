@@ -124,7 +124,7 @@ The attribute taskname used to be required, but now is not, and there is a new a
 
 **Here are the bits:**
 
-[**NAnt Stuff**](http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=select&id=2)
+**NAnt Stuff** *[Link removed: content not recovered during site restoration]*
 
 **Post Build Extension** [**Zip**](http://code.google.com/p/ci-factory/downloads/detail?name=Post-Build-Extension-v2.zip&can=2&q=) **and** [**Doc**](http://groups-beta.google.com/group/CI-Factory/web/Post+Build?hl=en&_done=%2Fgroup%2FCI-Factory%2Fweb%2FPost%2BBuild%3Fmsg%3Dns%26hl%3Den)
 

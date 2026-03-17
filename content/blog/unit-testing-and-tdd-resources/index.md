@@ -21,18 +21,18 @@ There are an awful lot of resources out there for TDD and unit testing. Though i
 
 I would suggest reading these articles (maybe even in this order):
 
-1. [Introduction To Unit Testing](http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=25)
+1. [Introduction To Unit Testing](/wiki/shrinking-the-edge-and-expanding-the-creamy-center/)
 2. [TDD Design Starter Kit - State vs. Interaction Testing](http://codebetter.com/blogs/jeremy.miller/articles/129544.aspx)
-3. [Shrinking the Edge and Expanding the Creamy Center](http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=31)
+3. [Shrinking the Edge and Expanding the Creamy Center](/wiki/shrinking-the-edge-and-expanding-the-creamy-center/)
 4. [Haacked on TDD and Jeremy’s First Rule of TDD](http://codebetter.com/blogs/jeremy.miller/archive/2005/10/20/133437.aspx)
 5. [TDD Design Starter Kit - Dependency Inversion Principle](http://codebetter.com/blogs/jeremy.miller/articles/129543.aspx)
 6. [TDD Design Starter Kit: It’s All about Assigning Responsibilities](http://codebetter.com/blogs/jeremy.miller/articles/131726.aspx)
 7. [Singleton Vs JustCreateOne](http://butunclebob.com/ArticleS.UncleBob.SingletonVsJustCreateOne)
 8. [Dependency Issues](http://weblogs.asp.net/rosherove/articles/DependencyIssues.aspx)
 9. [Design 4 Tesatbility](http://weblogs.asp.net/rosherove/articles/Design4Tesatbility1.aspx)
-10. [Unit Testing Highly Cyclomatic Test Subjects](http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=32)
-11. [Retrofitting unit tests](http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=33&Itemid=99999999)
-12. [Design Principles in Test First Programming](http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=34&Itemid=99999999)
+10. [Unit Testing Highly Cyclomatic Test Subjects](/wiki/unit-testing-highly-cyclomatic-test-subjects/)
+11. Retrofitting unit tests *[Link removed: content not recovered during site restoration]*
+12. Design Principles in Test First Programming *[Link removed: content not recovered during site restoration]*
 13. [Database Unit Testing](http://weblogs.asp.net/rosherove/articles/dbunittesting.aspx)
 14. [Achieve Better Results by following Jeremy’s Third Law of TDD: Test Small Before Testing Big](http://codebetter.com/blogs/jeremy.miller/archive/2006/05/30/145752.aspx)
 15. [Jeremy’s Second Law of TDD: Push, Don’t Pull](http://codebetter.com/blogs/jeremy.miller/archive/2006/03/09/140465.aspx)
@@ -51,8 +51,8 @@ Here are some blogs:
 
 Here are some tools:
 
-- [Doubler](http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=13&Itemid=38)
-- [MbUnit Extensions](http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=17&Itemid=45)
+- [Doubler](/wiki/doubler/)
+- [MbUnit Extensions](/wiki/mbunit-extensions/)
 - [MbUnit](http://mbunit.org/)
 - [NUnit](http://nunit.org/)
 - [NMock](http://nmock.org/)

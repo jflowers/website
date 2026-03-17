@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=unit_testing_highly_cyclomatic_test_subjects"
+  - "/wiki/unit-testing-highly-cyclomatic-test-subjects/"
 params:
-  wayback_url: "https://web.archive.org/web/20190823134507/http://jayflowers.com/doku/doku.php?id=unit_testing_highly_cyclomatic_test_subjects"
-  original_url: "http://jayflowers.com/doku/doku.php?id=unit_testing_highly_cyclomatic_test_subjects"
+  wayback_url: "https://web.archive.org/web/20190823134507//wiki/unit-testing-highly-cyclomatic-test-subjects/"
+  original_url: "/wiki/unit-testing-highly-cyclomatic-test-subjects/"
   archived_from: Wayback Machine
 
 ---
 
-[[[unit\_testing\_highly\_cyclomatic\_test\_subjects](/doku/doku.php?id=unit_testing_highly_cyclomatic_test_subjects&do=backlink)]]
+[[[unit\_testing\_highly\_cyclomatic\_test\_subjects](/wiki/unit-testing-highly-cyclomatic-test-subjects/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [unit\_testing\_highly\_cyclomatic\_test\_subjects](/doku/doku.php?id=unit_testing_highly_cyclomatic_test_subjects "unit_testing_highly_cyclomatic_test_subjects")
+
+Trace: » [unit\_testing\_highly\_cyclomatic\_test\_subjects](/wiki/unit-testing-highly-cyclomatic-test-subjects/ "unit_testing_highly_cyclomatic_test_subjects")
 
 ## Introduction
 
@@ -202,7 +202,7 @@ For a very simple example that is a lot of code. There is a lot duplicate code. 
 
 ## A New Fixture
 
-A new type of fixture can fulfill this need. A fixture that passes *a* test method *a* parameter from a provider. The fixture will iterate over a list of parameters passing each parameter to the test method on a separate call. Each parameter provided would be reported as a distinct test. The ObjectFixture, FactoryObjectProvider, FormattedObjectProvider, XmlObjectProvider, and TestWithEachObject are [MbUnit extensions](http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=17&Itemid=45 "http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=17&Itemid=45") that fulfill these needs.
+A new type of fixture can fulfill this need. A fixture that passes *a* test method *a* parameter from a provider. The fixture will iterate over a list of parameters passing each parameter to the test method on a separate call. Each parameter provided would be reported as a distinct test. The ObjectFixture, FactoryObjectProvider, FormattedObjectProvider, XmlObjectProvider, and TestWithEachObject are [MbUnit extensions](/wiki/mbunit-extensions/ "/wiki/mbunit-extensions/") that fulfill these needs.
 
 ```
 [ObjectFixture()]
@@ -444,11 +444,11 @@ The reason this works is there are a known set of controls and a known set of se
 
 ## Resources
 
-[MbUnit Extensions](http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=17&Itemid=45 "http://jayflowers.com/joomla/index.php?option=com_content&task=view&id=17&Itemid=45")
+[MbUnit Extensions](/wiki/mbunit-extensions/ "/wiki/mbunit-extensions/")
 
-[Solution Zip](http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=fileinfo&id=7 "http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=fileinfo&id=7")
+Solution Zip *[Link removed: content not recovered during site restoration]*
 
-[Conditional![reveal hidden content](/doku/lib/plugins/folded/closed.gif)](#folded_1 "reveal")
+Conditional![reveal hidden content *[Link removed: content not recovered during site restoration]*](#folded_1 "reveal")
 
 ```
 public class Conditional
@@ -473,7 +473,7 @@ public class Conditional
 
 }
 
-[TestConditional![reveal hidden content](/doku/lib/plugins/folded/closed.gif)](#folded_2 "reveal")
+TestConditional![reveal hidden content *[Link removed: content not recovered during site restoration]*](#folded_2 "reveal")
 
 [TestFixture()]
 
@@ -677,7 +677,7 @@ public class TestConditional
 }
 ```
 
-[ConditionalFactory![reveal hidden content](/doku/lib/plugins/folded/closed.gif)](#folded_3 "reveal")
+ConditionalFactory![reveal hidden content *[Link removed: content not recovered during site restoration]*](#folded_3 "reveal")
 
 ```
 public class ConditionalFactory : IObjectProviderFactory
@@ -778,7 +778,7 @@ public class ConditionalFactory : IObjectProviderFactory
 }
 ```
 
-[ConditionalTestCaseContainer![reveal hidden content](/doku/lib/plugins/folded/closed.gif)](#folded_4 "reveal")
+ConditionalTestCaseContainer![reveal hidden content *[Link removed: content not recovered during site restoration]*](#folded_4 "reveal")
 
 ```
 public class ConditionalTestCaseContainer : IContainer
@@ -848,7 +848,7 @@ public class ConditionalTestCaseContainer : IContainer
 }
 ```
 
-[NameTestCase![reveal hidden content](/doku/lib/plugins/folded/closed.gif)](#folded_5 "reveal")
+NameTestCase![reveal hidden content *[Link removed: content not recovered during site restoration]*](#folded_5 "reveal")
 
 ```
 public class NameTestCase
@@ -1063,7 +1063,7 @@ public class NameTestCase
 }
 ```
 
-[NameTestCaseCollection![reveal hidden content](/doku/lib/plugins/folded/closed.gif)](#folded_6 "reveal")
+NameTestCaseCollection![reveal hidden content *[Link removed: content not recovered during site restoration]*](#folded_6 "reveal")
 
 ```
 public class NameTestCaseCollection:System.Collections.CollectionBase

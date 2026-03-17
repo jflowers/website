@@ -46,4 +46,4 @@ If you right click on an assembly in the tree view of Reflector you can select t
 
 Know issue: Events with params by ref need to be edited by hand to pass the arguments received on the Fire<eventName> method to the event invocation.
 
-[Download](http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=fileinfo&id=16)
+Download *[Link removed: content not recovered during site restoration]*

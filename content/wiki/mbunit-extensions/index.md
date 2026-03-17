@@ -5,17 +5,17 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=mbunit_extensions"
+  - "/wiki/mbunit-extensions/"
 params:
-  wayback_url: "https://web.archive.org/web/20060516182318/http://jayflowers.com:80/doku/doku.php?id=mbunit_extensions"
-  original_url: "http://jayflowers.com:80/doku/doku.php?id=mbunit_extensions"
+  wayback_url: "https://web.archive.org/web/20060516182318//wiki/mbunit-extensions/"
+  original_url: "/wiki/mbunit-extensions/"
   archived_from: Wayback Machine
 
 ---
 
-[[[mbunit\_extensions](/doku/doku.php?id=mbunit_extensions&do=backlink&DokuWiki=d8d3795f4198da0e7e99f7806412ba7a)]]
+[[[mbunit\_extensions](/wiki/mbunit-extensions/)]]
 
-[JayFlowers](/doku/doku.php?id=&DokuWiki=d8d3795f4198da0e7e99f7806412ba7a "[ALT+H]")
+
 
 ## Description
 
@@ -23,10 +23,10 @@ These extensions are not included in the MbUnit project. I have released them se
 
 ## Videos
 
-- [FactoryObjectProvider](/doku/doku.php?id=mbunitextensions.factoryobjectprovidervideo&DokuWiki=d8d3795f4198da0e7e99f7806412ba7a "mbunitextensions.factoryobjectprovidervideo")
+- [FactoryObjectProvider](/wiki/mbunitextensionsfactoryobjectprovidervideo/ "mbunitextensions.factoryobjectprovidervideo")
 
 ## Download
 
-[mbunitextensions.zip](/doku/lib/exe/fetch.php?id=mbunit_extensions&cache=cache&media=mbunitextensions.zip&DokuWiki=d8d3795f4198da0e7e99f7806412ba7a "mbunitextensions.zip")
+mbunitextensions.zip *[Link removed: content not recovered during site restoration]*
 
 mbunit\_extensions.txt · Last modified: 2006/04/08 20:37 by jflowers

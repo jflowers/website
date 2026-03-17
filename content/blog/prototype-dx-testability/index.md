@@ -52,6 +52,6 @@ These metrics are a first crack at giving realtime feedback to developers as to 
 
 This is not production worthy.  It is not optimized, in fact it can be down right slow depending on the code being analyzed.  As well the algorithms that generate the metrics may have bugs.  This is a prototype.  It’s purpose is to help get more information and determine if there is a product in this idea.
 
-[**Download**](http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=fileinfo&id=17)
+**Download** *[Link removed: content not recovered during site restoration]*
 
 **Note:** You will need to have DXCore installed.  You can download it from [**here**](http://www.devexpress.com/Downloads/NET/IDETools/DXCore/).

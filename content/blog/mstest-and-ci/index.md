@@ -402,7 +402,7 @@ private void RestorConsoleOutput()
 
 I read the code in Reflector for Console and it seemed that the best thing to do was to replace the backing stream.  I save off the original stream so that it can be returned after the subversion is no longer needed.  The replacement stream is a StringWriter wich is dumped into the log when LogCapturedOutput is called.  I wondered if it was possible to inherit from an internally marked class in IL but I thought that was going overboard for the problem at hand.  I had never had good reason to use reflection is this was before.  This experience has shown me that when it is needed there is a pattern to how wrapper classes can be created.  It is repetative and could easily be turned into a Reflector plugin with Refly.
 
-Here is a zip containing the [MSTest CIFactory Package](http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=select&id=11).  It includes:
+Here is a zip containing the MSTest CIFactory Package *[Link removed: content not recovered during site restoration]*.  It includes:
 
 - MsTestSummary.xsl
 - UnitTest.Properties.xml

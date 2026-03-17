@@ -5,19 +5,19 @@ draft: false
 categories:
   - "Wiki"
 aliases:
-  - "/doku/doku.php?id=creating_a_loop_diagram_for_ci"
+  - "/wiki/creating-a-loop-diagram-for-ci/"
 params:
-  wayback_url: "https://web.archive.org/web/20190823140851/http://jayflowers.com/doku/doku.php?id=creating_a_loop_diagram_for_ci"
-  original_url: "http://jayflowers.com/doku/doku.php?id=creating_a_loop_diagram_for_ci"
+  wayback_url: "https://web.archive.org/web/20190823140851//wiki/creating-a-loop-diagram-for-ci/"
+  original_url: "/wiki/creating-a-loop-diagram-for-ci/"
   archived_from: Wayback Machine
 
 ---
 
-[[[creating\_a\_loop\_diagram\_for\_ci](/doku/doku.php?id=creating_a_loop_diagram_for_ci&do=backlink)]]
+[[[creating\_a\_loop\_diagram\_for\_ci](/wiki/creating-a-loop-diagram-for-ci/)]]
 
-[JayFlowers](/doku/doku.php?id= "[ALT+H]")
 
-Trace: » [creating\_a\_loop\_diagram\_for\_ci](/doku/doku.php?id=creating_a_loop_diagram_for_ci "creating_a_loop_diagram_for_ci")
+
+Trace: » [creating\_a\_loop\_diagram\_for\_ci](/wiki/creating-a-loop-diagram-for-ci/ "creating_a_loop_diagram_for_ci")
 
 ### Some Resources:
 
@@ -93,7 +93,7 @@ Continuous Integration is all about communication, so you want to ensure that ev
 
 ### Diagrams
 
-[![](/doku/lib/exe/fetch.php?w=&h=&cache=cache&media=ci-loop-diagram-1.png)](/doku/lib/exe/detail.php?id=creating_a_loop_diagram_for_ci&cache=cache&media=ci-loop-diagram-1.png "ci-loop-diagram-1.png")  
-[ci.msys](/doku/lib/exe/fetch.php?id=creating_a_loop_diagram_for_ci&cache=cache&media=ci.msys "ci.msys")
+*[Image: ci-loop-diagram-1.png -- not recovered during site restoration]*  
+ci.msys *[Link removed: content not recovered during site restoration]*
 
 creating\_a\_loop\_diagram\_for\_ci.txt · Last modified: 2007/06/01 07:17 by jflowers

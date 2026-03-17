@@ -18,7 +18,7 @@ params:
 
 ## CI Factory Beta 0.9.0.14
 
-This is the first release of the 0.9 series, build 14.  You can read the [release notes here](http://www.cifactory.org/joomla/index.php?option=com_content&task=view&id=44&Itemid=1) and [download from here](http://ci-factory.googlecode.com/files/CI-Factory-Beta-0.9.0.14.rar).
+This is the first release of the 0.9 series, build 14.  You can read the release notes here *[Link removed: content not recovered during site restoration]* and [download from here](http://ci-factory.googlecode.com/files/CI-Factory-Beta-0.9.0.14.rar).
 
 There is already a significant amount of change in this early release.  First off there is a NUnit Package now!  I am sure that a lot of people are saying about time.  There have been several performance improvements to CCNet, in particular the web dashboard.  One of the improvements that will make my life a lot easier in the NAnt scripting department is with xmlpeek.  I have improved the eval capabilities of the xpath expressions.  It should now work for any xpath expression, so things like sum(@testsrun) will work.  Lastly there have been some new CCNet NAnt functions added, allowing you to do things like write NAnt scripts to help testers get a test env setup for a build of their choosing.  Hopefully I will blog about these changes and more in the coming weeks.  Here are all the changes:
 

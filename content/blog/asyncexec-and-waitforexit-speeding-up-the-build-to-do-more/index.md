@@ -360,5 +360,5 @@ Below is the nant script main target.  It has been color coded to match the tab
 
 </target>
 
-**Download these tasks and more in** [**NAnt Stuff**](http://jayflowers.com/joomla/index.php?option=com_remository&Itemid=33&func=select&id=2)**.**
+**Download these tasks and more in** **NAnt Stuff** *[Link removed: content not recovered during site restoration]***.**
 ```
